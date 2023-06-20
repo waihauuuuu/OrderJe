@@ -27,12 +27,12 @@ Namespace My
             Me.IsSingleInstance = False
             Me.EnableVisualStyles = True
             Me.SaveMySettingsOnExit = True
-            Me.ShutDownStyle = Global.Microsoft.VisualBasic.ApplicationServices.ShutdownMode.AfterMainFormCloses
+            Me.ShutdownStyle = Global.Microsoft.VisualBasic.ApplicationServices.ShutdownMode.AfterMainFormCloses
         End Sub
 
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.OMC21.AccSelect
+            Me.MainForm = Global.OMC21.Form1
         End Sub
     End Class
 End Namespace
