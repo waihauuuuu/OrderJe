@@ -51,6 +51,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -80,6 +81,12 @@
       <DependentUpon>AccSelect.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FoodOrder.Designer.vb">
+      <DependentUpon>FoodOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FoodOrder.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="loginCafeOwner.Designer.vb">
       <DependentUpon>loginCafeOwner.vb</DependentUpon>
     </Compile>
@@ -101,10 +108,31 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="NewMenu1.Designer.vb">
+      <DependentUpon>NewMenu1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewMenu1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Payment1.Designer.vb">
+      <DependentUpon>Payment1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Payment1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RegistrationAproval.Designer.vb">
+      <DependentUpon>RegistrationAproval.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationAproval.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AccSelect.resx">
       <DependentUpon>AccSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoodOrder.resx">
+      <DependentUpon>FoodOrder.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="loginCafeOwner.resx">
       <DependentUpon>loginCafeOwner.vb</DependentUpon>
@@ -114,6 +142,15 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewMenu1.resx">
+      <DependentUpon>NewMenu1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payment1.resx">
+      <DependentUpon>Payment1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrationAproval.resx">
+      <DependentUpon>RegistrationAproval.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +167,60 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\IMG_20230617_214442_2181.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-251.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-25 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-25 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cart-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-time-machine-35.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class loginCafeOwner
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,25 +20,25 @@ Partial Class loginCafeOwner
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnSignUp = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.txbEmail = New System.Windows.Forms.TextBox()
+        Me.txbPass = New System.Windows.Forms.TextBox()
+        Me.btnLogin = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Firebrick
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.btnSignUp)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Right
@@ -48,73 +48,83 @@ Partial Class loginCafeOwner
         Me.Panel1.Size = New System.Drawing.Size(261, 434)
         Me.Panel1.TabIndex = 1
         '
-        'Label1
+        'btnSignUp
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(66, 153)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(135, 26)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Hello, Friend !"
+        Me.btnSignUp.BackColor = System.Drawing.Color.Transparent
+        Me.btnSignUp.Location = New System.Drawing.Point(90, 261)
+        Me.btnSignUp.Name = "btnSignUp"
+        Me.btnSignUp.Size = New System.Drawing.Size(82, 30)
+        Me.btnSignUp.TabIndex = 2
+        Me.btnSignUp.Text = "SIGN UP"
+        Me.btnSignUp.UseVisualStyleBackColor = False
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label2.Location = New System.Drawing.Point(26, 179)
+        Me.Label2.Location = New System.Drawing.Point(31, 179)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(209, 69)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Enter your personal details" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "   and start your journey" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "              with us"
         '
-        'Button1
+        'Label1
         '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.Location = New System.Drawing.Point(85, 260)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(82, 30)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "SIGN UP"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label1.Location = New System.Drawing.Point(68, 154)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(135, 26)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Hello, Friend !"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label3.Location = New System.Drawing.Point(153, 156)
+        Me.Label3.Location = New System.Drawing.Point(152, 156)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(159, 23)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Sign in to OrderJe !"
         '
-        'TextBox1
+        'txbEmail
         '
-        Me.TextBox1.Location = New System.Drawing.Point(122, 206)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(216, 23)
-        Me.TextBox1.TabIndex = 3
-        Me.TextBox1.Text = "Email :"
+        Me.txbEmail.Location = New System.Drawing.Point(122, 206)
+        Me.txbEmail.Name = "txbEmail"
+        Me.txbEmail.Size = New System.Drawing.Size(216, 23)
+        Me.txbEmail.TabIndex = 3
+        Me.txbEmail.Text = "Email :"
         '
-        'TextBox2
+        'txbPass
         '
-        Me.TextBox2.Location = New System.Drawing.Point(122, 251)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(216, 23)
-        Me.TextBox2.TabIndex = 4
-        Me.TextBox2.Text = "Password :"
+        Me.txbPass.Location = New System.Drawing.Point(122, 251)
+        Me.txbPass.Name = "txbPass"
+        Me.txbPass.Size = New System.Drawing.Size(216, 23)
+        Me.txbPass.TabIndex = 4
+        Me.txbPass.Text = "Password :"
         '
-        'Button2
+        'btnLogin
         '
-        Me.Button2.Location = New System.Drawing.Point(187, 293)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(82, 30)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "LOG IN"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnLogin.Location = New System.Drawing.Point(187, 293)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(82, 30)
+        Me.btnLogin.TabIndex = 5
+        Me.btnLogin.Text = "LOG IN"
+        Me.btnLogin.UseVisualStyleBackColor = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.OMC21.My.Resources.Resources.IMG_20230617_214442_218
+        Me.PictureBox1.Location = New System.Drawing.Point(45, -5)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(90, 100)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 6
+        Me.PictureBox1.TabStop = False
         '
         'loginCafeOwner
         '
@@ -122,9 +132,9 @@ Partial Class loginCafeOwner
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Brown
         Me.ClientSize = New System.Drawing.Size(751, 434)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.btnLogin)
+        Me.Controls.Add(Me.txbPass)
+        Me.Controls.Add(Me.txbEmail)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox1)
@@ -133,9 +143,9 @@ Partial Class loginCafeOwner
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Name = "loginCafeOwner"
         Me.Text = "loginCafeOwner"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -145,9 +155,9 @@ Partial Class loginCafeOwner
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnSignUp As Button
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents txbEmail As TextBox
+    Friend WithEvents txbPass As TextBox
+    Friend WithEvents btnLogin As Button
 End Class

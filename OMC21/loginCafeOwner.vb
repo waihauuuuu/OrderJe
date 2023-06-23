@@ -1,3 +1,5 @@
 ﻿Public Class loginCafeOwner
+    Private Sub loginCafeOwner_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
 End Class
