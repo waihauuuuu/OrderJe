@@ -14,6 +14,21 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,6 +62,27 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DocumentationFile>OMC21.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DocumentationFile>OMC21.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -74,23 +110,102 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccSelect.vb">
+    <Compile Include="1. Customer\LoginCustomer.Designer.vb">
+      <DependentUpon>LoginCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1. Customer\LoginCustomer.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AccSelect.Designer.vb">
-      <DependentUpon>AccSelect.vb</DependentUpon>
-      <SubType>Form</SubType>
+    <Compile Include="1AddBankCard.Designer.vb">
+      <DependentUpon>1AddBankCard.vb</DependentUpon>
     </Compile>
-    <Compile Include="FoodOrder.Designer.vb">
-      <DependentUpon>FoodOrder.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FoodOrder.vb">
+    <Compile Include="1AddBankCard.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="loginCafeOwner.Designer.vb">
-      <DependentUpon>loginCafeOwner.vb</DependentUpon>
+    <Compile Include="1CustomerProfile.Designer.vb">
+      <DependentUpon>1CustomerProfile.vb</DependentUpon>
     </Compile>
-    <Compile Include="loginCafeOwner.vb">
+    <Compile Include="1CustomerProfile.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="1FbCafe.Designer.vb">
+      <DependentUpon>1FbCafe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1FbCafe.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="1ViewFeedBack.Designer.vb">
+      <DependentUpon>1ViewFeedBack.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1ViewFeedBack.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="2. Cafe Owner\LoginCafeOwner.Designer.vb">
+      <DependentUpon>LoginCafeOwner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="2. Cafe Owner\LoginCafeOwner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3RiderProfile.Designer.vb">
+      <DependentUpon>3RiderProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="3RiderProfile.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="0AccSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="0AccSelect.Designer.vb">
+      <DependentUpon>0AccSelect.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1FoodOrder.Designer.vb">
+      <DependentUpon>1FoodOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1FoodOrder.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="1. Customer\CustomerSignUp.Designer.vb">
+      <DependentUpon>CustomerSignUp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1. Customer\CustomerSignUp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1AddPaymentMethods.Designer.vb">
+      <DependentUpon>1AddPaymentMethods.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1AddPaymentMethods.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="CloseMinimize.Designer.vb">
+      <DependentUpon>CloseMinimize.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CloseMinimize.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="1FbApplication.Designer.vb">
+      <DependentUpon>1FbApplication.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1FbApplication.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="1FbRider.Designer.vb">
+      <DependentUpon>1FbRider.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1FbRider.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="0Homepage.Designer.vb">
+      <DependentUpon>0Homepage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="0Homepage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3. Rider\LoginRider.Designer.vb">
+      <DependentUpon>LoginRider.vb</DependentUpon>
+    </Compile>
+    <Compile Include="3. Rider\LoginRider.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -109,49 +224,106 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="NewMenu1.Designer.vb">
-      <DependentUpon>NewMenu1.vb</DependentUpon>
+    <Compile Include="2NewMenu.Designer.vb">
+      <DependentUpon>2NewMenu.vb</DependentUpon>
     </Compile>
-    <Compile Include="NewMenu1.vb">
+    <Compile Include="2NewMenu.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Payment1.Designer.vb">
-      <DependentUpon>Payment1.vb</DependentUpon>
+    <Compile Include="1Payment.Designer.vb">
+      <DependentUpon>1Payment.vb</DependentUpon>
     </Compile>
-    <Compile Include="Payment1.vb">
+    <Compile Include="1Payment.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="RegistrationAproval.Designer.vb">
-      <DependentUpon>RegistrationAproval.vb</DependentUpon>
+    <Compile Include="4RegistrationAproval.Designer.vb">
+      <DependentUpon>4RegistrationAproval.vb</DependentUpon>
     </Compile>
-    <Compile Include="RegistrationAproval.vb">
+    <Compile Include="4RegistrationAproval.vb">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="3. Rider\RiderSignUp.Designer.vb">
+      <DependentUpon>RiderSignUp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="3. Rider\RiderSignUp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="0Profile.Designer.vb">
+      <DependentUpon>0Profile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="0Profile.vb">
+      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AccSelect.resx">
-      <DependentUpon>AccSelect.vb</DependentUpon>
+    <EmbeddedResource Include="1. Customer\LoginCustomer.resx">
+      <DependentUpon>LoginCustomer.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FoodOrder.resx">
-      <DependentUpon>FoodOrder.vb</DependentUpon>
+    <EmbeddedResource Include="1AddBankCard.resx">
+      <DependentUpon>1AddBankCard.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="loginCafeOwner.resx">
-      <DependentUpon>loginCafeOwner.vb</DependentUpon>
+    <EmbeddedResource Include="1AddPaymentMethods.resx">
+      <DependentUpon>1AddPaymentMethods.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1CustomerProfile.resx">
+      <DependentUpon>1CustomerProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1FbCafe.resx">
+      <DependentUpon>1FbCafe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1ViewFeedBack.resx">
+      <DependentUpon>1ViewFeedBack.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2. Cafe Owner\LoginCafeOwner.resx">
+      <DependentUpon>LoginCafeOwner.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3RiderProfile.resx">
+      <DependentUpon>3RiderProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0AccSelect.resx">
+      <DependentUpon>0AccSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1FoodOrder.resx">
+      <DependentUpon>1FoodOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1. Customer\CustomerSignUp.resx">
+      <DependentUpon>CustomerSignUp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CloseMinimize.resx">
+      <DependentUpon>CloseMinimize.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1FbApplication.resx">
+      <DependentUpon>1FbApplication.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1FbRider.resx">
+      <DependentUpon>1FbRider.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0Homepage.resx">
+      <DependentUpon>0Homepage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3. Rider\LoginRider.resx">
+      <DependentUpon>LoginRider.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
-      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewMenu1.resx">
-      <DependentUpon>NewMenu1.vb</DependentUpon>
+    <EmbeddedResource Include="3. Rider\RiderSignUp.resx">
+      <DependentUpon>RiderSignUp.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Payment1.resx">
-      <DependentUpon>Payment1.vb</DependentUpon>
+    <EmbeddedResource Include="0Profile.resx">
+      <DependentUpon>0Profile.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegistrationAproval.resx">
-      <DependentUpon>RegistrationAproval.vb</DependentUpon>
+    <EmbeddedResource Include="2NewMenu.resx">
+      <DependentUpon>2NewMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1Payment.resx">
+      <DependentUpon>1Payment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4RegistrationAproval.resx">
+      <DependentUpon>4RegistrationAproval.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -167,7 +339,67 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\IMG_20230617_214442_2181.jpg" />
+    <None Include="Resources\OrderJeLogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="4. Admin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profilePic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sun spare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BankCard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BankChip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BankChip1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BankLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BankLogo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BankLogo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BankLogo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OrderJeLogo1.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\list %281%29.png" />
