@@ -31,7 +31,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
@@ -110,59 +110,133 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="1. Customer\LoginCustomer.Designer.vb">
-      <DependentUpon>LoginCustomer.vb</DependentUpon>
+    <Compile Include="0. Users\AboutUs.Designer.vb">
+      <DependentUpon>AboutUs.vb</DependentUpon>
     </Compile>
-    <Compile Include="1. Customer\LoginCustomer.vb">
+    <Compile Include="0. Users\AboutUs.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="0. Users\GlobalVariables.vb" />
+    <Compile Include="0. Users\ModuleEncrypt.vb" />
+    <Compile Include="0. Users\SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="0. Users\SplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="1AddBankCard.Designer.vb">
-      <DependentUpon>1AddBankCard.vb</DependentUpon>
+    <Compile Include="1. Customer\CustomerLogin.Designer.vb">
+      <DependentUpon>CustomerLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="1AddBankCard.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="1CustomerProfile.Designer.vb">
-      <DependentUpon>1CustomerProfile.vb</DependentUpon>
-    </Compile>
-    <Compile Include="1CustomerProfile.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="1FbCafe.Designer.vb">
-      <DependentUpon>1FbCafe.vb</DependentUpon>
-    </Compile>
-    <Compile Include="1FbCafe.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="1ViewFeedBack.Designer.vb">
-      <DependentUpon>1ViewFeedBack.vb</DependentUpon>
-    </Compile>
-    <Compile Include="1ViewFeedBack.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="2. Cafe Owner\LoginCafeOwner.Designer.vb">
-      <DependentUpon>LoginCafeOwner.vb</DependentUpon>
-    </Compile>
-    <Compile Include="2. Cafe Owner\LoginCafeOwner.vb">
+    <Compile Include="1. Customer\CustomerLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="3RiderProfile.Designer.vb">
-      <DependentUpon>3RiderProfile.vb</DependentUpon>
+    <Compile Include="1. Customer\AddBankCard.Designer.vb">
+      <DependentUpon>AddBankCard.vb</DependentUpon>
     </Compile>
-    <Compile Include="3RiderProfile.vb">
+    <Compile Include="1. Customer\AddBankCard.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="0AccSelect.vb">
+    <Compile Include="1. Customer\CustomerNotification.Designer.vb">
+      <DependentUpon>CustomerNotification.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1. Customer\CustomerNotification.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="1. Customer\CustomerProfile.Designer.vb">
+      <DependentUpon>CustomerProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1. Customer\CustomerProfile.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="1. Customer\CustomerTransactionHistory.Designer.vb">
+      <DependentUpon>CustomerTransactionHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1. Customer\CustomerTransactionHistory.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="1. Customer\FbCafe.Designer.vb">
+      <DependentUpon>FbCafe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1. Customer\FbCafe.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="1. Customer\MyPoints.Designer.vb">
+      <DependentUpon>MyPoints.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1. Customer\MyPoints.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="1. Customer\OrderStatus.Designer.vb">
+      <DependentUpon>OrderStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1. Customer\OrderStatus.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="1. Customer\OrderSummary.Designer.vb">
+      <DependentUpon>OrderSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1. Customer\OrderSummary.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="1. Customer\ViewFeedBack.Designer.vb">
+      <DependentUpon>ViewFeedBack.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1. Customer\ViewFeedBack.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="2. Cafe Owner\CafeOwnerLogin.Designer.vb">
+      <DependentUpon>CafeOwnerLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="2. Cafe Owner\CafeOwnerLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="0AccSelect.Designer.vb">
-      <DependentUpon>0AccSelect.vb</DependentUpon>
+    <Compile Include="2. Cafe Owner\CafeOwnerNotification.Designer.vb">
+      <DependentUpon>CafeOwnerNotification.vb</DependentUpon>
+    </Compile>
+    <Compile Include="2. Cafe Owner\CafeOwnerNotification.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="2. Cafe Owner\CafeOwnerReceipt.Designer.vb">
+      <DependentUpon>CafeOwnerReceipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="2. Cafe Owner\CafeOwnerReceipt.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="2. Cafe Owner\CafeOwnerTransactionHistory.Designer.vb">
+      <DependentUpon>CafeOwnerTransactionHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="2. Cafe Owner\CafeOwnerTransactionHistory.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="2. Cafe Owner\CafeOwnerViewFeedback.Designer.vb">
+      <DependentUpon>CafeOwnerViewFeedback.vb</DependentUpon>
+    </Compile>
+    <Compile Include="2. Cafe Owner\CafeOwnerViewFeedback.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="3. Rider\RiderNotification.Designer.vb">
+      <DependentUpon>RiderNotification.vb</DependentUpon>
+    </Compile>
+    <Compile Include="3. Rider\RiderNotification.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="3. Rider\RiderProfile.Designer.vb">
+      <DependentUpon>RiderProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="3. Rider\RiderProfile.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="0. Users\AccSelect.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="1FoodOrder.Designer.vb">
-      <DependentUpon>1FoodOrder.vb</DependentUpon>
+    <Compile Include="0. Users\AccSelect.Designer.vb">
+      <DependentUpon>AccSelect.vb</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="1FoodOrder.vb">
+    <Compile Include="1. Customer\FoodOrder.Designer.vb">
+      <DependentUpon>FoodOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1. Customer\FoodOrder.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="1. Customer\CustomerSignUp.Designer.vb">
@@ -171,10 +245,40 @@
     <Compile Include="1. Customer\CustomerSignUp.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="1AddPaymentMethods.Designer.vb">
-      <DependentUpon>1AddPaymentMethods.vb</DependentUpon>
+    <Compile Include="1. Customer\AddPaymentMethods.Designer.vb">
+      <DependentUpon>AddPaymentMethods.vb</DependentUpon>
     </Compile>
-    <Compile Include="1AddPaymentMethods.vb">
+    <Compile Include="1. Customer\AddPaymentMethods.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="3. Rider\RiderReceipt.Designer.vb">
+      <DependentUpon>RiderReceipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="3. Rider\RiderReceipt.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="3. Rider\RiderTransactionHistory.Designer.vb">
+      <DependentUpon>RiderTransactionHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="3. Rider\RiderTransactionHistory.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="3. Rider\RiderViewFeedback.Designer.vb">
+      <DependentUpon>RiderViewFeedback.vb</DependentUpon>
+    </Compile>
+    <Compile Include="3. Rider\RiderViewFeedback.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="4. Admin\AdminLogin.Designer.vb">
+      <DependentUpon>AdminLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="4. Admin\AdminLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4. Admin\AdminViewFeedback.Designer.vb">
+      <DependentUpon>AdminViewFeedback.vb</DependentUpon>
+    </Compile>
+    <Compile Include="4. Admin\AdminViewFeedback.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
@@ -184,28 +288,28 @@
     <Compile Include="CloseMinimize.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="1FbApplication.Designer.vb">
-      <DependentUpon>1FbApplication.vb</DependentUpon>
+    <Compile Include="1. Customer\FbApplication.Designer.vb">
+      <DependentUpon>FbApplication.vb</DependentUpon>
     </Compile>
-    <Compile Include="1FbApplication.vb">
+    <Compile Include="1. Customer\FbApplication.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="1FbRider.Designer.vb">
-      <DependentUpon>1FbRider.vb</DependentUpon>
+    <Compile Include="1. Customer\FbRider.Designer.vb">
+      <DependentUpon>FbRider.vb</DependentUpon>
     </Compile>
-    <Compile Include="1FbRider.vb">
+    <Compile Include="1. Customer\FbRider.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="0Homepage.Designer.vb">
-      <DependentUpon>0Homepage.vb</DependentUpon>
+    <Compile Include="0. Users\CustomerHomepage.Designer.vb">
+      <DependentUpon>CustomerHomepage.vb</DependentUpon>
     </Compile>
-    <Compile Include="0Homepage.vb">
+    <Compile Include="0. Users\CustomerHomepage.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="3. Rider\LoginRider.Designer.vb">
-      <DependentUpon>LoginRider.vb</DependentUpon>
+    <Compile Include="3. Rider\RiderLogin.Designer.vb">
+      <DependentUpon>RiderLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="3. Rider\LoginRider.vb">
+    <Compile Include="3. Rider\RiderLogin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -224,22 +328,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="2NewMenu.Designer.vb">
-      <DependentUpon>2NewMenu.vb</DependentUpon>
+    <Compile Include="2. Cafe Owner\NewMenu.Designer.vb">
+      <DependentUpon>NewMenu.vb</DependentUpon>
     </Compile>
-    <Compile Include="2NewMenu.vb">
+    <Compile Include="2. Cafe Owner\NewMenu.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="1Payment.Designer.vb">
-      <DependentUpon>1Payment.vb</DependentUpon>
+    <Compile Include="1. Customer\Payment.Designer.vb">
+      <DependentUpon>Payment.vb</DependentUpon>
     </Compile>
-    <Compile Include="1Payment.vb">
+    <Compile Include="1. Customer\Payment.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="4RegistrationAproval.Designer.vb">
-      <DependentUpon>4RegistrationAproval.vb</DependentUpon>
+    <Compile Include="4. Admin\RegistrationAproval.Designer.vb">
+      <DependentUpon>RegistrationAproval.vb</DependentUpon>
     </Compile>
-    <Compile Include="4RegistrationAproval.vb">
+    <Compile Include="4. Admin\RegistrationAproval.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="3. Rider\RiderSignUp.Designer.vb">
@@ -248,61 +352,114 @@
     <Compile Include="3. Rider\RiderSignUp.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="0Profile.Designer.vb">
-      <DependentUpon>0Profile.vb</DependentUpon>
+    <Compile Include="0. Users\CustomerEditProfile.Designer.vb">
+      <DependentUpon>CustomerEditProfile.vb</DependentUpon>
     </Compile>
-    <Compile Include="0Profile.vb">
+    <Compile Include="0. Users\CustomerEditProfile.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderJeDatabaseDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrderJeDatabaseDataSet.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="1. Customer\LoginCustomer.resx">
-      <DependentUpon>LoginCustomer.vb</DependentUpon>
+    <EmbeddedResource Include="0. Users\SplashScreen.resx">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="1AddBankCard.resx">
-      <DependentUpon>1AddBankCard.vb</DependentUpon>
+    <EmbeddedResource Include="1. Customer\CustomerLogin.resx">
+      <DependentUpon>CustomerLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="1AddPaymentMethods.resx">
-      <DependentUpon>1AddPaymentMethods.vb</DependentUpon>
+    <EmbeddedResource Include="1. Customer\AddBankCard.resx">
+      <DependentUpon>AddBankCard.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="1CustomerProfile.resx">
-      <DependentUpon>1CustomerProfile.vb</DependentUpon>
+    <EmbeddedResource Include="1. Customer\AddPaymentMethods.resx">
+      <DependentUpon>AddPaymentMethods.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="1FbCafe.resx">
-      <DependentUpon>1FbCafe.vb</DependentUpon>
+    <EmbeddedResource Include="1. Customer\CustomerNotification.resx">
+      <DependentUpon>CustomerNotification.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="1ViewFeedBack.resx">
-      <DependentUpon>1ViewFeedBack.vb</DependentUpon>
+    <EmbeddedResource Include="1. Customer\CustomerProfile.resx">
+      <DependentUpon>CustomerProfile.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="2. Cafe Owner\LoginCafeOwner.resx">
-      <DependentUpon>LoginCafeOwner.vb</DependentUpon>
+    <EmbeddedResource Include="1. Customer\CustomerTransactionHistory.resx">
+      <DependentUpon>CustomerTransactionHistory.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="3RiderProfile.resx">
-      <DependentUpon>3RiderProfile.vb</DependentUpon>
+    <EmbeddedResource Include="1. Customer\FbCafe.resx">
+      <DependentUpon>FbCafe.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="0AccSelect.resx">
-      <DependentUpon>0AccSelect.vb</DependentUpon>
+    <EmbeddedResource Include="1. Customer\MyPoints.resx">
+      <DependentUpon>MyPoints.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="1FoodOrder.resx">
-      <DependentUpon>1FoodOrder.vb</DependentUpon>
+    <EmbeddedResource Include="1. Customer\OrderStatus.resx">
+      <DependentUpon>OrderStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1. Customer\OrderSummary.resx">
+      <DependentUpon>OrderSummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1. Customer\ViewFeedBack.resx">
+      <DependentUpon>ViewFeedBack.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2. Cafe Owner\CafeOwnerLogin.resx">
+      <DependentUpon>CafeOwnerLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2. Cafe Owner\CafeOwnerNotification.resx">
+      <DependentUpon>CafeOwnerNotification.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2. Cafe Owner\CafeOwnerReceipt.resx">
+      <DependentUpon>CafeOwnerReceipt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2. Cafe Owner\CafeOwnerTransactionHistory.resx">
+      <DependentUpon>CafeOwnerTransactionHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2. Cafe Owner\CafeOwnerViewFeedback.resx">
+      <DependentUpon>CafeOwnerViewFeedback.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3. Rider\RiderNotification.resx">
+      <DependentUpon>RiderNotification.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3. Rider\RiderProfile.resx">
+      <DependentUpon>RiderProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0. Users\AccSelect.resx">
+      <DependentUpon>AccSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1. Customer\FoodOrder.resx">
+      <DependentUpon>FoodOrder.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="1. Customer\CustomerSignUp.resx">
       <DependentUpon>CustomerSignUp.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="3. Rider\RiderReceipt.resx">
+      <DependentUpon>RiderReceipt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3. Rider\RiderTransactionHistory.resx">
+      <DependentUpon>RiderTransactionHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3. Rider\RiderViewFeedback.resx">
+      <DependentUpon>RiderViewFeedback.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4. Admin\AdminLogin.resx">
+      <DependentUpon>AdminLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4. Admin\AdminViewFeedback.resx">
+      <DependentUpon>AdminViewFeedback.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CloseMinimize.resx">
       <DependentUpon>CloseMinimize.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="1FbApplication.resx">
-      <DependentUpon>1FbApplication.vb</DependentUpon>
+    <EmbeddedResource Include="1. Customer\FbApplication.resx">
+      <DependentUpon>FbApplication.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="1FbRider.resx">
-      <DependentUpon>1FbRider.vb</DependentUpon>
+    <EmbeddedResource Include="1. Customer\FbRider.resx">
+      <DependentUpon>FbRider.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="0Homepage.resx">
-      <DependentUpon>0Homepage.vb</DependentUpon>
+    <EmbeddedResource Include="0. Users\CustomerHomepage.resx">
+      <DependentUpon>CustomerHomepage.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="3. Rider\LoginRider.resx">
-      <DependentUpon>LoginRider.vb</DependentUpon>
+    <EmbeddedResource Include="3. Rider\RiderLogin.resx">
+      <DependentUpon>RiderLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
@@ -313,17 +470,17 @@
     <EmbeddedResource Include="3. Rider\RiderSignUp.resx">
       <DependentUpon>RiderSignUp.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="0Profile.resx">
-      <DependentUpon>0Profile.vb</DependentUpon>
+    <EmbeddedResource Include="0. Users\CustomerEditProfile.resx">
+      <DependentUpon>CustomerEditProfile.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="2NewMenu.resx">
-      <DependentUpon>2NewMenu.vb</DependentUpon>
+    <EmbeddedResource Include="2. Cafe Owner\NewMenu.resx">
+      <DependentUpon>NewMenu.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="1Payment.resx">
-      <DependentUpon>1Payment.vb</DependentUpon>
+    <EmbeddedResource Include="1. Customer\Payment.resx">
+      <DependentUpon>Payment.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="4RegistrationAproval.resx">
-      <DependentUpon>4RegistrationAproval.vb</DependentUpon>
+    <EmbeddedResource Include="4. Admin\RegistrationAproval.resx">
+      <DependentUpon>RegistrationAproval.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -339,10 +496,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="OrderJeDatabaseDataSet.xsc">
+      <DependentUpon>OrderJeDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OrderJeDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrderJeDatabaseDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrderJeDatabaseDataSet.xss">
+      <DependentUpon>OrderJeDatabaseDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\OrderJeLogo.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="4. Admin\" />
+    <None Include="Resources\Rider.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\back.png" />
@@ -454,6 +622,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-time-machine-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Admin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cafe Owner.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OrderJeDatabase.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Delivery.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
