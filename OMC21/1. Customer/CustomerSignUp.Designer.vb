@@ -44,7 +44,7 @@ Partial Class CustomerSignUp
         Me.Label12 = New System.Windows.Forms.Label()
         Me.picProfile = New System.Windows.Forms.PictureBox()
         Me.txtPhone = New System.Windows.Forms.MaskedTextBox()
-        Me.cboShowPassword = New System.Windows.Forms.CheckBox()
+        Me.chkShowPassword = New System.Windows.Forms.CheckBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.CloseMinimize1 = New OMC21.CloseMinimize()
         Me.txtVillage = New System.Windows.Forms.TextBox()
@@ -278,16 +278,16 @@ Partial Class CustomerSignUp
         Me.txtPhone.Size = New System.Drawing.Size(192, 24)
         Me.txtPhone.TabIndex = 76
         '
-        'cboShowPassword
+        'chkShowPassword
         '
-        Me.cboShowPassword.AutoSize = True
-        Me.cboShowPassword.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboShowPassword.Location = New System.Drawing.Point(65, 455)
-        Me.cboShowPassword.Name = "cboShowPassword"
-        Me.cboShowPassword.Size = New System.Drawing.Size(112, 20)
-        Me.cboShowPassword.TabIndex = 77
-        Me.cboShowPassword.Text = "Show password"
-        Me.cboShowPassword.UseVisualStyleBackColor = True
+        Me.chkShowPassword.AutoSize = True
+        Me.chkShowPassword.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkShowPassword.Location = New System.Drawing.Point(65, 455)
+        Me.chkShowPassword.Name = "chkShowPassword"
+        Me.chkShowPassword.Size = New System.Drawing.Size(112, 20)
+        Me.chkShowPassword.TabIndex = 77
+        Me.chkShowPassword.Text = "Show password"
+        Me.chkShowPassword.UseVisualStyleBackColor = True
         '
         'OpenFileDialog1
         '
@@ -332,7 +332,7 @@ Partial Class CustomerSignUp
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtVillage)
         Me.Controls.Add(Me.CloseMinimize1)
-        Me.Controls.Add(Me.cboShowPassword)
+        Me.Controls.Add(Me.chkShowPassword)
         Me.Controls.Add(Me.txtPhone)
         Me.Controls.Add(Me.picProfile)
         Me.Controls.Add(Me.Label12)
@@ -389,7 +389,7 @@ Partial Class CustomerSignUp
     Friend WithEvents Label12 As Label
     Friend WithEvents picProfile As PictureBox
     Friend WithEvents txtPhone As MaskedTextBox
-    Friend WithEvents cboShowPassword As CheckBox
+    Friend WithEvents chkShowPassword As CheckBox
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents CloseMinimize1 As CloseMinimize
     Friend WithEvents txtVillage As TextBox

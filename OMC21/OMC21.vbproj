@@ -116,8 +116,32 @@
     <Compile Include="0. Users\AboutUs.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="0. Users\AdminHomepage.Designer.vb">
+      <DependentUpon>AdminHomepage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="0. Users\AdminHomepage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="0. Users\CafeOwnerHomepage.Designer.vb">
+      <DependentUpon>CafeOwnerHomepage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="0. Users\CafeOwnerHomepage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="0. Users\GlobalVariables.vb" />
     <Compile Include="0. Users\ModuleEncrypt.vb" />
+    <Compile Include="0. Users\RiderEditProfile.Designer.vb">
+      <DependentUpon>RiderEditProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="0. Users\RiderEditProfile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="0. Users\RiderHomepage.Designer.vb">
+      <DependentUpon>RiderHomepage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="0. Users\RiderHomepage.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="0. Users\SplashScreen.Designer.vb">
       <DependentUpon>SplashScreen.vb</DependentUpon>
     </Compile>
@@ -365,6 +389,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="0. Users\AdminHomepage.resx">
+      <DependentUpon>AdminHomepage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0. Users\CafeOwnerHomepage.resx">
+      <DependentUpon>CafeOwnerHomepage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0. Users\RiderEditProfile.resx">
+      <DependentUpon>RiderEditProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0. Users\RiderHomepage.resx">
+      <DependentUpon>RiderHomepage.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="0. Users\SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
     </EmbeddedResource>
@@ -639,6 +675,25 @@
     <Content Include="OrderJeDatabase.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\loading.jpg" />
+    <None Include="Resources\OrderJeLogo1.png" />
+    <None Include="Resources\loading.png" />
+    <None Include="Resources\OrderJeLogo.png" />
+    <None Include="Resources\UsersData.png" />
+    <None Include="Resources\NewMenu.png" />
+    <None Include="Resources\AboutUs.png" />
+    <None Include="Resources\PaymentMethods.png" />
+    <None Include="Resources\MyPoints.png" />
+    <None Include="Resources\TransactionHistory.png" />
+    <None Include="Resources\PersonalDetails.png" />
+    <None Include="Resources\Feedback.png" />
+    <None Include="Resources\Delivery.png" />
+    <None Include="Resources\MiniGame.png" />
+    <None Include="Resources\Cafe.png" />
+    <None Include="Resources\Home3.png" />
+    <None Include="Resources\Home2.png" />
+    <None Include="Resources\Home1.png" />
+    <None Include="Resources\Home.png" />
     <None Include="Resources\Delivery.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

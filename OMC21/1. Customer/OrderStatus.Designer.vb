@@ -45,7 +45,7 @@ Partial Class OrderStatus
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label14.ForeColor = System.Drawing.Color.White
         Me.Label14.Location = New System.Drawing.Point(208, 42)
         Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
@@ -56,7 +56,8 @@ Partial Class OrderStatus
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(209, 147)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(221, 161)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(140, 17)
         Me.Label1.TabIndex = 73
@@ -64,8 +65,9 @@ Partial Class OrderStatus
         '
         'picDelivery
         '
+        Me.picDelivery.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.picDelivery.Image = Global.OMC21.My.Resources.Resources.Delivery
-        Me.picDelivery.Location = New System.Drawing.Point(45, 115)
+        Me.picDelivery.Location = New System.Drawing.Point(45, 130)
         Me.picDelivery.Name = "picDelivery"
         Me.picDelivery.Size = New System.Drawing.Size(141, 138)
         Me.picDelivery.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -89,7 +91,8 @@ Partial Class OrderStatus
         'lblTimer
         '
         Me.lblTimer.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
-        Me.lblTimer.Location = New System.Drawing.Point(220, 184)
+        Me.lblTimer.ForeColor = System.Drawing.Color.White
+        Me.lblTimer.Location = New System.Drawing.Point(232, 198)
         Me.lblTimer.Name = "lblTimer"
         Me.lblTimer.Size = New System.Drawing.Size(106, 41)
         Me.lblTimer.TabIndex = 75
@@ -99,16 +102,19 @@ Partial Class OrderStatus
         'lblRiderInfo
         '
         Me.lblRiderInfo.AutoSize = True
-        Me.lblRiderInfo.Location = New System.Drawing.Point(42, 286)
+        Me.lblRiderInfo.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRiderInfo.ForeColor = System.Drawing.Color.White
+        Me.lblRiderInfo.Location = New System.Drawing.Point(221, 319)
         Me.lblRiderInfo.Name = "lblRiderInfo"
-        Me.lblRiderInfo.Size = New System.Drawing.Size(66, 17)
+        Me.lblRiderInfo.Size = New System.Drawing.Size(68, 16)
         Me.lblRiderInfo.TabIndex = 76
         Me.lblRiderInfo.Text = "Rider Info"
         '
         'lblUsername
         '
         Me.lblUsername.AutoSize = True
-        Me.lblUsername.Location = New System.Drawing.Point(221, 326)
+        Me.lblUsername.ForeColor = System.Drawing.Color.White
+        Me.lblUsername.Location = New System.Drawing.Point(221, 347)
         Me.lblUsername.Name = "lblUsername"
         Me.lblUsername.Size = New System.Drawing.Size(61, 17)
         Me.lblUsername.TabIndex = 77
@@ -116,6 +122,7 @@ Partial Class OrderStatus
         '
         'picProfile
         '
+        Me.picProfile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.picProfile.Image = Global.OMC21.My.Resources.Resources.profilePic
         Me.picProfile.Location = New System.Drawing.Point(45, 306)
         Me.picProfile.Name = "picProfile"
@@ -127,7 +134,8 @@ Partial Class OrderStatus
         'lblUserID
         '
         Me.lblUserID.AutoSize = True
-        Me.lblUserID.Location = New System.Drawing.Point(290, 352)
+        Me.lblUserID.ForeColor = System.Drawing.Color.White
+        Me.lblUserID.Location = New System.Drawing.Point(290, 373)
         Me.lblUserID.Name = "lblUserID"
         Me.lblUserID.Size = New System.Drawing.Size(44, 17)
         Me.lblUserID.TabIndex = 79
@@ -136,7 +144,8 @@ Partial Class OrderStatus
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(221, 352)
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(221, 373)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(63, 17)
         Me.Label2.TabIndex = 80
@@ -145,7 +154,8 @@ Partial Class OrderStatus
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(221, 393)
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(221, 414)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(105, 17)
         Me.Label3.TabIndex = 81
@@ -154,7 +164,8 @@ Partial Class OrderStatus
         'lblPhone
         '
         Me.lblPhone.AutoSize = True
-        Me.lblPhone.Location = New System.Drawing.Point(332, 393)
+        Me.lblPhone.ForeColor = System.Drawing.Color.White
+        Me.lblPhone.Location = New System.Drawing.Point(332, 414)
         Me.lblPhone.Name = "lblPhone"
         Me.lblPhone.Size = New System.Drawing.Size(112, 17)
         Me.lblPhone.TabIndex = 82
@@ -164,7 +175,7 @@ Partial Class OrderStatus
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(152, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.Controls.Add(Me.lblPhone)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)

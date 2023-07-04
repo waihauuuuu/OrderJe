@@ -1,3 +1,3 @@
-﻿Public Class _3RiderProfile
+﻿Public Class RiderProfile
 
 End Class

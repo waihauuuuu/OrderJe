@@ -41,6 +41,7 @@ Partial Class RiderViewFeedback
         '
         'PictureBox1
         '
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox1.Image = Global.OMC21.My.Resources.Resources.profilePic
         Me.PictureBox1.Location = New System.Drawing.Point(45, 114)
         Me.PictureBox1.Name = "PictureBox1"
@@ -53,7 +54,7 @@ Partial Class RiderViewFeedback
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
-        Me.Label14.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label14.ForeColor = System.Drawing.Color.White
         Me.Label14.Location = New System.Drawing.Point(208, 42)
         Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
@@ -76,7 +77,7 @@ Partial Class RiderViewFeedback
         '
         Me.lblUsername.AutoSize = True
         Me.lblUsername.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUsername.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.lblUsername.ForeColor = System.Drawing.Color.White
         Me.lblUsername.Location = New System.Drawing.Point(160, 129)
         Me.lblUsername.Name = "lblUsername"
         Me.lblUsername.Size = New System.Drawing.Size(80, 23)
@@ -87,7 +88,7 @@ Partial Class RiderViewFeedback
         '
         Me.lblUserID.AutoSize = True
         Me.lblUserID.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUserID.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.lblUserID.ForeColor = System.Drawing.Color.White
         Me.lblUserID.Location = New System.Drawing.Point(244, 167)
         Me.lblUserID.Name = "lblUserID"
         Me.lblUserID.Size = New System.Drawing.Size(58, 23)
@@ -98,7 +99,7 @@ Partial Class RiderViewFeedback
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(162, 167)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(76, 23)
@@ -109,7 +110,7 @@ Partial Class RiderViewFeedback
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(363, 129)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(57, 23)
@@ -172,7 +173,7 @@ Partial Class RiderViewFeedback
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(152, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
@@ -187,7 +188,7 @@ Partial Class RiderViewFeedback
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "RiderViewFeedback"
         Me.Size = New System.Drawing.Size(622, 470)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

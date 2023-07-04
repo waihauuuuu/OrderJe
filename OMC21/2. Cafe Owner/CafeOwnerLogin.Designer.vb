@@ -23,47 +23,28 @@ Partial Class CafeOwnerLogin
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CafeOwnerLogin))
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.btnLogin = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.picLogo = New System.Windows.Forms.PictureBox()
-        Me.CloseMinimize1 = New OMC21.CloseMinimize()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.chkShowPassword = New System.Windows.Forms.CheckBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
+        Me.CloseMinimize1 = New OMC21.CloseMinimize()
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button2
+        'btnLogin
         '
-        Me.Button2.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(291, 296)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(82, 30)
-        Me.Button2.TabIndex = 29
-        Me.Button2.Text = "LOG IN"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(226, 254)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(216, 23)
-        Me.TextBox2.TabIndex = 28
-        Me.TextBox2.Text = "Password :"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(226, 209)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(216, 23)
-        Me.TextBox1.TabIndex = 27
-        Me.TextBox1.Text = "Email :"
+        Me.btnLogin.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogin.Location = New System.Drawing.Point(291, 296)
+        Me.btnLogin.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(82, 30)
+        Me.btnLogin.TabIndex = 29
+        Me.btnLogin.Text = "LOG IN"
+        Me.btnLogin.UseVisualStyleBackColor = True
         '
         'Label3
         '
@@ -79,7 +60,8 @@ Partial Class CafeOwnerLogin
         '
         'btnBack
         '
-        Me.btnBack.BackColor = System.Drawing.Color.Brown
+        Me.btnBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.btnBack.FlatAppearance.BorderSize = 0
         Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBack.ForeColor = System.Drawing.Color.Brown
@@ -101,16 +83,6 @@ Partial Class CafeOwnerLogin
         Me.picLogo.TabIndex = 30
         Me.picLogo.TabStop = False
         '
-        'CloseMinimize1
-        '
-        Me.CloseMinimize1.BackColor = System.Drawing.Color.Transparent
-        Me.CloseMinimize1.ForeColor = System.Drawing.Color.Transparent
-        Me.CloseMinimize1.Location = New System.Drawing.Point(590, 5)
-        Me.CloseMinimize1.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.CloseMinimize1.Name = "CloseMinimize1"
-        Me.CloseMinimize1.Size = New System.Drawing.Size(58, 31)
-        Me.CloseMinimize1.TabIndex = 32
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -123,18 +95,62 @@ Partial Class CafeOwnerLogin
         Me.Label1.TabIndex = 33
         Me.Label1.Text = "Hello, Cafe Owner!"
         '
+        'chkShowPassword
+        '
+        Me.chkShowPassword.AutoSize = True
+        Me.chkShowPassword.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.chkShowPassword.Location = New System.Drawing.Point(229, 264)
+        Me.chkShowPassword.Name = "chkShowPassword"
+        Me.chkShowPassword.Size = New System.Drawing.Size(109, 21)
+        Me.chkShowPassword.TabIndex = 36
+        Me.chkShowPassword.Text = "Show password"
+        Me.chkShowPassword.UseVisualStyleBackColor = True
+        '
+        'txtPassword
+        '
+        Me.txtPassword.Font = New System.Drawing.Font("Comic Sans MS", 9.0!)
+        Me.txtPassword.ForeColor = System.Drawing.SystemColors.InactiveCaption
+        Me.txtPassword.Location = New System.Drawing.Point(229, 235)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Size = New System.Drawing.Size(216, 24)
+        Me.txtPassword.TabIndex = 35
+        Me.txtPassword.Text = "Password"
+        '
+        'txtUsername
+        '
+        Me.txtUsername.Font = New System.Drawing.Font("Comic Sans MS", 9.0!)
+        Me.txtUsername.ForeColor = System.Drawing.SystemColors.InactiveCaption
+        Me.txtUsername.Location = New System.Drawing.Point(229, 198)
+        Me.txtUsername.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.Size = New System.Drawing.Size(216, 24)
+        Me.txtUsername.TabIndex = 34
+        Me.txtUsername.Text = "Username"
+        '
+        'CloseMinimize1
+        '
+        Me.CloseMinimize1.BackColor = System.Drawing.Color.Transparent
+        Me.CloseMinimize1.ForeColor = System.Drawing.Color.Transparent
+        Me.CloseMinimize1.Location = New System.Drawing.Point(590, 5)
+        Me.CloseMinimize1.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.CloseMinimize1.Name = "CloseMinimize1"
+        Me.CloseMinimize1.Size = New System.Drawing.Size(58, 31)
+        Me.CloseMinimize1.TabIndex = 32
+        '
         'CafeOwnerLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Brown
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(660, 415)
+        Me.Controls.Add(Me.chkShowPassword)
+        Me.Controls.Add(Me.txtPassword)
+        Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CloseMinimize1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.btnBack)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.picLogo)
         Me.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -149,12 +165,13 @@ Partial Class CafeOwnerLogin
 
     End Sub
 
-    Friend WithEvents Button2 As Button
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents btnLogin As Button
     Friend WithEvents btnBack As Button
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents picLogo As PictureBox
     Friend WithEvents CloseMinimize1 As CloseMinimize
     Friend WithEvents Label1 As Label
+    Friend WithEvents chkShowPassword As CheckBox
+    Friend WithEvents txtPassword As TextBox
+    Friend WithEvents txtUsername As TextBox
 End Class

@@ -164,7 +164,7 @@ Partial Class Payment
         Me.RadioButton6.AutoSize = True
         Me.RadioButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.RadioButton6.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.RadioButton6.ForeColor = System.Drawing.Color.White
         Me.RadioButton6.Location = New System.Drawing.Point(235, 49)
         Me.RadioButton6.Margin = New System.Windows.Forms.Padding(4)
         Me.RadioButton6.Name = "RadioButton6"
@@ -178,7 +178,7 @@ Partial Class Payment
         Me.RadioButton5.AutoSize = True
         Me.RadioButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.RadioButton5.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.RadioButton5.ForeColor = System.Drawing.Color.White
         Me.RadioButton5.Location = New System.Drawing.Point(78, 49)
         Me.RadioButton5.Margin = New System.Windows.Forms.Padding(4)
         Me.RadioButton5.Name = "RadioButton5"
@@ -191,7 +191,7 @@ Partial Class Payment
         '
         Me.RadioButton4.AutoSize = True
         Me.RadioButton4.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.RadioButton4.ForeColor = System.Drawing.Color.White
         Me.RadioButton4.Location = New System.Drawing.Point(16, 67)
         Me.RadioButton4.Margin = New System.Windows.Forms.Padding(4)
         Me.RadioButton4.Name = "RadioButton4"
@@ -206,7 +206,7 @@ Partial Class Payment
         Me.RadioButton3.AutoSize = True
         Me.RadioButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.RadioButton3.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.RadioButton3.ForeColor = System.Drawing.Color.White
         Me.RadioButton3.Location = New System.Drawing.Point(16, 30)
         Me.RadioButton3.Margin = New System.Windows.Forms.Padding(4)
         Me.RadioButton3.Name = "RadioButton3"
@@ -340,7 +340,7 @@ Partial Class Payment
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label14.ForeColor = System.Drawing.Color.White
         Me.Label14.Location = New System.Drawing.Point(208, 42)
         Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
@@ -363,7 +363,7 @@ Partial Class Payment
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox1.Controls.Add(Me.ComboBox1)
-        Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(22, 128)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(182, 121)
@@ -375,6 +375,7 @@ Partial Class Payment
         '
         Me.GroupBox2.Controls.Add(Me.RadioButton3)
         Me.GroupBox2.Controls.Add(Me.RadioButton4)
+        Me.GroupBox2.ForeColor = System.Drawing.Color.White
         Me.GroupBox2.Location = New System.Drawing.Point(232, 128)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(200, 121)
@@ -386,7 +387,7 @@ Partial Class Payment
         '
         Me.GroupBox3.Controls.Add(Me.RadioButton6)
         Me.GroupBox3.Controls.Add(Me.RadioButton5)
-        Me.GroupBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.GroupBox3.ForeColor = System.Drawing.Color.White
         Me.GroupBox3.Location = New System.Drawing.Point(22, 276)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(410, 109)
@@ -396,6 +397,7 @@ Partial Class Payment
         '
         'btnCheckOut
         '
+        Me.btnCheckOut.ForeColor = System.Drawing.Color.White
         Me.btnCheckOut.Location = New System.Drawing.Point(171, 413)
         Me.btnCheckOut.Name = "btnCheckOut"
         Me.btnCheckOut.Size = New System.Drawing.Size(97, 28)
@@ -407,7 +409,7 @@ Partial Class Payment
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(152, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.Controls.Add(Me.btnCheckOut)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)

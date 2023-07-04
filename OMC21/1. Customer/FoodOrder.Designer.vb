@@ -57,7 +57,7 @@ Partial Class FoodOrder
         '
         Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button12.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button12.ForeColor = System.Drawing.Color.Maroon
+        Me.Button12.ForeColor = System.Drawing.Color.White
         Me.Button12.Location = New System.Drawing.Point(272, 174)
         Me.Button12.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button12.Name = "Button12"
@@ -70,7 +70,7 @@ Partial Class FoodOrder
         '
         Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button11.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button11.ForeColor = System.Drawing.Color.Maroon
+        Me.Button11.ForeColor = System.Drawing.Color.White
         Me.Button11.Location = New System.Drawing.Point(155, 174)
         Me.Button11.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button11.Name = "Button11"
@@ -188,7 +188,7 @@ Partial Class FoodOrder
         '
         Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button10.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button10.ForeColor = System.Drawing.Color.Maroon
+        Me.Button10.ForeColor = System.Drawing.Color.White
         Me.Button10.Location = New System.Drawing.Point(35, 174)
         Me.Button10.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Button10.Name = "Button10"
@@ -201,7 +201,7 @@ Partial Class FoodOrder
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label14.ForeColor = System.Drawing.Color.White
         Me.Label14.Location = New System.Drawing.Point(208, 42)
         Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
@@ -227,7 +227,7 @@ Partial Class FoodOrder
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(152, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.pnlCart)

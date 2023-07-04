@@ -1,16 +1,6 @@
 ﻿Imports System.Security.Cryptography
 Imports System.Text
 Module ModuleEncrypt
-    'This module is to encrypt password
-    Sub Main()
-        ' Retrieve password from textbox input
-        Dim formInstance As New CustomerSignUp()
-        Dim password As String = formInstance.TextBoxValue
-
-        ' Encrypt the password
-        Dim encryptedPassword As String = EncryptPassword(password)
-    End Sub
-
     Function EncryptPassword(password As String) As String
         ' Create an instance of the MD5 cryptographic algorithm
         Using md5 As New MD5CryptoServiceProvider()

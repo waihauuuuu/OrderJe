@@ -32,7 +32,7 @@ Public Class CustomerLogin
 
         'connect to database
         Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
-        Dim strsql As String = "SELECT * FROM CustomerDatabase WHERE Username = @username"
+        Dim strsql As String = "SELECT * FROM UserDatabase WHERE Username = @username"
         Dim mycmd As New OleDbCommand(strsql, mycon)
 
         'sets the value of the parameter to the text entered in the "txtUsername" control
@@ -43,33 +43,33 @@ Public Class CustomerLogin
         'reader: input for "username" from user can find in database or not
         Dim reader As OleDbDataReader = mycmd.ExecuteReader()
         If reader.Read() Then
-            Dim storedPassword As String = reader("Password (encrypted)").ToString()
-            If EncryptPassword(txtPassword.Text) = storedPassword Then
-
-                'Username and password match
-                MsgBox("Login successful!", 0 + MsgBoxStyle.Information, "Login Status")
-
-                'retrieve the user ID and username from the database
-                'Share the data to another form 
-                GlobalVariables.UserID = reader("ID")
-                GlobalVariables.Username = reader("Username")
-                GlobalVariables.ProfilePicture = reader("Picture")
-
-                'change form
-                Me.Hide()
-                CustomerHomepage.Show()
+            If reader("User Type") = "Customer" Then
+                Dim storedPassword As String = reader("Password (encrypted)").ToString()
+                If EncryptPassword(txtPassword.Text) = storedPassword Then
+                    'Username and password match
+                    MsgBox("Login successful!", 0 + MsgBoxStyle.Information, "Login Status")
+                    'retrieve the user ID and username from the database
+                    'Share the data to another form 
+                    GlobalVariables.UserID = reader("ID")
+                    GlobalVariables.Username = reader("Username")
+                    If Not IsDBNull(reader("Picture")) Then
+                        GlobalVariables.ProfilePicture = reader("Picture")
+                    End If
+                    'change form
+                    Me.Hide()
+                    CustomerHomepage.Show()
+                Else
+                    'Password is incorrect
+                    MsgBox("Incorrect password!", 0 + MsgBoxStyle.Exclamation, "Login Status")
+                End If
             Else
-
-                'Password is incorrect
-                MsgBox("Incorrect password!", 0 + MsgBoxStyle.Information, "Login Status")
-
+                'Username is incorrect
+                MsgBox("Username not found!", 0 + MsgBoxStyle.Exclamation, "Login Status")
             End If
-
         Else
-            'Username is incorrect
-            MsgBox("Username not found!", 0 + MsgBoxStyle.Information, "Login Status")
-        End If
 
+            MsgBox("Username not found!", 0 + MsgBoxStyle.Exclamation, "Login Status")
+        End If
         reader.Close()
 
         mycon.Close()

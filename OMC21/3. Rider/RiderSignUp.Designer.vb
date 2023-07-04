@@ -28,11 +28,9 @@ Partial Class RiderSignUp
         Me.Label1 = New System.Windows.Forms.Label()
         Me.picLogo = New System.Windows.Forms.PictureBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.CloseMinimize1 = New OMC21.CloseMinimize()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtVillage = New System.Windows.Forms.TextBox()
-        Me.cboShowPassword = New System.Windows.Forms.CheckBox()
+        Me.chkShowPassword = New System.Windows.Forms.CheckBox()
         Me.txtPhone = New System.Windows.Forms.MaskedTextBox()
         Me.picProfile = New System.Windows.Forms.PictureBox()
         Me.btnSignup = New System.Windows.Forms.Button()
@@ -48,6 +46,11 @@ Partial Class RiderSignUp
         Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.txtFullName = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.cboVehicleType = New System.Windows.Forms.ComboBox()
+        Me.CloseMinimize1 = New OMC21.CloseMinimize()
+        Me.txtNumberPlate = New System.Windows.Forms.MaskedTextBox()
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picProfile, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -110,16 +113,6 @@ Partial Class RiderSignUp
         Me.Label12.TabIndex = 72
         Me.Label12.Text = "Hi, Rider!"
         '
-        'CloseMinimize1
-        '
-        Me.CloseMinimize1.BackColor = System.Drawing.Color.Transparent
-        Me.CloseMinimize1.ForeColor = System.Drawing.Color.Transparent
-        Me.CloseMinimize1.Location = New System.Drawing.Point(700, 3)
-        Me.CloseMinimize1.Margin = New System.Windows.Forms.Padding(4)
-        Me.CloseMinimize1.Name = "CloseMinimize1"
-        Me.CloseMinimize1.Size = New System.Drawing.Size(60, 30)
-        Me.CloseMinimize1.TabIndex = 74
-        '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
@@ -132,29 +125,21 @@ Partial Class RiderSignUp
         Me.Label3.Location = New System.Drawing.Point(306, 267)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(44, 16)
+        Me.Label3.Size = New System.Drawing.Size(0, 16)
         Me.Label3.TabIndex = 98
-        Me.Label3.Text = "Village"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'txtVillage
+        'chkShowPassword
         '
-        Me.txtVillage.Location = New System.Drawing.Point(300, 286)
-        Me.txtVillage.Name = "txtVillage"
-        Me.txtVillage.Size = New System.Drawing.Size(192, 24)
-        Me.txtVillage.TabIndex = 97
-        '
-        'cboShowPassword
-        '
-        Me.cboShowPassword.AutoSize = True
-        Me.cboShowPassword.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboShowPassword.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.cboShowPassword.Location = New System.Drawing.Point(65, 455)
-        Me.cboShowPassword.Name = "cboShowPassword"
-        Me.cboShowPassword.Size = New System.Drawing.Size(112, 20)
-        Me.cboShowPassword.TabIndex = 96
-        Me.cboShowPassword.Text = "Show password"
-        Me.cboShowPassword.UseVisualStyleBackColor = True
+        Me.chkShowPassword.AutoSize = True
+        Me.chkShowPassword.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.chkShowPassword.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.chkShowPassword.Location = New System.Drawing.Point(65, 500)
+        Me.chkShowPassword.Name = "chkShowPassword"
+        Me.chkShowPassword.Size = New System.Drawing.Size(112, 20)
+        Me.chkShowPassword.TabIndex = 96
+        Me.chkShowPassword.Text = "Show password"
+        Me.chkShowPassword.UseVisualStyleBackColor = True
         '
         'txtPhone
         '
@@ -170,7 +155,7 @@ Partial Class RiderSignUp
         Me.picProfile.Location = New System.Drawing.Point(577, 153)
         Me.picProfile.Name = "picProfile"
         Me.picProfile.Size = New System.Drawing.Size(100, 123)
-        Me.picProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.picProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.picProfile.TabIndex = 94
         Me.picProfile.TabStop = False
         '
@@ -178,7 +163,7 @@ Partial Class RiderSignUp
         '
         Me.btnSignup.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.btnSignup.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnSignup.Location = New System.Drawing.Point(553, 432)
+        Me.btnSignup.Location = New System.Drawing.Point(553, 477)
         Me.btnSignup.Name = "btnSignup"
         Me.btnSignup.Size = New System.Drawing.Size(146, 43)
         Me.btnSignup.TabIndex = 93
@@ -201,7 +186,7 @@ Partial Class RiderSignUp
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label9.Location = New System.Drawing.Point(71, 403)
+        Me.Label9.Location = New System.Drawing.Point(71, 448)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(107, 16)
@@ -214,7 +199,7 @@ Partial Class RiderSignUp
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label10.Location = New System.Drawing.Point(71, 352)
+        Me.Label10.Location = New System.Drawing.Point(71, 397)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(59, 16)
@@ -224,7 +209,7 @@ Partial Class RiderSignUp
         '
         'txtConfirmPassword
         '
-        Me.txtConfirmPassword.Location = New System.Drawing.Point(65, 422)
+        Me.txtConfirmPassword.Location = New System.Drawing.Point(65, 467)
         Me.txtConfirmPassword.Name = "txtConfirmPassword"
         Me.txtConfirmPassword.Size = New System.Drawing.Size(192, 24)
         Me.txtConfirmPassword.TabIndex = 89
@@ -232,7 +217,7 @@ Partial Class RiderSignUp
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(65, 371)
+        Me.txtPassword.Location = New System.Drawing.Point(65, 416)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(192, 24)
         Me.txtPassword.TabIndex = 88
@@ -311,15 +296,72 @@ Partial Class RiderSignUp
         Me.txtFullName.Size = New System.Drawing.Size(427, 24)
         Me.txtFullName.TabIndex = 81
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label8.Location = New System.Drawing.Point(71, 323)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(86, 16)
+        Me.Label8.TabIndex = 99
+        Me.Label8.Text = "Number Plate"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label11.Location = New System.Drawing.Point(306, 267)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(81, 16)
+        Me.Label11.TabIndex = 100
+        Me.Label11.Text = "Vehicle Type"
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'cboVehicleType
+        '
+        Me.cboVehicleType.BackColor = System.Drawing.Color.White
+        Me.cboVehicleType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboVehicleType.FormattingEnabled = True
+        Me.cboVehicleType.Items.AddRange(New Object() {"Car", "Motorcycle", "Bicycle", "Scooter"})
+        Me.cboVehicleType.Location = New System.Drawing.Point(300, 285)
+        Me.cboVehicleType.Name = "cboVehicleType"
+        Me.cboVehicleType.Size = New System.Drawing.Size(192, 25)
+        Me.cboVehicleType.TabIndex = 101
+        '
+        'CloseMinimize1
+        '
+        Me.CloseMinimize1.BackColor = System.Drawing.Color.Transparent
+        Me.CloseMinimize1.ForeColor = System.Drawing.Color.Transparent
+        Me.CloseMinimize1.Location = New System.Drawing.Point(700, 3)
+        Me.CloseMinimize1.Margin = New System.Windows.Forms.Padding(4)
+        Me.CloseMinimize1.Name = "CloseMinimize1"
+        Me.CloseMinimize1.Size = New System.Drawing.Size(60, 30)
+        Me.CloseMinimize1.TabIndex = 74
+        '
+        'txtNumberPlate
+        '
+        Me.txtNumberPlate.Location = New System.Drawing.Point(65, 342)
+        Me.txtNumberPlate.Name = "txtNumberPlate"
+        Me.txtNumberPlate.Size = New System.Drawing.Size(192, 24)
+        Me.txtNumberPlate.TabIndex = 102
+        '
         'RiderSignUp
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Brown
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(767, 547)
+        Me.Controls.Add(Me.txtNumberPlate)
+        Me.Controls.Add(Me.cboVehicleType)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.txtVillage)
-        Me.Controls.Add(Me.cboShowPassword)
+        Me.Controls.Add(Me.chkShowPassword)
         Me.Controls.Add(Me.txtPhone)
         Me.Controls.Add(Me.picProfile)
         Me.Controls.Add(Me.btnSignup)
@@ -345,6 +387,7 @@ Partial Class RiderSignUp
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "RiderSignUp"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "RiderSignUp"
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picProfile, System.ComponentModel.ISupportInitialize).EndInit()
@@ -360,8 +403,7 @@ Partial Class RiderSignUp
     Friend WithEvents CloseMinimize1 As CloseMinimize
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents Label3 As Label
-    Friend WithEvents txtVillage As TextBox
-    Friend WithEvents cboShowPassword As CheckBox
+    Friend WithEvents chkShowPassword As CheckBox
     Friend WithEvents txtPhone As MaskedTextBox
     Friend WithEvents picProfile As PictureBox
     Friend WithEvents btnSignup As Button
@@ -377,4 +419,8 @@ Partial Class RiderSignUp
     Friend WithEvents txtEmail As TextBox
     Friend WithEvents txtUsername As TextBox
     Friend WithEvents txtFullName As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents cboVehicleType As ComboBox
+    Friend WithEvents txtNumberPlate As MaskedTextBox
 End Class

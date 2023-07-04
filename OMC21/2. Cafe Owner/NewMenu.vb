@@ -1,3 +1,3 @@
-﻿Public Class NewMenu1
+﻿Public Class NewMenu
 
 End Class
