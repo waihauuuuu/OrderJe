@@ -34,14 +34,17 @@ Partial Class CafeOwnerViewFeedback
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'FlowLayoutPanel1
         '
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(45, 226)
+        Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.FlowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(45, 240)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(526, 223)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(526, 209)
         Me.FlowLayoutPanel1.TabIndex = 98
         '
         'Button5
@@ -93,7 +96,7 @@ Partial Class CafeOwnerViewFeedback
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(41, 112)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(209, 23)
@@ -104,7 +107,7 @@ Partial Class CafeOwnerViewFeedback
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
-        Me.Label14.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label14.ForeColor = System.Drawing.Color.White
         Me.Label14.Location = New System.Drawing.Point(208, 42)
         Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
@@ -127,7 +130,7 @@ Partial Class CafeOwnerViewFeedback
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(42, 135)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(197, 17)
@@ -138,7 +141,7 @@ Partial Class CafeOwnerViewFeedback
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(41, 171)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(117, 23)
@@ -154,11 +157,23 @@ Partial Class CafeOwnerViewFeedback
         Me.ComboBox1.Size = New System.Drawing.Size(196, 25)
         Me.ComboBox1.TabIndex = 101
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(182, 197)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(77, 23)
+        Me.Label4.TabIndex = 102
+        Me.Label4.Text = "lblRating"
+        '
         'CafeOwnerViewFeedback
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(152, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
@@ -172,7 +187,7 @@ Partial Class CafeOwnerViewFeedback
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.PictureBox2)
         Me.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "CafeOwnerViewFeedback"
         Me.Size = New System.Drawing.Size(622, 470)
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -193,4 +208,5 @@ Partial Class CafeOwnerViewFeedback
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents Label4 As Label
 End Class

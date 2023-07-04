@@ -25,17 +25,22 @@ Public Class RiderSignUp
 
             'Ensure no empty textbox
         ElseIf String.IsNullOrWhiteSpace(txtFullName.Text) OrElse
-            String.IsNullOrWhiteSpace(txtUsername.Text) OrElse
-            String.IsNullOrWhiteSpace(txtEmail.Text) OrElse
-            Not (txtPhone.MaskFull OrElse txtPhone.Text.Length = 11) OrElse
-            String.IsNullOrWhiteSpace(txtVillage.Text) OrElse
-            String.IsNullOrWhiteSpace(txtPassword.Text) OrElse
-            String.IsNullOrWhiteSpace(txtConfirmPassword.Text) Then
+                String.IsNullOrWhiteSpace(txtUsername.Text) OrElse
+                String.IsNullOrWhiteSpace(txtEmail.Text) OrElse
+                Not (txtPhone.MaskFull OrElse txtPhone.Text.Length = 11) OrElse
+                String.IsNullOrWhiteSpace(txtPassword.Text) OrElse
+                String.IsNullOrWhiteSpace(txtConfirmPassword.Text) OrElse
+                String.IsNullOrWhiteSpace(cboVehicleType.SelectedItem) Then
             MsgBox("Please fill in all the required fields.", 0 + MsgBoxStyle.Exclamation, "Mising Information")
 
             'Ensure valid email format
         ElseIf Not ValidateEmailFormat(txtEmail.Text) Then
             MsgBox("Please enter a valid email address.", 0 + MsgBoxStyle.Exclamation, "Invalid Email")
+
+        ElseIf String.IsNullOrWhiteSpace(txtNumberPlate.Text) Then
+            If cboVehicleType.SelectedItem = "Car" OrElse cboVehicleType.SelectedItem = "Motorcycle" Then
+                MsgBox("Please fill in all the required fields.", 0 + MsgBoxStyle.Exclamation, "Mising Information")
+            End If
 
             'Update data to database
         Else
@@ -45,9 +50,9 @@ Public Class RiderSignUp
             picProfile.Image?.Save(imagePath, System.Drawing.Imaging.ImageFormat.Png) 'if picturebox contain image, then save image as png
 
             'Connect database
-            Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Msi\source\repos\OMC21\OMC21\OrderJeDatabase.accdb")
+            Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
             'insert into is a statement of SQL, CustomerDatabase is datatable name
-            Dim strsql As String = "INSERT INTO CustomerDatabase ([Full Name], [Username], [Email], [Phone Number], [Village], [Password (encrypted)], [Picture]) Values(@fullname, @username, @email, @phone, @village, @password, @picture)"
+            Dim strsql As String = "INSERT INTO UserDatabase ([Full Name], [Username], [Email], [Phone Number], [Vehicle Type], [Number Plate], [Password (encrypted)], [Picture], [User Type]) Values(@fullname, @username, @email, @phone, @vehicle, @numberplate, @password, @picture, @usertype)"
             Dim mycmd As New OleDbCommand(strsql, mycon)
 
             mycon.Open()
@@ -56,34 +61,26 @@ Public Class RiderSignUp
             mycmd.Parameters.AddWithValue("@username", txtUsername.Text)
             mycmd.Parameters.AddWithValue("@email", txtEmail.Text)
             mycmd.Parameters.AddWithValue("@phone", txtPhone.Text)
-            mycmd.Parameters.AddWithValue("@village", txtVillage.Text)
+            mycmd.Parameters.AddWithValue("@vehicle", cboVehicleType.Text)
+            mycmd.Parameters.AddWithValue("@numberplate", txtNumberPlate.Text)
             mycmd.Parameters.AddWithValue("@password", EncryptPassword(txtPassword.Text)) 'call module created, name = "ModuleEncrypt"
 
             'Check either picturebox is empty
             If picProfile.Image IsNot Nothing Then
                 mycmd.Parameters.AddWithValue("@picture", imagePath) 'If
             Else
-                mycmd.Parameters.AddWithValue("@picture", DBNull.Value) 'if empty, store nothing
+                mycmd.Parameters.AddWithValue("@picture", DBNull.Value) 'If empty, store nothing
             End If
 
-            'catch exception to prevent error
-            Try
-                'execute a SQL statement that does not return any data, such as an INSERT, UPDATE, DELETE, or CREATE TABLE statement
-                mycmd.ExecuteNonQuery()
+            mycmd.Parameters.AddWithValue("@usertype", "Rider")
 
-                mycon.Close()
-
-                'pop out messagebox
-                MsgBox("Your account has been successfully created!", 0 + MsgBoxStyle.Information, "Sign Up Account")
-
-                'Change form
-                Me.Hide()
-                CustomerLogin.Show()
-
-            Catch ex As Exception
-                MsgBox(ex.Message) 'returns the error message associated with the exception
-
-            End Try
+            mycmd.ExecuteNonQuery()
+            mycon.Close()
+            'pop out messagebox
+            MsgBox("Your account has been successfully created!", 0 + MsgBoxStyle.Information, "Sign Up Account")
+            'Change form
+            Me.Hide()
+            RiderLogin.Show()
         End If
     End Sub
 
@@ -93,9 +90,9 @@ Public Class RiderSignUp
         Return Regex.IsMatch(email, pattern)
     End Function
 
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles cboShowPassword.CheckedChanged
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowPassword.CheckedChanged
         'User can show or hide password
-        If cboShowPassword.Checked = True Then
+        If chkShowPassword.Checked = True Then
             txtPassword.UseSystemPasswordChar = False
             txtConfirmPassword.UseSystemPasswordChar = False
         Else
@@ -122,4 +119,27 @@ Public Class RiderSignUp
         txtFullName.Text = UCase(txtFullName.Text)
     End Sub
 
+    Private Sub LblLogin_MouseEnter(sender As Object, e As EventArgs) Handles lblLogin.MouseEnter
+        lblLogin.ForeColor = Color.FromArgb(128, 255, 255)
+    End Sub
+
+    Private Sub LblLogin_MouseLeave(sender As Object, e As EventArgs) Handles lblLogin.MouseLeave
+        lblLogin.ForeColor = Color.FromName("MenuHighlight")
+    End Sub
+
+    Private Sub TxtNumberPlate_Enter(sender As Object, e As EventArgs)
+        If cboVehicleType.Text = "Bicycle" OrElse cboVehicleType.Text = "Scooter" Then
+            MsgBox("This field is not required for this vehicle.", 0 + MsgBoxStyle.Information, "Not required")
+        End If
+    End Sub
+
+    Private Sub CboVehicleType_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboVehicleType.SelectedIndexChanged
+        If cboVehicleType.SelectedItem = "Bicycle" OrElse cboVehicleType.SelectedItem = "Scooter" Then
+            txtNumberPlate.Text = "Not Required"
+            txtNumberPlate.BackColor = Color.Gray
+        Else
+            txtNumberPlate.Clear()
+            txtNumberPlate.BackColor = Color.White
+        End If
+    End Sub
 End Class

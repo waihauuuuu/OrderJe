@@ -24,6 +24,7 @@ Partial Class RiderNotification
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -31,6 +32,7 @@ Partial Class RiderNotification
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(208, 42)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(100, 23)
@@ -48,15 +50,23 @@ Partial Class RiderNotification
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 117)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(622, 353)
+        Me.FlowLayoutPanel1.TabIndex = 4
+        '
         'RiderNotification
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(152, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "RiderNotification"
         Me.Size = New System.Drawing.Size(622, 470)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -67,4 +77,5 @@ Partial Class RiderNotification
 
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
 End Class

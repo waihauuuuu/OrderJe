@@ -23,9 +23,9 @@ Partial Class RiderLogin
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RiderLogin))
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.btnLogin = New System.Windows.Forms.Button()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.CloseMinimize1 = New OMC21.CloseMinimize()
@@ -39,38 +39,38 @@ Partial Class RiderLogin
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button2
+        'btnLogin
         '
-        Me.Button2.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(149, 276)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(82, 30)
-        Me.Button2.TabIndex = 11
-        Me.Button2.Text = "LOG IN"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnLogin.Font = New System.Drawing.Font("Comic Sans MS", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogin.Location = New System.Drawing.Point(149, 276)
+        Me.btnLogin.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(82, 30)
+        Me.btnLogin.TabIndex = 11
+        Me.btnLogin.Text = "LOG IN"
+        Me.btnLogin.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'txtPassword
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Comic Sans MS", 9.0!)
-        Me.TextBox2.ForeColor = System.Drawing.SystemColors.InactiveCaption
-        Me.TextBox2.Location = New System.Drawing.Point(82, 220)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(216, 24)
-        Me.TextBox2.TabIndex = 10
-        Me.TextBox2.Text = "Password "
+        Me.txtPassword.Font = New System.Drawing.Font("Comic Sans MS", 9.0!)
+        Me.txtPassword.ForeColor = System.Drawing.SystemColors.InactiveCaption
+        Me.txtPassword.Location = New System.Drawing.Point(82, 220)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Size = New System.Drawing.Size(216, 24)
+        Me.txtPassword.TabIndex = 10
+        Me.txtPassword.Text = "Password "
         '
-        'TextBox1
+        'txtUsername
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Comic Sans MS", 9.0!)
-        Me.TextBox1.ForeColor = System.Drawing.SystemColors.InactiveCaption
-        Me.TextBox1.Location = New System.Drawing.Point(82, 183)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(216, 24)
-        Me.TextBox1.TabIndex = 9
-        Me.TextBox1.Text = "Username"
+        Me.txtUsername.Font = New System.Drawing.Font("Comic Sans MS", 9.0!)
+        Me.txtUsername.ForeColor = System.Drawing.SystemColors.InactiveCaption
+        Me.txtUsername.Location = New System.Drawing.Point(82, 183)
+        Me.txtUsername.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.Size = New System.Drawing.Size(216, 24)
+        Me.txtUsername.TabIndex = 9
+        Me.txtUsername.Text = "Username"
         '
         'Label3
         '
@@ -189,10 +189,10 @@ Partial Class RiderLogin
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(660, 415)
         Me.Controls.Add(Me.cboShowPassword)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.btnLogin)
+        Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.btnBack)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.picLogo)
@@ -210,9 +210,9 @@ Partial Class RiderLogin
 
     End Sub
 
-    Friend WithEvents Button2 As Button
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents btnLogin As Button
+    Friend WithEvents txtPassword As TextBox
+    Friend WithEvents txtUsername As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnSignUp As Button

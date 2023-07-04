@@ -37,6 +37,7 @@ Partial Class ViewFeedBack
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(208, 42)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(80, 23)
@@ -46,7 +47,8 @@ Partial Class ViewFeedBack
         'btnCafe
         '
         Me.btnCafe.BackColor = System.Drawing.Color.White
-        Me.btnCafe.ForeColor = System.Drawing.Color.Black
+        Me.btnCafe.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCafe.ForeColor = System.Drawing.Color.Maroon
         Me.btnCafe.Location = New System.Drawing.Point(-1, 105)
         Me.btnCafe.Name = "btnCafe"
         Me.btnCafe.Size = New System.Drawing.Size(103, 45)
@@ -57,7 +59,8 @@ Partial Class ViewFeedBack
         'btnRider
         '
         Me.btnRider.BackColor = System.Drawing.Color.White
-        Me.btnRider.ForeColor = System.Drawing.Color.Black
+        Me.btnRider.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRider.ForeColor = System.Drawing.Color.Maroon
         Me.btnRider.Location = New System.Drawing.Point(99, 105)
         Me.btnRider.Name = "btnRider"
         Me.btnRider.Size = New System.Drawing.Size(103, 45)
@@ -68,7 +71,8 @@ Partial Class ViewFeedBack
         'btnApplication
         '
         Me.btnApplication.BackColor = System.Drawing.Color.White
-        Me.btnApplication.ForeColor = System.Drawing.Color.Black
+        Me.btnApplication.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnApplication.ForeColor = System.Drawing.Color.Maroon
         Me.btnApplication.Location = New System.Drawing.Point(198, 105)
         Me.btnApplication.Name = "btnApplication"
         Me.btnApplication.Size = New System.Drawing.Size(103, 45)
@@ -78,7 +82,7 @@ Partial Class ViewFeedBack
         '
         'pnlContainerIn
         '
-        Me.pnlContainerIn.BackColor = System.Drawing.SystemColors.Control
+        Me.pnlContainerIn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.pnlContainerIn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.pnlContainerIn.Location = New System.Drawing.Point(0, 149)
         Me.pnlContainerIn.Name = "pnlContainerIn"
@@ -120,7 +124,7 @@ Partial Class ViewFeedBack
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(152, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.Controls.Add(Me.pnlContainerIn)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)

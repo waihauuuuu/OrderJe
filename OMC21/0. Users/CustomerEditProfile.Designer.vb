@@ -39,17 +39,22 @@ Partial Class CustomerEditProfile
         Me.pnlContainer = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.lblUserID = New System.Windows.Forms.Label()
+        Me.iconAboutUs = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.iconPayment = New System.Windows.Forms.Button()
         Me.btnLogout = New System.Windows.Forms.Button()
+        Me.iconPoints = New System.Windows.Forms.Button()
         Me.btnAboutUs = New System.Windows.Forms.Button()
+        Me.iconTransaction = New System.Windows.Forms.Button()
         Me.btnPayment = New System.Windows.Forms.Button()
+        Me.iconPersonal = New System.Windows.Forms.Button()
         Me.btnPoints = New System.Windows.Forms.Button()
         Me.btnTransaction = New System.Windows.Forms.Button()
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.btnPersonal = New System.Windows.Forms.Button()
         Me.picProfile = New System.Windows.Forms.PictureBox()
-        Me.CloseMinimize2 = New OMC21.CloseMinimize()
         Me.CloseMinimize1 = New OMC21.CloseMinimize()
+        Me.CloseMinimize2 = New OMC21.CloseMinimize()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -212,7 +217,7 @@ Partial Class CustomerEditProfile
         '
         'pnlContainer
         '
-        Me.pnlContainer.BackColor = System.Drawing.Color.DimGray
+        Me.pnlContainer.BackColor = System.Drawing.Color.Gray
         Me.pnlContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pnlContainer.Location = New System.Drawing.Point(250, 38)
         Me.pnlContainer.Name = "pnlContainer"
@@ -224,10 +229,15 @@ Partial Class CustomerEditProfile
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel4.Controls.Add(Me.lblUserID)
+        Me.Panel4.Controls.Add(Me.iconAboutUs)
         Me.Panel4.Controls.Add(Me.Label3)
+        Me.Panel4.Controls.Add(Me.iconPayment)
         Me.Panel4.Controls.Add(Me.btnLogout)
+        Me.Panel4.Controls.Add(Me.iconPoints)
         Me.Panel4.Controls.Add(Me.btnAboutUs)
+        Me.Panel4.Controls.Add(Me.iconTransaction)
         Me.Panel4.Controls.Add(Me.btnPayment)
+        Me.Panel4.Controls.Add(Me.iconPersonal)
         Me.Panel4.Controls.Add(Me.btnPoints)
         Me.Panel4.Controls.Add(Me.btnTransaction)
         Me.Panel4.Controls.Add(Me.lblUsername)
@@ -249,6 +259,21 @@ Partial Class CustomerEditProfile
         Me.lblUserID.Text = "XXXX"
         Me.lblUserID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'iconAboutUs
+        '
+        Me.iconAboutUs.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.iconAboutUs.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.iconAboutUs.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.iconAboutUs.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.iconAboutUs.ForeColor = System.Drawing.Color.White
+        Me.iconAboutUs.Image = Global.OMC21.My.Resources.Resources.AboutUs
+        Me.iconAboutUs.Location = New System.Drawing.Point(-1, 420)
+        Me.iconAboutUs.Name = "iconAboutUs"
+        Me.iconAboutUs.Size = New System.Drawing.Size(55, 43)
+        Me.iconAboutUs.TabIndex = 26
+        Me.iconAboutUs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.iconAboutUs.UseVisualStyleBackColor = False
+        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -260,69 +285,138 @@ Partial Class CustomerEditProfile
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "User ID: "
         '
+        'iconPayment
+        '
+        Me.iconPayment.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.iconPayment.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.iconPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.iconPayment.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.iconPayment.ForeColor = System.Drawing.Color.White
+        Me.iconPayment.Image = Global.OMC21.My.Resources.Resources.PaymentMethods
+        Me.iconPayment.Location = New System.Drawing.Point(-1, 377)
+        Me.iconPayment.Name = "iconPayment"
+        Me.iconPayment.Size = New System.Drawing.Size(55, 43)
+        Me.iconPayment.TabIndex = 25
+        Me.iconPayment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.iconPayment.UseVisualStyleBackColor = False
+        '
         'btnLogout
         '
         Me.btnLogout.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnLogout.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogout.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogout.ForeColor = System.Drawing.Color.White
-        Me.btnLogout.Location = New System.Drawing.Point(0, 463)
+        Me.btnLogout.Location = New System.Drawing.Point(-1, 463)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(250, 43)
         Me.btnLogout.TabIndex = 21
         Me.btnLogout.Text = "Logout"
         Me.btnLogout.UseVisualStyleBackColor = False
         '
+        'iconPoints
+        '
+        Me.iconPoints.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.iconPoints.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.iconPoints.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.iconPoints.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.iconPoints.ForeColor = System.Drawing.Color.White
+        Me.iconPoints.Image = Global.OMC21.My.Resources.Resources.MyPoints
+        Me.iconPoints.Location = New System.Drawing.Point(-1, 334)
+        Me.iconPoints.Name = "iconPoints"
+        Me.iconPoints.Size = New System.Drawing.Size(55, 43)
+        Me.iconPoints.TabIndex = 24
+        Me.iconPoints.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.iconPoints.UseVisualStyleBackColor = False
+        '
         'btnAboutUs
         '
         Me.btnAboutUs.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.btnAboutUs.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnAboutUs.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnAboutUs.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAboutUs.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAboutUs.ForeColor = System.Drawing.Color.White
-        Me.btnAboutUs.Location = New System.Drawing.Point(0, 420)
+        Me.btnAboutUs.Location = New System.Drawing.Point(52, 420)
         Me.btnAboutUs.Name = "btnAboutUs"
-        Me.btnAboutUs.Size = New System.Drawing.Size(250, 43)
+        Me.btnAboutUs.Size = New System.Drawing.Size(197, 43)
         Me.btnAboutUs.TabIndex = 20
         Me.btnAboutUs.Text = "About Us"
+        Me.btnAboutUs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnAboutUs.UseVisualStyleBackColor = False
+        '
+        'iconTransaction
+        '
+        Me.iconTransaction.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.iconTransaction.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.iconTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.iconTransaction.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.iconTransaction.ForeColor = System.Drawing.Color.White
+        Me.iconTransaction.Image = Global.OMC21.My.Resources.Resources.TransactionHistory
+        Me.iconTransaction.Location = New System.Drawing.Point(-1, 291)
+        Me.iconTransaction.Name = "iconTransaction"
+        Me.iconTransaction.Size = New System.Drawing.Size(55, 43)
+        Me.iconTransaction.TabIndex = 23
+        Me.iconTransaction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.iconTransaction.UseVisualStyleBackColor = False
         '
         'btnPayment
         '
         Me.btnPayment.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnPayment.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPayment.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPayment.ForeColor = System.Drawing.Color.White
-        Me.btnPayment.Location = New System.Drawing.Point(0, 377)
+        Me.btnPayment.Location = New System.Drawing.Point(52, 377)
         Me.btnPayment.Name = "btnPayment"
-        Me.btnPayment.Size = New System.Drawing.Size(250, 43)
+        Me.btnPayment.Size = New System.Drawing.Size(197, 43)
         Me.btnPayment.TabIndex = 5
         Me.btnPayment.Text = "Payment Methods"
+        Me.btnPayment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnPayment.UseVisualStyleBackColor = False
+        '
+        'iconPersonal
+        '
+        Me.iconPersonal.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.iconPersonal.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.iconPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.iconPersonal.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.iconPersonal.ForeColor = System.Drawing.Color.White
+        Me.iconPersonal.Image = Global.OMC21.My.Resources.Resources.PersonalDetails
+        Me.iconPersonal.Location = New System.Drawing.Point(-1, 248)
+        Me.iconPersonal.Name = "iconPersonal"
+        Me.iconPersonal.Size = New System.Drawing.Size(55, 43)
+        Me.iconPersonal.TabIndex = 22
+        Me.iconPersonal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.iconPersonal.UseVisualStyleBackColor = False
         '
         'btnPoints
         '
         Me.btnPoints.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.btnPoints.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnPoints.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnPoints.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPoints.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPoints.ForeColor = System.Drawing.Color.White
-        Me.btnPoints.Location = New System.Drawing.Point(0, 334)
+        Me.btnPoints.Location = New System.Drawing.Point(52, 334)
         Me.btnPoints.Name = "btnPoints"
-        Me.btnPoints.Size = New System.Drawing.Size(250, 43)
+        Me.btnPoints.Size = New System.Drawing.Size(197, 43)
         Me.btnPoints.TabIndex = 4
         Me.btnPoints.Text = "My Points"
+        Me.btnPoints.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnPoints.UseVisualStyleBackColor = False
         '
         'btnTransaction
         '
         Me.btnTransaction.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.btnTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnTransaction.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnTransaction.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTransaction.ForeColor = System.Drawing.Color.White
-        Me.btnTransaction.Location = New System.Drawing.Point(0, 291)
+        Me.btnTransaction.Location = New System.Drawing.Point(52, 291)
         Me.btnTransaction.Name = "btnTransaction"
-        Me.btnTransaction.Size = New System.Drawing.Size(250, 43)
+        Me.btnTransaction.Size = New System.Drawing.Size(197, 43)
         Me.btnTransaction.TabIndex = 3
         Me.btnTransaction.Text = "Transaction History"
+        Me.btnTransaction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnTransaction.UseVisualStyleBackColor = False
         '
         'lblUsername
@@ -339,14 +433,16 @@ Partial Class CustomerEditProfile
         'btnPersonal
         '
         Me.btnPersonal.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.btnPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnPersonal.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.btnPersonal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPersonal.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPersonal.ForeColor = System.Drawing.Color.White
-        Me.btnPersonal.Location = New System.Drawing.Point(0, 248)
+        Me.btnPersonal.Location = New System.Drawing.Point(52, 248)
         Me.btnPersonal.Name = "btnPersonal"
-        Me.btnPersonal.Size = New System.Drawing.Size(250, 43)
+        Me.btnPersonal.Size = New System.Drawing.Size(197, 43)
         Me.btnPersonal.TabIndex = 1
         Me.btnPersonal.Text = "Personal Details"
+        Me.btnPersonal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnPersonal.UseVisualStyleBackColor = False
         '
         'picProfile
@@ -359,16 +455,6 @@ Partial Class CustomerEditProfile
         Me.picProfile.TabIndex = 0
         Me.picProfile.TabStop = False
         '
-        'CloseMinimize2
-        '
-        Me.CloseMinimize2.BackColor = System.Drawing.Color.Transparent
-        Me.CloseMinimize2.ForeColor = System.Drawing.Color.Transparent
-        Me.CloseMinimize2.Location = New System.Drawing.Point(700, 3)
-        Me.CloseMinimize2.Margin = New System.Windows.Forms.Padding(5)
-        Me.CloseMinimize2.Name = "CloseMinimize2"
-        Me.CloseMinimize2.Size = New System.Drawing.Size(61, 32)
-        Me.CloseMinimize2.TabIndex = 3
-        '
         'CloseMinimize1
         '
         Me.CloseMinimize1.BackColor = System.Drawing.Color.Transparent
@@ -378,6 +464,16 @@ Partial Class CustomerEditProfile
         Me.CloseMinimize1.Name = "CloseMinimize1"
         Me.CloseMinimize1.Size = New System.Drawing.Size(59, 30)
         Me.CloseMinimize1.TabIndex = 3
+        '
+        'CloseMinimize2
+        '
+        Me.CloseMinimize2.BackColor = System.Drawing.Color.Transparent
+        Me.CloseMinimize2.ForeColor = System.Drawing.Color.Transparent
+        Me.CloseMinimize2.Location = New System.Drawing.Point(700, 5)
+        Me.CloseMinimize2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.CloseMinimize2.Name = "CloseMinimize2"
+        Me.CloseMinimize2.Size = New System.Drawing.Size(68, 29)
+        Me.CloseMinimize2.TabIndex = 0
         '
         'btnBack
         '
@@ -399,8 +495,8 @@ Partial Class CustomerEditProfile
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(767, 547)
-        Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.CloseMinimize2)
+        Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.pnlContainer)
         Me.Controls.Add(Me.Panel4)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -434,7 +530,6 @@ Partial Class CustomerEditProfile
     Friend WithEvents Label1 As Label
     Friend WithEvents Button6 As Button
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents CloseMinimize2 As CloseMinimize
     Friend WithEvents pnlContainer As Panel
     Friend WithEvents Panel4 As Panel
     Friend WithEvents btnAboutUs As Button
@@ -448,4 +543,10 @@ Partial Class CustomerEditProfile
     Friend WithEvents lblUserID As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents btnBack As Button
+    Friend WithEvents iconAboutUs As Button
+    Friend WithEvents iconPayment As Button
+    Friend WithEvents iconPoints As Button
+    Friend WithEvents iconTransaction As Button
+    Friend WithEvents iconPersonal As Button
+    Friend WithEvents CloseMinimize2 As CloseMinimize
 End Class

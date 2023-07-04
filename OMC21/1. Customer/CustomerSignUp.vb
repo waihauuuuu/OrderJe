@@ -46,7 +46,7 @@ Public Class CustomerSignUp
             'Connect database
             Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Msi\source\repos\OMC21\OMC21\OrderJeDatabase.accdb")
             'insert into is a statement of SQL, CustomerDatabase is datatable name
-            Dim strsql As String = "INSERT INTO CustomerDatabase ([Full Name], [Username], [Email], [Phone Number], [Village], [Password (encrypted)], [Picture]) Values(@fullname, @username, @email, @phone, @village, @password, @picture)"
+            Dim strsql As String = "INSERT INTO UserDatabase ([Full Name], [Username], [Email], [Phone Number], [Village], [Password (encrypted)], [Picture], [User Type]) Values(@fullname, @username, @email, @phone, @village, @password, @picture, @usertype)"
             Dim mycmd As New OleDbCommand(strsql, mycon)
 
             mycon.Open()
@@ -62,27 +62,18 @@ Public Class CustomerSignUp
             If picProfile.Image IsNot Nothing Then
                 mycmd.Parameters.AddWithValue("@picture", imagePath) 'If
             Else
-                mycmd.Parameters.AddWithValue("@picture", DBNull.Value) 'if empty, store nothing
+                mycmd.Parameters.AddWithValue("@picture", DBNull.Value) 'If empty, store nothing
             End If
 
-            'catch exception to prevent error
-            Try
-                'execute a SQL statement that does not return any data, such as an INSERT, UPDATE, DELETE, or CREATE TABLE statement
-                mycmd.ExecuteNonQuery()
+            mycmd.Parameters.AddWithValue("@usertype", "Customer")
 
-                mycon.Close()
-
-                'pop out messagebox
-                MsgBox("Your account has been successfully created!", 0 + MsgBoxStyle.Information, "Sign Up Account")
-
-                'Change form
-                Me.Hide()
-                CustomerLogin.Show()
-
-            Catch ex As Exception
-                MsgBox(ex.Message) 'returns the error message associated with the exception
-
-            End Try
+            mycmd.ExecuteNonQuery()
+            mycon.Close()
+            'pop out messagebox
+            MsgBox("Your account has been successfully created!", 0 + MsgBoxStyle.Information, "Sign Up Account")
+            'Change form
+            Me.Hide()
+            CustomerLogin.Show()
         End If
     End Sub
 
@@ -92,9 +83,9 @@ Public Class CustomerSignUp
         Return Regex.IsMatch(email, pattern)
     End Function
 
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles cboShowPassword.CheckedChanged
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowPassword.CheckedChanged
         'User can show or hide password
-        If cboShowPassword.Checked = True Then
+        If chkShowPassword.Checked = True Then
             txtPassword.UseSystemPasswordChar = False
             txtConfirmPassword.UseSystemPasswordChar = False
         Else
@@ -119,5 +110,13 @@ Public Class CustomerSignUp
 
     Private Sub TxtFullName_Leave(sender As Object, e As EventArgs) Handles txtFullName.Leave
         txtFullName.Text = UCase(txtFullName.Text)
+    End Sub
+
+    Private Sub LblLogin_MouseEnter(sender As Object, e As EventArgs) Handles lblLogin.MouseEnter
+        lblLogin.ForeColor = Color.FromArgb(128, 255, 255)
+    End Sub
+
+    Private Sub LblLogin_MouseLeave(sender As Object, e As EventArgs) Handles lblLogin.MouseLeave
+        lblLogin.ForeColor = Color.FromName("MenuHighlight")
     End Sub
 End Class

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class NewMenu1
+Partial Class NewMenu
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
@@ -40,7 +40,7 @@ Partial Class NewMenu1
         Me.txbFoodName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txbFoodName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.txbFoodName.Location = New System.Drawing.Point(495, 372)
-        Me.txbFoodName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txbFoodName.Margin = New System.Windows.Forms.Padding(4)
         Me.txbFoodName.Name = "txbFoodName"
         Me.txbFoodName.Size = New System.Drawing.Size(84, 24)
         Me.txbFoodName.TabIndex = 33
@@ -52,7 +52,7 @@ Partial Class NewMenu1
         Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnSave.Location = New System.Drawing.Point(665, 409)
-        Me.btnSave.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnSave.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(89, 30)
         Me.btnSave.TabIndex = 30
@@ -62,7 +62,7 @@ Partial Class NewMenu1
         'picBox
         '
         Me.picBox.Location = New System.Drawing.Point(44, 161)
-        Me.picBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.picBox.Margin = New System.Windows.Forms.Padding(4)
         Me.picBox.Name = "picBox"
         Me.picBox.Size = New System.Drawing.Size(218, 180)
         Me.picBox.TabIndex = 31
@@ -72,7 +72,7 @@ Partial Class NewMenu1
         '
         Me.PictureBox1.Image = Global.OMC21.My.Resources.Resources.OrderJeLogo
         Me.PictureBox1.Location = New System.Drawing.Point(45, -5)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(90, 100)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -83,7 +83,7 @@ Partial Class NewMenu1
         '
         Me.TextBox1.ForeColor = System.Drawing.SystemColors.InactiveCaption
         Me.TextBox1.Location = New System.Drawing.Point(301, 162)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(278, 179)
@@ -94,7 +94,7 @@ Partial Class NewMenu1
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label14.ForeColor = System.Drawing.Color.White
         Me.Label14.Location = New System.Drawing.Point(208, 42)
         Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
@@ -106,7 +106,7 @@ Partial Class NewMenu1
         '
         Me.lblFoodName.AutoSize = True
         Me.lblFoodName.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFoodName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.lblFoodName.ForeColor = System.Drawing.Color.White
         Me.lblFoodName.Location = New System.Drawing.Point(41, 373)
         Me.lblFoodName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblFoodName.Name = "lblFoodName"
@@ -118,7 +118,7 @@ Partial Class NewMenu1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(197, 373)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
@@ -127,11 +127,11 @@ Partial Class NewMenu1
         Me.Label1.Text = "lblFood"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'NewMenu1
+        'NewMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(152, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.TextBox1)
@@ -141,8 +141,8 @@ Partial Class NewMenu1
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.PictureBox1)
         Me.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Name = "NewMenu1"
+        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.Name = "NewMenu"
         Me.Size = New System.Drawing.Size(622, 470)
         CType(Me.picBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

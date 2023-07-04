@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.OMC21.AccSelect
+            Me.MainForm = Global.OMC21.SplashScreen
         End Sub
     End Class
 End Namespace

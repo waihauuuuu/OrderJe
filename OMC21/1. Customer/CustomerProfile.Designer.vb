@@ -48,7 +48,7 @@ Partial Class CustomerProfile
         '
         'btnChange
         '
-        Me.btnChange.Location = New System.Drawing.Point(330, 247)
+        Me.btnChange.Location = New System.Drawing.Point(333, 301)
         Me.btnChange.Name = "btnChange"
         Me.btnChange.Size = New System.Drawing.Size(143, 38)
         Me.btnChange.TabIndex = 47
@@ -154,7 +154,8 @@ Partial Class CustomerProfile
         '
         'picProfile
         '
-        Me.picProfile.Location = New System.Drawing.Point(343, 85)
+        Me.picProfile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.picProfile.Location = New System.Drawing.Point(346, 139)
         Me.picProfile.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.picProfile.Name = "picProfile"
         Me.picProfile.Size = New System.Drawing.Size(117, 147)

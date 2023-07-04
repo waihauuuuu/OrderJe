@@ -1,8 +1,7 @@
-﻿Imports System.Threading
-Public Class OrderStatus
+﻿Public Class OrderStatus
     Private countdownTime As Integer 'Total countdown time in seconds
     Private Sub OrderStatus_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        countdownTime = 30 * 60 'Set the countdown time
+        countdownTime = 30 * 3600 'Set the countdown time
         UpdateCountdownLabel()
         Timer1.Start()
     End Sub
