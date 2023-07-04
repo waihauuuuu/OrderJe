@@ -636,10 +636,12 @@
     <None Include="Resources\Customer.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Delivery.gif" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="OrderJeDatabase.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Resources\Delivery.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

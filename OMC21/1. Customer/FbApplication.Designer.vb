@@ -52,7 +52,7 @@ Partial Class FbApplication
         Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
         Me.Label1.Location = New System.Drawing.Point(188, 81)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(228, 23)
+        Me.Label1.Size = New System.Drawing.Size(290, 28)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Thank you for using OrderJe!"
         '
@@ -62,7 +62,7 @@ Partial Class FbApplication
         Me.Label2.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
         Me.Label2.Location = New System.Drawing.Point(192, 114)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(185, 23)
+        Me.Label2.Size = New System.Drawing.Size(236, 28)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Rate and comment on us!"
         '
@@ -75,7 +75,7 @@ Partial Class FbApplication
         Me.Star1.Font = New System.Drawing.Font("Comic Sans MS", 30.0!)
         Me.Star1.Location = New System.Drawing.Point(26, 188)
         Me.Star1.Name = "Star1"
-        Me.Star1.Size = New System.Drawing.Size(69, 68)
+        Me.Star1.Size = New System.Drawing.Size(83, 81)
         Me.Star1.TabIndex = 3
         Me.Star1.Text = "★"
         Me.Star1.UseVisualStyleBackColor = False
@@ -89,7 +89,7 @@ Partial Class FbApplication
         Me.Star2.Font = New System.Drawing.Font("Comic Sans MS", 30.0!)
         Me.Star2.Location = New System.Drawing.Point(75, 188)
         Me.Star2.Name = "Star2"
-        Me.Star2.Size = New System.Drawing.Size(69, 68)
+        Me.Star2.Size = New System.Drawing.Size(83, 81)
         Me.Star2.TabIndex = 4
         Me.Star2.Text = "★"
         Me.Star2.UseVisualStyleBackColor = False
@@ -103,7 +103,7 @@ Partial Class FbApplication
         Me.Star3.Font = New System.Drawing.Font("Comic Sans MS", 30.0!)
         Me.Star3.Location = New System.Drawing.Point(125, 188)
         Me.Star3.Name = "Star3"
-        Me.Star3.Size = New System.Drawing.Size(69, 68)
+        Me.Star3.Size = New System.Drawing.Size(83, 81)
         Me.Star3.TabIndex = 5
         Me.Star3.Text = "★"
         Me.Star3.UseVisualStyleBackColor = False
@@ -117,7 +117,7 @@ Partial Class FbApplication
         Me.Star4.Font = New System.Drawing.Font("Comic Sans MS", 30.0!)
         Me.Star4.Location = New System.Drawing.Point(175, 188)
         Me.Star4.Name = "Star4"
-        Me.Star4.Size = New System.Drawing.Size(69, 68)
+        Me.Star4.Size = New System.Drawing.Size(83, 81)
         Me.Star4.TabIndex = 6
         Me.Star4.Text = "★"
         Me.Star4.UseVisualStyleBackColor = False
@@ -131,16 +131,16 @@ Partial Class FbApplication
         Me.Star5.Font = New System.Drawing.Font("Comic Sans MS", 30.0!)
         Me.Star5.Location = New System.Drawing.Point(226, 188)
         Me.Star5.Name = "Star5"
-        Me.Star5.Size = New System.Drawing.Size(69, 68)
+        Me.Star5.Size = New System.Drawing.Size(83, 81)
         Me.Star5.TabIndex = 7
         Me.Star5.Text = "★"
         Me.Star5.UseVisualStyleBackColor = False
         '
         'btnClear
         '
-        Me.btnClear.Location = New System.Drawing.Point(394, 259)
+        Me.btnClear.Location = New System.Drawing.Point(421, 260)
         Me.btnClear.Name = "btnClear"
-        Me.btnClear.Size = New System.Drawing.Size(45, 24)
+        Me.btnClear.Size = New System.Drawing.Size(84, 24)
         Me.btnClear.TabIndex = 13
         Me.btnClear.Text = "Clear"
         Me.btnClear.UseVisualStyleBackColor = True
@@ -149,7 +149,7 @@ Partial Class FbApplication
         '
         Me.btnSend.Location = New System.Drawing.Point(333, 259)
         Me.btnSend.Name = "btnSend"
-        Me.btnSend.Size = New System.Drawing.Size(45, 24)
+        Me.btnSend.Size = New System.Drawing.Size(82, 24)
         Me.btnSend.TabIndex = 12
         Me.btnSend.Text = "Send"
         Me.btnSend.UseVisualStyleBackColor = True
@@ -161,13 +161,13 @@ Partial Class FbApplication
         Me.txtComment.Location = New System.Drawing.Point(40, 260)
         Me.txtComment.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.txtComment.Name = "txtComment"
-        Me.txtComment.Size = New System.Drawing.Size(275, 24)
+        Me.txtComment.Size = New System.Drawing.Size(275, 28)
         Me.txtComment.TabIndex = 11
         Me.txtComment.Text = "Comment"
         '
         'FbApplication
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnSend)

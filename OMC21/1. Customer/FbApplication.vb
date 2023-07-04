@@ -1,4 +1,7 @@
-﻿Public Class FbApplication
+﻿Imports System.Data.OleDb
+Imports System.IO
+
+Public Class FbApplication
     Dim stars = {Star1, Star2, Star3, Star4, Star5}
     Dim rate As Integer = 0
     Public Sub New()
@@ -32,8 +35,23 @@
         If String.IsNullOrWhiteSpace(txtComment.Text) OrElse rate = 0 Then
             MsgBox("Please enter a comment and provide a rating before sending.", MsgBoxStyle.Exclamation, "Incomplete Information")
         Else
-            'database
+            Dim feedback As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Huawei\Desktop\OrderJeDatabase.accdb")
+            'insert into is a statement of SQL, Feedback is datatable name
+            Dim strsql As String = "INSERT INTO Feedback ([Comment], [Rating], [Feedback Target]) Values(@comment, @rating, @target)"
+            Dim mycmd As New OleDbCommand(strsql, feedback)
+
+            feedback.Open()
+
+            mycmd.Parameters.AddWithValue("@comment", txtComment.Text)
+            mycmd.Parameters.AddWithValue("@rating", rate)
+            mycmd.Parameters.AddWithValue("@target", "Application")
+
+            mycmd.ExecuteNonQuery()
+            feedback.Close() 'database
+            MsgBox("Your feedback has been successfully sent!", 0 + MsgBoxStyle.Information, "Feedback")
         End If
+
+
     End Sub
     Private Sub TxtComment_Enter(sender As Object, e As EventArgs) Handles txtComment.Enter
         If txtComment.ForeColor = Color.FromName("InactiveCaption") Then
@@ -48,4 +66,6 @@
             txtComment.Text = "Comment"
         End If
     End Sub
+
+
 End Class
