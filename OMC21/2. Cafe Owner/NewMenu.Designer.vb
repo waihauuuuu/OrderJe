@@ -110,9 +110,9 @@ Partial Class NewMenu
         Me.lblFoodName.Location = New System.Drawing.Point(41, 373)
         Me.lblFoodName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblFoodName.Name = "lblFoodName"
-        Me.lblFoodName.Size = New System.Drawing.Size(100, 23)
+        Me.lblFoodName.Size = New System.Drawing.Size(104, 23)
         Me.lblFoodName.TabIndex = 32
-        Me.lblFoodName.Text = "Food Name :"
+        Me.lblFoodName.Text = "Menu Name :"
         '
         'Label1
         '
