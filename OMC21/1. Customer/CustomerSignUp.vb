@@ -44,7 +44,7 @@ Public Class CustomerSignUp
             picProfile.Image?.Save(imagePath, System.Drawing.Imaging.ImageFormat.Png) 'if picturebox contain image, then save image as png
 
             'Connect database
-            Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
+            Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Msi\source\repos\OMC21\OMC21\OrderJeDatabase.accdb")
             'insert into is a statement of SQL, CustomerDatabase is datatable name
             Dim strsql As String = "INSERT INTO UserDatabase ([Full Name], [Username], [Email], [Phone Number], [Village], [Password (encrypted)], [Picture], [User Type]) Values(@fullname, @username, @email, @phone, @village, @password, @picture, @usertype)"
             Dim mycmd As New OleDbCommand(strsql, mycon)

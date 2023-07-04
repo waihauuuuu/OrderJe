@@ -1,7 +1,9 @@
 ﻿Imports System.Data.OleDb
 Imports System.IO
 Imports System.Text.RegularExpressions
+
 Public Class RiderSignUp
+
     Private Sub LblLogin_Click(sender As Object, e As EventArgs) Handles lblLogin.Click
         'change form when button clicked
         Me.Hide()
