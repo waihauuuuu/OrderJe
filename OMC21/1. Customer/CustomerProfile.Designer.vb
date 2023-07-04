@@ -42,7 +42,7 @@ Partial Class CustomerProfile
         Me.rbFemale = New System.Windows.Forms.RadioButton()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnChangePassword = New System.Windows.Forms.Button()
         CType(Me.picProfile, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -230,21 +230,21 @@ Partial Class CustomerProfile
         '
         Me.OpenFileDialog2.FileName = "OpenFileDialog2"
         '
-        'Button1
+        'btnChangePassword
         '
-        Me.Button1.Location = New System.Drawing.Point(41, 309)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(123, 29)
-        Me.Button1.TabIndex = 55
-        Me.Button1.Text = "Change Password"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnChangePassword.Location = New System.Drawing.Point(41, 309)
+        Me.btnChangePassword.Name = "btnChangePassword"
+        Me.btnChangePassword.Size = New System.Drawing.Size(123, 29)
+        Me.btnChangePassword.TabIndex = 55
+        Me.btnChangePassword.Text = "Change Password"
+        Me.btnChangePassword.UseVisualStyleBackColor = True
         '
         'CustomerProfile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnChangePassword)
         Me.Controls.Add(Me.rbFemale)
         Me.Controls.Add(Me.rbMale)
         Me.Controls.Add(Me.btnSave)
@@ -293,5 +293,5 @@ Partial Class CustomerProfile
     Friend WithEvents rbFemale As RadioButton
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents OpenFileDialog2 As OpenFileDialog
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnChangePassword As Button
 End Class

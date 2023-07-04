@@ -1,6 +1,5 @@
 ﻿Imports System.IO
 Public Class CustomerHomepage
-
     Private Sub BtnEditProfile_Click(sender As Object, e As EventArgs) Handles btnEditProfile.Click
         Me.Hide()
         CustomerEditProfile.Show()

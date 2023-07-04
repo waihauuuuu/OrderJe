@@ -52,7 +52,7 @@ Public Class CustomerLogin
                     MsgBox("Login successful!", 0 + MsgBoxStyle.Information, "Login Status")
                     'retrieve the user ID and username from the database
                     'Share the data to another form 
-                    GlobalVariables.UserID = reader("ID")
+                    GlobalVariables.UserID = reader("User ID")
                     GlobalVariables.Username = reader("Username")
                     If Not IsDBNull(reader("Picture")) Then
                         GlobalVariables.ProfilePicture = reader("Picture")

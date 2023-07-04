@@ -2,50 +2,12 @@
 Imports System.IO
 
 Public Class CustomerProfile
-    Private connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Msi\source\repos\OMC21\OMC21\OrderJeDatabase.accdb"
-
-    Private Function GetCustomerIdFromDatabase() As Integer
-        Dim customerId As Integer = 0
-
-        Using mycon As New OleDbConnection(connectionString)
-            Dim strsql As String = "SELECT ID FROM CustomerDatabase WHERE [ID] = @id"
-            Dim mycmd As New OleDbCommand(strsql, mycon)
-            mycmd.Parameters.AddWithValue("@id", GlobalVariables.UserID)
-
-            Try
-                mycon.Open()
-                Dim reader As OleDbDataReader = mycmd.ExecuteReader()
-                If reader.Read() Then
-                    customerId = CInt(reader("ID"))
-                End If
-                reader.Close()
-                Console.WriteLine("Retrieved customer ID: " & customerId) ' Add this line to display the retrieved customer ID in the console
-            Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Exclamation, "Error")
-            End Try
-        End Using
-
-        Return customerId
-    End Function
-
-    Private Function ImageToString(image As Image) As String
-        Using ms As New MemoryStream()
-            image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg)
-            Dim imageBytes() As Byte = ms.ToArray()
-            Return Convert.ToBase64String(imageBytes)
-        End Using
-    End Function
-
-    Private Function StringToImage(imageString As String) As Image
-        Dim imageBytes() As Byte = Convert.FromBase64String(imageString)
-        Using ms As New MemoryStream(imageBytes)
-            Return Image.FromStream(ms)
-        End Using
-    End Function
+    Private CustomerEditProfile As CustomerEditProfile
+    Private connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb"
 
     Private Sub CustomerProfile_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Using mycon As New OleDbConnection(connectionString)
-            Dim strsql As String = "SELECT * FROM CustomerDatabase WHERE [ID] = @id"
+            Dim strsql As String = "SELECT * FROM UserDatabase WHERE [User ID] = @id"
             Dim mycmd As New OleDbCommand(strsql, mycon)
             mycmd.Parameters.AddWithValue("@id", GlobalVariables.UserID)
 
@@ -58,48 +20,29 @@ Public Class CustomerProfile
                     txtEmail.Text = reader("Email").ToString()
                     txtPhone.Text = reader("Phone Number").ToString()
                     txtVillage.Text = reader("Village").ToString()
-                    picProfile.Image = StringToImage(reader("Picture").ToString())
+
+
+                    If Not String.IsNullOrEmpty(reader("Picture")) AndAlso File.Exists(reader("Picture")) Then
+                        picProfile.Image = Image.FromFile(reader("Picture"))
+                    Else
+                        picProfile.Image = My.Resources.profilePic
+                    End If
                 End If
                 reader.Close()
             Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Exclamation, "Error")
+                MessageBox.Show(ex.Message)
             End Try
         End Using
     End Sub
 
-    Private Function DecryptPassword(encryptedPassword As String) As String
-        Dim decryptedPassword As String = ""
-
-        For Each c As Char In encryptedPassword
-            decryptedPassword += Chr(Asc(c) - 1)
-        Next
-
-        Return decryptedPassword
-    End Function
-
-
-
-    Private Function ByteArrayToImage(byteArrayIn As Byte()) As Image
-        Dim ms As New MemoryStream(byteArrayIn)
-        Dim returnImage As Image = Image.FromStream(ms)
-        Return returnImage
-    End Function
-
-    Private Function ImageToByteArray(image As Image) As Byte()
-        Dim ms As New MemoryStream()
-        image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg)
-        Return ms.ToArray()
-    End Function
-
-    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+    Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         Using mycon As New OleDbConnection(connectionString)
-            Dim strsql As String = "UPDATE CustomerDatabase SET [Full Name] = IIf(@fullname='', [Full Name], @fullname), " &
+            Dim strsql As String = "UPDATE UserDatabase SET [Full Name] = IIf(@fullname='', [Full Name], @fullname), " &
                                    "[Username] = IIf(@username='', [Username], @username), " &
                                    "[Email] = IIf(@email='', [Email], @email), " &
                                    "[Phone Number] = IIf(@phone='', [Phone Number], @phone), " &
                                    "[Village] = IIf(@village='', [Village], @village), " &
-                                   "[Password (encrypted)] = IIf(@password='', [Password (encrypted)], @password), " &
-                                   "[Picture] = IIf(@picture IS NULL, [Picture], @picture) WHERE ID = @id"
+                                   "[Picture] = IIf(@picture IS NULL, [Picture], @picture) WHERE [User ID] = @id"
 
             Using mycmd As New OleDbCommand(strsql, mycon)
                 mycmd.Parameters.AddWithValue("@fullname", If(txtFullName.Text.Trim() = "", DBNull.Value, txtFullName.Text))
@@ -107,48 +50,53 @@ Public Class CustomerProfile
                 mycmd.Parameters.AddWithValue("@email", If(txtEmail.Text.Trim() = "", DBNull.Value, txtEmail.Text))
                 mycmd.Parameters.AddWithValue("@phone", If(txtPhone.Text.Trim() = "", DBNull.Value, txtPhone.Text))
                 mycmd.Parameters.AddWithValue("@village", If(txtVillage.Text.Trim() = "", DBNull.Value, txtVillage.Text))
-                mycmd.Parameters.AddWithValue("@picture", If(picProfile.Image Is Nothing, DBNull.Value, ImageToString(picProfile.Image)))
+                mycmd.Parameters.AddWithValue("@picture", If(picProfile.Image Is Nothing, DBNull.Value, GlobalVariables.ProfilePicture))
+                mycmd.Parameters.AddWithValue("@id", GlobalVariables.UserID)
 
-                Dim customerId As Integer = GetCustomerIdFromDatabase()
-                mycmd.Parameters.AddWithValue("@id", customerId)
-
-                'msgbox asks user if they want to confirm the changes
-                Dim result As Integer = MsgBox("Are you sure you want to save the changes?", MsgBoxStyle.YesNo, "Save Changes")
+                Dim result As DialogResult = MessageBox.Show("Are you sure you want to save the changes?", "Save Changes", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 If result = DialogResult.Yes Then
                     Try
                         mycon.Open()
                         mycmd.ExecuteNonQuery()
-                        MsgBox("Your information has been updated successfully!", MsgBoxStyle.Information, "Update Successful")
+                        MessageBox.Show("Your information has been updated successfully!", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        Dim CustomerEditProfile As CustomerEditProfile = TryCast(Me.ParentForm, CustomerEditProfile)
+                        If parentForm IsNot Nothing Then
+                            CustomerEditProfile.RefreshParentForm()
+                        End If
                     Catch ex As Exception
-                        MsgBox(ex.Message, MsgBoxStyle.Exclamation, "Error")
+                        MessageBox.Show(ex.Message)
                     End Try
                 End If
             End Using
         End Using
     End Sub
 
-    Private Sub btnChange_Click(sender As Object, e As EventArgs) Handles btnChange.Click
-        'User can upload image from their file
-        OpenFileDialog1.Title = "Open Picture"
-        OpenFileDialog1.FileName = ""
-        OpenFileDialog1.Filter = "Images|*.jpg;*.png;*.bmp;*.gif"
-
-        'Check either user click on OK button in fileDialog
-        If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
-            picProfile.Image = System.Drawing.Image.FromFile(OpenFileDialog1.FileName)
-        End If
+    Private Sub BtnChange_Click(sender As Object, e As EventArgs) Handles btnChange.Click
+        Using mycon As New OleDbConnection(connectionString)
+            Dim strsql As String = "SELECT * FROM UserDatabase WHERE [User ID] = @id"
+            Dim mycmd As New OleDbCommand(strsql, mycon)
+            mycmd.Parameters.AddWithValue("@id", GlobalVariables.UserID)
+            OpenFileDialog1.Title = "Open Picture"
+            OpenFileDialog1.FileName = ""
+            OpenFileDialog1.Filter = "Images|*.jpg;*.png;*.bmp;*.gif"
+            If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
+                Try
+                    picProfile.Image = Image.FromFile(OpenFileDialog1.FileName)
+                    GlobalVariables.ProfilePicture = OpenFileDialog1.FileName ' Update the profile picture path in GlobalVariables
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message)
+                End Try
+            End If
+        End Using
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub BtnChangePassword_Click(sender As Object, e As EventArgs) Handles btnChangePassword.Click
         Dim CustomerEditProfile As CustomerEditProfile = TryCast(Me.ParentForm, CustomerEditProfile)
         Dim panel As Panel = TryCast(ParentForm.Controls("pnlContainer"), Panel)
         If panel IsNot Nothing Then
-            'change usercontrol
             Dim ChangePassword As New ChangePassword
             panel.Controls.Clear()
             panel.Controls.Add(ChangePassword)
         End If
     End Sub
-
-    ' ...
 End Class

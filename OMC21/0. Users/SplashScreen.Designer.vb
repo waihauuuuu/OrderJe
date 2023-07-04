@@ -31,6 +31,7 @@ Partial Class SplashScreen
         Me.lblVersion = New System.Windows.Forms.Label()
         CType(Me.picOrderJe, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picLoading, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Bar.SuspendLayout()
         Me.SuspendLayout()
         '
         'TimerLoading
@@ -62,7 +63,8 @@ Partial Class SplashScreen
         '
         'Bar
         '
-        Me.Bar.Location = New System.Drawing.Point(-1, 373)
+        Me.Bar.Controls.Add(Me.Value)
+        Me.Bar.Location = New System.Drawing.Point(-1, 352)
         Me.Bar.Name = "Bar"
         Me.Bar.Size = New System.Drawing.Size(661, 30)
         Me.Bar.TabIndex = 2
@@ -71,7 +73,7 @@ Partial Class SplashScreen
         'Value
         '
         Me.Value.BackColor = System.Drawing.Color.SeaGreen
-        Me.Value.Location = New System.Drawing.Point(-1, 373)
+        Me.Value.Location = New System.Drawing.Point(-1, 0)
         Me.Value.Name = "Value"
         Me.Value.Size = New System.Drawing.Size(1, 30)
         Me.Value.TabIndex = 3
@@ -81,7 +83,7 @@ Partial Class SplashScreen
         Me.lblVersion.AutoSize = True
         Me.lblVersion.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.lblVersion.ForeColor = System.Drawing.SystemColors.Control
-        Me.lblVersion.Location = New System.Drawing.Point(571, 353)
+        Me.lblVersion.Location = New System.Drawing.Point(571, 332)
         Me.lblVersion.Name = "lblVersion"
         Me.lblVersion.Size = New System.Drawing.Size(77, 17)
         Me.lblVersion.TabIndex = 4
@@ -95,7 +97,6 @@ Partial Class SplashScreen
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(660, 415)
         Me.Controls.Add(Me.lblVersion)
-        Me.Controls.Add(Me.Value)
         Me.Controls.Add(Me.Bar)
         Me.Controls.Add(Me.picOrderJe)
         Me.Controls.Add(Me.picLoading)
@@ -107,6 +108,7 @@ Partial Class SplashScreen
         Me.Text = "SplashScreen"
         CType(Me.picOrderJe, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picLoading, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Bar.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
