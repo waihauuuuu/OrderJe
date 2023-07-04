@@ -31,7 +31,7 @@ Public Class CustomerLogin
     Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
 
         'connect to database
-        Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
+        Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Msi\source\repos\OMC21\OMC21\OrderJeDatabase.accdb")
         Dim strsql As String = "SELECT * FROM CustomerDatabase WHERE Username = @username"
         Dim mycmd As New OleDbCommand(strsql, mycon)
 

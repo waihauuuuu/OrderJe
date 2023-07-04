@@ -84,7 +84,9 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.DirectoryServices" />
@@ -123,6 +125,12 @@
     </Compile>
     <Compile Include="0. Users\SplashScreen.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1. Customer\ChangePassword.Designer.vb">
+      <DependentUpon>ChangePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1. Customer\ChangePassword.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="1. Customer\CustomerLogin.Designer.vb">
       <DependentUpon>CustomerLogin.vb</DependentUpon>
@@ -367,6 +375,9 @@
   <ItemGroup>
     <EmbeddedResource Include="0. Users\SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1. Customer\ChangePassword.resx">
+      <DependentUpon>ChangePassword.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="1. Customer\CustomerLogin.resx">
       <DependentUpon>CustomerLogin.vb</DependentUpon>

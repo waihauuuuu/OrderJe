@@ -29,18 +29,20 @@ Partial Class CustomerProfile
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtVillage = New System.Windows.Forms.TextBox()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtFullName = New System.Windows.Forms.TextBox()
         Me.picProfile = New System.Windows.Forms.PictureBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
+        Me.txtPhone = New System.Windows.Forms.MaskedTextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.btnSave = New System.Windows.Forms.Button()
+        Me.rbMale = New System.Windows.Forms.RadioButton()
+        Me.rbFemale = New System.Windows.Forms.RadioButton()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.picProfile, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -57,7 +59,7 @@ Partial Class CustomerProfile
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Comic Sans MS", 9.0!)
-        Me.Label8.Location = New System.Drawing.Point(38, 429)
+        Me.Label8.Location = New System.Drawing.Point(38, 424)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(46, 17)
         Me.Label8.TabIndex = 46
@@ -67,7 +69,7 @@ Partial Class CustomerProfile
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Comic Sans MS", 9.0!)
-        Me.Label7.Location = New System.Drawing.Point(38, 370)
+        Me.Label7.Location = New System.Drawing.Point(38, 353)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(46, 17)
         Me.Label7.TabIndex = 45
@@ -113,42 +115,23 @@ Partial Class CustomerProfile
         Me.Label3.TabIndex = 41
         Me.Label3.Text = "Full Name"
         '
-        'TextBox6
+        'txtVillage
         '
-        Me.TextBox6.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(41, 449)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(249, 24)
-        Me.TextBox6.TabIndex = 40
+        Me.txtVillage.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtVillage.Location = New System.Drawing.Point(41, 444)
+        Me.txtVillage.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.txtVillage.Name = "txtVillage"
+        Me.txtVillage.Size = New System.Drawing.Size(249, 24)
+        Me.txtVillage.TabIndex = 40
         '
-        'TextBox5
+        'txtEmail
         '
-        Me.TextBox5.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(41, 390)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(249, 24)
-        Me.TextBox5.TabIndex = 39
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(41, 309)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(249, 24)
-        Me.TextBox3.TabIndex = 37
-        Me.TextBox3.UseSystemPasswordChar = True
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(41, 194)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(249, 24)
-        Me.TextBox2.TabIndex = 36
+        Me.txtEmail.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmail.Location = New System.Drawing.Point(41, 194)
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(249, 24)
+        Me.txtEmail.TabIndex = 36
         '
         'Label1
         '
@@ -160,14 +143,14 @@ Partial Class CustomerProfile
         Me.Label1.TabIndex = 34
         Me.Label1.Text = "Personal Details"
         '
-        'TextBox1
+        'txtFullName
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(41, 85)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(249, 24)
-        Me.TextBox1.TabIndex = 33
+        Me.txtFullName.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFullName.Location = New System.Drawing.Point(41, 85)
+        Me.txtFullName.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.txtFullName.Name = "txtFullName"
+        Me.txtFullName.Size = New System.Drawing.Size(249, 24)
+        Me.txtFullName.TabIndex = 33
         '
         'picProfile
         '
@@ -175,27 +158,18 @@ Partial Class CustomerProfile
         Me.picProfile.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.picProfile.Name = "picProfile"
         Me.picProfile.Size = New System.Drawing.Size(117, 147)
+        Me.picProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.picProfile.TabIndex = 32
         Me.picProfile.TabStop = False
         '
-        'CheckBox1
+        'txtPhone
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(41, 339)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(109, 21)
-        Me.CheckBox1.TabIndex = 48
-        Me.CheckBox1.Text = "Show password"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
-        'MaskedTextBox1
-        '
-        Me.MaskedTextBox1.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(41, 251)
-        Me.MaskedTextBox1.Mask = "###-########"
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(249, 24)
-        Me.MaskedTextBox1.TabIndex = 49
+        Me.txtPhone.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPhone.Location = New System.Drawing.Point(41, 251)
+        Me.txtPhone.Mask = "###-########"
+        Me.txtPhone.Name = "txtPhone"
+        Me.txtPhone.Size = New System.Drawing.Size(249, 24)
+        Me.txtPhone.TabIndex = 49
         '
         'Label2
         '
@@ -207,14 +181,14 @@ Partial Class CustomerProfile
         Me.Label2.TabIndex = 51
         Me.Label2.Text = "Username"
         '
-        'TextBox4
+        'txtUsername
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(41, 139)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(249, 24)
-        Me.TextBox4.TabIndex = 50
+        Me.txtUsername.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUsername.Location = New System.Drawing.Point(41, 139)
+        Me.txtUsername.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.Size = New System.Drawing.Size(249, 24)
+        Me.txtUsername.TabIndex = 50
         '
         'btnSave
         '
@@ -225,16 +199,57 @@ Partial Class CustomerProfile
         Me.btnSave.Text = "Save changes"
         Me.btnSave.UseVisualStyleBackColor = True
         '
+        'rbMale
+        '
+        Me.rbMale.AutoSize = True
+        Me.rbMale.Location = New System.Drawing.Point(41, 384)
+        Me.rbMale.Name = "rbMale"
+        Me.rbMale.Size = New System.Drawing.Size(52, 21)
+        Me.rbMale.TabIndex = 53
+        Me.rbMale.TabStop = True
+        Me.rbMale.Text = "Male"
+        Me.rbMale.UseVisualStyleBackColor = True
+        '
+        'rbFemale
+        '
+        Me.rbFemale.AutoSize = True
+        Me.rbFemale.Location = New System.Drawing.Point(124, 384)
+        Me.rbFemale.Name = "rbFemale"
+        Me.rbFemale.Size = New System.Drawing.Size(63, 21)
+        Me.rbFemale.TabIndex = 54
+        Me.rbFemale.TabStop = True
+        Me.rbFemale.Text = "Female"
+        Me.rbFemale.UseVisualStyleBackColor = True
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'OpenFileDialog2
+        '
+        Me.OpenFileDialog2.FileName = "OpenFileDialog2"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(41, 309)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(123, 29)
+        Me.Button1.TabIndex = 55
+        Me.Button1.Text = "Change Password"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'CustomerProfile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.rbFemale)
+        Me.Controls.Add(Me.rbMale)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.MaskedTextBox1)
-        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.txtUsername)
+        Me.Controls.Add(Me.txtPhone)
         Me.Controls.Add(Me.btnChange)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -242,12 +257,10 @@ Partial Class CustomerProfile
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtVillage)
+        Me.Controls.Add(Me.txtEmail)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtFullName)
         Me.Controls.Add(Me.picProfile)
         Me.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4)
@@ -266,16 +279,18 @@ Partial Class CustomerProfile
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtVillage As TextBox
+    Friend WithEvents txtEmail As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtFullName As TextBox
     Friend WithEvents picProfile As PictureBox
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents MaskedTextBox1 As MaskedTextBox
+    Friend WithEvents txtPhone As MaskedTextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtUsername As TextBox
     Friend WithEvents btnSave As Button
+    Friend WithEvents rbMale As RadioButton
+    Friend WithEvents rbFemale As RadioButton
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents OpenFileDialog2 As OpenFileDialog
+    Friend WithEvents Button1 As Button
 End Class
