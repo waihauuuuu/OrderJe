@@ -1,4 +1,5 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+﻿'Splash Screen
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class SplashScreen
     Private Sub TimerLoading_Tick(sender As Object, e As EventArgs) Handles TimerLoading.Tick

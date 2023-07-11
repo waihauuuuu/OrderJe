@@ -71,6 +71,8 @@ Partial Class FbApplication
         Me.Star1.AutoSize = True
         Me.Star1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Star1.FlatAppearance.BorderSize = 0
+        Me.Star1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Star1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Star1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Star1.Font = New System.Drawing.Font("Comic Sans MS", 30.0!)
         Me.Star1.Location = New System.Drawing.Point(26, 188)
@@ -85,6 +87,8 @@ Partial Class FbApplication
         Me.Star2.AutoSize = True
         Me.Star2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Star2.FlatAppearance.BorderSize = 0
+        Me.Star2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Star2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Star2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Star2.Font = New System.Drawing.Font("Comic Sans MS", 30.0!)
         Me.Star2.Location = New System.Drawing.Point(75, 188)
@@ -99,6 +103,8 @@ Partial Class FbApplication
         Me.Star3.AutoSize = True
         Me.Star3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Star3.FlatAppearance.BorderSize = 0
+        Me.Star3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Star3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Star3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Star3.Font = New System.Drawing.Font("Comic Sans MS", 30.0!)
         Me.Star3.Location = New System.Drawing.Point(125, 188)
@@ -113,6 +119,8 @@ Partial Class FbApplication
         Me.Star4.AutoSize = True
         Me.Star4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Star4.FlatAppearance.BorderSize = 0
+        Me.Star4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Star4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Star4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Star4.Font = New System.Drawing.Font("Comic Sans MS", 30.0!)
         Me.Star4.Location = New System.Drawing.Point(175, 188)
@@ -127,6 +135,8 @@ Partial Class FbApplication
         Me.Star5.AutoSize = True
         Me.Star5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Star5.FlatAppearance.BorderSize = 0
+        Me.Star5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Star5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Star5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Star5.Font = New System.Drawing.Font("Comic Sans MS", 30.0!)
         Me.Star5.Location = New System.Drawing.Point(226, 188)

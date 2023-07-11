@@ -1,4 +1,5 @@
-﻿Imports System.Data.OleDb
+﻿'Cafe Owner Login
+Imports System.Data.OleDb
 
 Public Class CafeOwnerLogin
     Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
@@ -41,8 +42,7 @@ Public Class CafeOwnerLogin
                     MsgBox("Login successful!", 0 + MsgBoxStyle.Information, "Login Status")
                     'retrieve the user ID and username from the database
                     'Share the data to another form 
-                    GlobalVariables.UserID = reader("ID")
-                    GlobalVariables.Username = reader("Username")
+                    GlobalVariables.UserID = reader("User ID")
                     'change form
                     Me.Hide()
                     CafeOwnerHomepage.Show()

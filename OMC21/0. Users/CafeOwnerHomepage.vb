@@ -1,25 +1,42 @@
-﻿Public Class CafeOwnerHomepage
+﻿Imports System.Data.OleDb
+
+Public Class CafeOwnerHomepage
     Private Sub Homepage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Display username
-        If GlobalVariables.Username = "V2Cafe" Then
-            lblCafeName.Text = "V2 Gee & S Café"
-        ElseIf GlobalVariables.Username = "V3Cafe" Then
-            lblCafeName.Text = "V3 Island One Café"
-        ElseIf GlobalVariables.Username = "V4Cafe" Then
-            lblCafeName.Text = "V4 Razak zaitom Café"
-        ElseIf GlobalVariables.Username = "V5Cafe" Then
-            lblCafeName.Text = "V5 Afifah Beta Café"
-        ElseIf GlobalVariables.Username = "V5Dapur" Then
-            lblCafeName.Text = "V5 Dapur Ibrahim Café"
-        ElseIf GlobalVariables.Username = "Manje" Then
-            lblCafeName.Text = "V5 Manje Burger"
-        ElseIf GlobalVariables.Username = "V6Cafe" Then
-            lblCafeName.Text = "V6 Harraz Café"
-        ElseIf GlobalVariables.Username = "Sayang" Then
-            lblCafeName.Text = "Sayang Café"
-        ElseIf GlobalVariables.Username = "Mesra" Then
-            lblCafeName.Text = "Café Mesra"
-        End If
+        Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
+        Dim strsql As String = "SELECT * FROM UserDatabase WHERE [User ID] = @id"
+        Dim mycmd As New OleDbCommand(strsql, mycon)
+        mycmd.Parameters.AddWithValue("@id", GlobalVariables.UserID)
+
+        Try
+            mycon.Open()
+            Dim reader As OleDbDataReader = mycmd.ExecuteReader()
+            'Display username, userID, Profile pic
+            If reader.Read() Then
+                'Display username
+                If reader("Username").ToString = "V2Cafe" Then
+                    lblCafeName.Text = "V2 Gee & S Café"
+                ElseIf reader("Username").ToString = "V3Cafe" Then
+                    lblCafeName.Text = "V3 Island One Café"
+                ElseIf reader("Username").ToString = "V4Cafe" Then
+                    lblCafeName.Text = "V4 Razak zaitom Café"
+                ElseIf reader("Username").ToString = "V5Cafe" Then
+                    lblCafeName.Text = "V5 Afifah Beta Café"
+                ElseIf reader("Username").ToString = "V5Dapur" Then
+                    lblCafeName.Text = "V5 Dapur Ibrahim Café"
+                ElseIf reader("Username").ToString = "Manje" Then
+                    lblCafeName.Text = "V5 Manje Burger"
+                ElseIf reader("Username").ToString = "V6Cafe" Then
+                    lblCafeName.Text = "V6 Harraz Café"
+                ElseIf reader("Username").ToString = "Sayang" Then
+                    lblCafeName.Text = "Sayang Café"
+                ElseIf reader("Username").ToString = "Mesra" Then
+                    lblCafeName.Text = "Café Mesra"
+                End If
+            End If
+            reader.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
         btnHome.BackColor = Color.FromArgb(180, 20, 20)
         iconHome.BackColor = Color.FromArgb(180, 20, 20)
     End Sub
@@ -111,10 +128,10 @@
 
     Private Sub BtnMenu_Click(sender As Object, e As EventArgs) Handles iconMenu.Click, btnMenu.Click
         Resett()
-        Dim NewMenu As New NewMenu()
+        Dim Menu As New Menu()
         btnMenu.BackColor = Color.FromArgb(180, 20, 20)
         iconMenu.BackColor = Color.FromArgb(180, 20, 20)
-        NewMenu.Parent = pnlContainer
+        Menu.Parent = pnlContainer
     End Sub
 
     Private Sub BtnTransaction_Click(sender As Object, e As EventArgs) Handles iconTransaction.Click, btnTransaction.Click
@@ -128,8 +145,8 @@
     Private Sub BtnFeedback_Click(sender As Object, e As EventArgs) Handles iconFeedback.Click, btnFeedback.Click
         Resett()
         Dim CafeOwnerViewFeedback As New CafeOwnerViewFeedback()
-        btnTransaction.BackColor = Color.FromArgb(180, 20, 20)
-        iconTransaction.BackColor = Color.FromArgb(180, 20, 20)
+        btnFeedback.BackColor = Color.FromArgb(180, 20, 20)
+        iconFeedback.BackColor = Color.FromArgb(180, 20, 20)
         CafeOwnerViewFeedback.Parent = pnlContainer
     End Sub
 End Class

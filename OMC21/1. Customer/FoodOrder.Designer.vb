@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FoodOrder
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,11 @@ Partial Class FoodOrder
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button12 = New System.Windows.Forms.Button()
-        Me.Button11 = New System.Windows.Forms.Button()
+        Me.btnSideDish = New System.Windows.Forms.Button()
+        Me.btnBeverages = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.pnlCart = New System.Windows.Forms.Panel()
         Me.Button8 = New System.Windows.Forms.Button()
@@ -33,17 +33,19 @@ Partial Class FoodOrder
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button10 = New System.Windows.Forms.Button()
+        Me.btnFood = New System.Windows.Forms.Button()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.TLPMenu = New System.Windows.Forms.TableLayoutPanel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.pnlCart.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ComboBox1
         '
-        Me.ComboBox1.ForeColor = System.Drawing.SystemColors.InactiveCaption
+        Me.ComboBox1.ForeColor = System.Drawing.SystemColors.ControlText
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"All Cafe", "Cafe V2", "Cafe V3", "Cafe V4", "Cafe V5", "Cafe V6"})
         Me.ComboBox1.Location = New System.Drawing.Point(35, 127)
@@ -53,31 +55,31 @@ Partial Class FoodOrder
         Me.ComboBox1.TabIndex = 46
         Me.ComboBox1.Text = "All Cafe"
         '
-        'Button12
+        'btnSideDish
         '
-        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button12.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button12.ForeColor = System.Drawing.Color.White
-        Me.Button12.Location = New System.Drawing.Point(272, 174)
-        Me.Button12.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(88, 36)
-        Me.Button12.TabIndex = 45
-        Me.Button12.Text = "Side Dish"
-        Me.Button12.UseVisualStyleBackColor = True
+        Me.btnSideDish.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSideDish.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSideDish.ForeColor = System.Drawing.Color.White
+        Me.btnSideDish.Location = New System.Drawing.Point(272, 174)
+        Me.btnSideDish.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.btnSideDish.Name = "btnSideDish"
+        Me.btnSideDish.Size = New System.Drawing.Size(88, 36)
+        Me.btnSideDish.TabIndex = 45
+        Me.btnSideDish.Text = "Side Dish"
+        Me.btnSideDish.UseVisualStyleBackColor = True
         '
-        'Button11
+        'btnBeverages
         '
-        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button11.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button11.ForeColor = System.Drawing.Color.White
-        Me.Button11.Location = New System.Drawing.Point(155, 174)
-        Me.Button11.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(88, 36)
-        Me.Button11.TabIndex = 44
-        Me.Button11.Text = "Beverages"
-        Me.Button11.UseVisualStyleBackColor = True
+        Me.btnBeverages.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBeverages.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBeverages.ForeColor = System.Drawing.Color.White
+        Me.btnBeverages.Location = New System.Drawing.Point(155, 174)
+        Me.btnBeverages.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.btnBeverages.Name = "btnBeverages"
+        Me.btnBeverages.Size = New System.Drawing.Size(88, 36)
+        Me.btnBeverages.TabIndex = 44
+        Me.btnBeverages.Text = "Beverages"
+        Me.btnBeverages.UseVisualStyleBackColor = True
         '
         'TextBox1
         '
@@ -173,6 +175,46 @@ Partial Class FoodOrder
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "My Cart"
         '
+        'btnFood
+        '
+        Me.btnFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFood.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFood.ForeColor = System.Drawing.Color.White
+        Me.btnFood.Location = New System.Drawing.Point(35, 174)
+        Me.btnFood.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.btnFood.Name = "btnFood"
+        Me.btnFood.Size = New System.Drawing.Size(88, 36)
+        Me.btnFood.TabIndex = 43
+        Me.btnFood.Text = "Food"
+        Me.btnFood.UseVisualStyleBackColor = True
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.Color.White
+        Me.Label14.Location = New System.Drawing.Point(208, 42)
+        Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(44, 23)
+        Me.Label14.TabIndex = 70
+        Me.Label14.Text = "Cafe"
+        '
+        'TLPMenu
+        '
+        Me.TLPMenu.AutoScroll = True
+        Me.TLPMenu.ColumnCount = 3
+        Me.TLPMenu.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TLPMenu.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TLPMenu.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TLPMenu.Location = New System.Drawing.Point(14, 224)
+        Me.TLPMenu.Name = "TLPMenu"
+        Me.TLPMenu.RowCount = 2
+        Me.TLPMenu.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TLPMenu.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TLPMenu.Size = New System.Drawing.Size(593, 246)
+        Me.TLPMenu.TabIndex = 71
+        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.OMC21.My.Resources.Resources.OrderJeLogo
@@ -184,57 +226,40 @@ Partial Class FoodOrder
         Me.PictureBox1.TabIndex = 55
         Me.PictureBox1.TabStop = False
         '
-        'Button10
+        'Button1
         '
-        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button10.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button10.ForeColor = System.Drawing.Color.White
-        Me.Button10.Location = New System.Drawing.Point(35, 174)
-        Me.Button10.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(88, 36)
-        Me.Button10.TabIndex = 43
-        Me.Button10.Text = "Food"
-        Me.Button10.UseVisualStyleBackColor = True
+        Me.Button1.BackColor = System.Drawing.Color.White
+        Me.Button1.Image = Global.OMC21.My.Resources.Resources.icons8_cart_35
+        Me.Button1.Location = New System.Drawing.Point(551, 33)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(45, 45)
+        Me.Button1.TabIndex = 73
+        Me.Button1.UseVisualStyleBackColor = False
         '
-        'Label14
+        'Button5
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.Color.White
-        Me.Label14.Location = New System.Drawing.Point(208, 42)
-        Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(49, 23)
-        Me.Label14.TabIndex = 70
-        Me.Label14.Text = "Menu"
-        '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.ColumnCount = 3
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 206.0!))
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 224)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(622, 246)
-        Me.TableLayoutPanel1.TabIndex = 71
+        Me.Button5.BackColor = System.Drawing.Color.White
+        Me.Button5.Image = Global.OMC21.My.Resources.Resources.icons8_notification_35
+        Me.Button5.Location = New System.Drawing.Point(491, 33)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(45, 45)
+        Me.Button5.TabIndex = 72
+        Me.Button5.UseVisualStyleBackColor = False
         '
         'FoodOrder
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.TLPMenu)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.pnlCart)
         Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Button12)
-        Me.Controls.Add(Me.Button11)
-        Me.Controls.Add(Me.Button10)
+        Me.Controls.Add(Me.btnSideDish)
+        Me.Controls.Add(Me.btnBeverages)
+        Me.Controls.Add(Me.btnFood)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -251,8 +276,8 @@ Partial Class FoodOrder
     End Sub
 
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Button12 As Button
-    Friend WithEvents Button11 As Button
+    Friend WithEvents btnSideDish As Button
+    Friend WithEvents btnBeverages As Button
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents pnlCart As Panel
@@ -262,7 +287,9 @@ Partial Class FoodOrder
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button10 As Button
+    Friend WithEvents btnFood As Button
     Friend WithEvents Label14 As Label
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents TLPMenu As TableLayoutPanel
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button5 As Button
 End Class

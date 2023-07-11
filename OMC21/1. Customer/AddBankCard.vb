@@ -1,4 +1,7 @@
-﻿Public Class AddBankCard
+﻿'Add Bank Card
+Imports System.Runtime.CompilerServices
+
+Public Class AddBankCard
     Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         'parent form named "CustomerEditProfile"
         Dim CustomerEditProfile As CustomerEditProfile = TryCast(Me.ParentForm, CustomerEditProfile)
@@ -11,11 +14,22 @@
         End If
     End Sub
 
-    'need to connect another datatable
+    Private Sub TxtBank_TextChanged(sender As Object, e As EventArgs) Handles txtBank.TextChanged
+        lblBank.Text = txtBank.Text
+    End Sub
 
-    'TO DO LIST
-    ' > when leave the textbox, label.text change to what is insert in textbox
-    ' > msgbox "successful" --> elaborate
-    ' when "back button" on left down corner clicked back to "AddPaymentMethods"
-    ' when "X" on left up corner clicked back to "AddPaymentMethods"
+    Private Sub TxtName_TextChanged(sender As Object, e As EventArgs) Handles txtName.TextChanged
+        lblName.Text = UCase(txtName.Text)
+    End Sub
+
+    Private Sub TxtCardNum_Click(sender As Object, e As EventArgs) Handles txtCardNum.Click
+        lblCardNumber.Text = ""
+        lblCardNumber.Text = txtCardNum.Text
+    End Sub
+
+    Private Sub TxtExpired_Click(sender As Object, e As EventArgs) Handles txtExpired.Click
+        lblExpiredDate.Text = ""
+        lblExpiredDate.Text = txtExpired.Text
+    End Sub
+
 End Class

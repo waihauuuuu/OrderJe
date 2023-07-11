@@ -1,4 +1,5 @@
-﻿Public Class AccSelect
+﻿'Account Selection
+Public Class AccSelect
     'Switch form when button clicked
     Private Sub BtnCustomer_Click(sender As Object, e As EventArgs) Handles btnCustomer.Click
         Me.Hide()

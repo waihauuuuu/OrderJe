@@ -117,7 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="OpenFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Discover, order, and enjoy a wide variety of delicious meals from your favorite local restaurants. With OrderJe, food delivery is convenient, reliable, and hassle-free. Experience the joy of satisfying your cravings with just a few taps. Download OrderJe now and elevate your dining experience.</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>DEVELOPMENT TEAM
+Fong Wai Hau		
+Nurul Izzati Binti Razali
+Muhammad Qudri Elzam Bin Samsul Bahri
+Dini Wirdhah Binti Mohd Hasbullah
+Nik Sarah Heidi Binti Nik Feizal Haidi
+Valerie Yapp Li Xin
+Shaikh Amir Bin Muzamil
+Fakhrul Hariz Bin Shazli	
+</value>
+  </data>
 </root>

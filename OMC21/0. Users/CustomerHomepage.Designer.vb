@@ -89,7 +89,7 @@ Partial Class CustomerHomepage
         Me.btnEditProfile.BackColor = System.Drawing.Color.Gray
         Me.btnEditProfile.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(202, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnEditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnEditProfile.Location = New System.Drawing.Point(25, 142)
+        Me.btnEditProfile.Location = New System.Drawing.Point(26, 142)
         Me.btnEditProfile.Name = "btnEditProfile"
         Me.btnEditProfile.Size = New System.Drawing.Size(96, 32)
         Me.btnEditProfile.TabIndex = 21
@@ -180,7 +180,7 @@ Partial Class CustomerHomepage
         Me.btnGames.ForeColor = System.Drawing.Color.White
         Me.btnGames.Location = New System.Drawing.Point(44, 293)
         Me.btnGames.Name = "btnGames"
-        Me.btnGames.Size = New System.Drawing.Size(101, 43)
+        Me.btnGames.Size = New System.Drawing.Size(111, 43)
         Me.btnGames.TabIndex = 4
         Me.btnGames.Text = "Mini Games"
         Me.btnGames.TextAlign = System.Drawing.ContentAlignment.MiddleLeft

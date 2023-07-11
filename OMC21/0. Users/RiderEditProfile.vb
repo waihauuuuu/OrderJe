@@ -1,14 +1,36 @@
-﻿Imports System.IO
+﻿Imports System.Data.OleDb
+Imports System.IO
 Public Class RiderEditProfile
+    Private connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb"
+    Public Sub RefreshParentForm()
+        Using mycon As New OleDbConnection(connectionString)
+            Dim strsql As String = "SELECT * FROM UserDatabase WHERE [User ID] = @id"
+            Dim mycmd As New OleDbCommand(strsql, mycon)
+            mycmd.Parameters.AddWithValue("@id", GlobalVariables.UserID)
+
+            Try
+                mycon.Open()
+                Dim reader As OleDbDataReader = mycmd.ExecuteReader()
+                'Display username, userID, Profile pic
+                If reader.Read() Then
+                    lblUsername.Text = reader("Username").ToString
+                    lblUserID.Text = GlobalVariables.UserID
+                    If Not String.IsNullOrEmpty(reader("Picture")) AndAlso File.Exists(reader("Picture")) Then
+                        picProfile.Image = Image.FromFile(reader("Picture"))
+                    Else
+                        picProfile.Image = My.Resources.profilePic
+                    End If
+                End If
+
+                reader.Close()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        End Using
+    End Sub
     Private Sub RiderEditProfile_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Display username, userID, Profile pic
-        lblUsername.Text = GlobalVariables.Username
-        lblUserID.Text = "U" & (100 + GlobalVariables.UserID)
-        If Not String.IsNullOrEmpty(GlobalVariables.ProfilePicture) AndAlso File.Exists(GlobalVariables.ProfilePicture) Then
-            picProfile.Image = Image.FromFile(GlobalVariables.ProfilePicture)
-        Else
-            picProfile.Image = My.Resources.profilePic
-        End If
+        RefreshParentForm()
+
         'Default colour = orange red
         Dim RiderProfile As New RiderProfile()
         btnPersonal.BackColor = Color.OrangeRed
@@ -101,10 +123,11 @@ Public Class RiderEditProfile
         Resett()
 
         'Add new usercontrol
-        'IN PROGRESS...
+        Dim AboutUs As New AboutUs()
         btnAboutUs.BackColor = Color.MediumBlue
         iconAboutUs.BackColor = Color.MediumBlue
         Me.BackColor = Color.MediumBlue
+        AboutUs.Parent = pnlContainer
     End Sub
 
     Private Sub BtnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click

@@ -192,6 +192,12 @@
     <Compile Include="1. Customer\FbCafe.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="1. Customer\MiniGames.Designer.vb">
+      <DependentUpon>MiniGames.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1. Customer\MiniGames.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="1. Customer\MyPoints.Designer.vb">
       <DependentUpon>MyPoints.vb</DependentUpon>
     </Compile>
@@ -244,6 +250,18 @@
       <DependentUpon>CafeOwnerViewFeedback.vb</DependentUpon>
     </Compile>
     <Compile Include="2. Cafe Owner\CafeOwnerViewFeedback.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="2. Cafe Owner\Menu.Designer.vb">
+      <DependentUpon>Menu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="2. Cafe Owner\Menu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="2. Cafe Owner\MenuPicture.Designer.vb">
+      <DependentUpon>MenuPicture.vb</DependentUpon>
+    </Compile>
+    <Compile Include="2. Cafe Owner\MenuPicture.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="3. Rider\RiderNotification.Designer.vb">
@@ -306,6 +324,12 @@
     </Compile>
     <Compile Include="4. Admin\AdminLogin.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4. Admin\AdminTransactionHistory.Designer.vb">
+      <DependentUpon>AdminTransactionHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="4. Admin\AdminTransactionHistory.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="4. Admin\AdminViewFeedback.Designer.vb">
       <DependentUpon>AdminViewFeedback.vb</DependentUpon>
@@ -372,10 +396,10 @@
     <Compile Include="1. Customer\Payment.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="4. Admin\RegistrationAproval.Designer.vb">
-      <DependentUpon>RegistrationAproval.vb</DependentUpon>
+    <Compile Include="4. Admin\UserData.Designer.vb">
+      <DependentUpon>UserData.vb</DependentUpon>
     </Compile>
-    <Compile Include="4. Admin\RegistrationAproval.vb">
+    <Compile Include="4. Admin\UserData.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="3. Rider\RiderSignUp.Designer.vb">
@@ -397,6 +421,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="0. Users\AboutUs.resx">
+      <DependentUpon>AboutUs.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="0. Users\AdminHomepage.resx">
       <DependentUpon>AdminHomepage.vb</DependentUpon>
     </EmbeddedResource>
@@ -436,6 +463,9 @@
     <EmbeddedResource Include="1. Customer\FbCafe.resx">
       <DependentUpon>FbCafe.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="1. Customer\MiniGames.resx">
+      <DependentUpon>MiniGames.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="1. Customer\MyPoints.resx">
       <DependentUpon>MyPoints.vb</DependentUpon>
     </EmbeddedResource>
@@ -463,6 +493,12 @@
     <EmbeddedResource Include="2. Cafe Owner\CafeOwnerViewFeedback.resx">
       <DependentUpon>CafeOwnerViewFeedback.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="2. Cafe Owner\Menu.resx">
+      <DependentUpon>Menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2. Cafe Owner\MenuPicture.resx">
+      <DependentUpon>MenuPicture.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="3. Rider\RiderNotification.resx">
       <DependentUpon>RiderNotification.vb</DependentUpon>
     </EmbeddedResource>
@@ -489,6 +525,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="4. Admin\AdminLogin.resx">
       <DependentUpon>AdminLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4. Admin\AdminTransactionHistory.resx">
+      <DependentUpon>AdminTransactionHistory.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="4. Admin\AdminViewFeedback.resx">
       <DependentUpon>AdminViewFeedback.vb</DependentUpon>
@@ -526,8 +565,8 @@
     <EmbeddedResource Include="1. Customer\Payment.resx">
       <DependentUpon>Payment.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="4. Admin\RegistrationAproval.resx">
-      <DependentUpon>RegistrationAproval.vb</DependentUpon>
+    <EmbeddedResource Include="4. Admin\UserData.resx">
+      <DependentUpon>UserData.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -683,9 +722,6 @@
     <None Include="Resources\Customer.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="OrderJeDatabase.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <None Include="Resources\loading.jpg" />
     <None Include="Resources\OrderJeLogo1.png" />
     <None Include="Resources\loading.png" />
@@ -706,6 +742,15 @@
     <None Include="Resources\Home1.png" />
     <None Include="Resources\Home.png" />
     <None Include="Resources\Delivery.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="OrderJeDatabase.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\puzzle icon.png" />
+    <None Include="Resources\car racing icon2.png" />
+    <None Include="Resources\memory_icon-removebg-preview.png" />
+    <None Include="Resources\tic tac toe icon2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

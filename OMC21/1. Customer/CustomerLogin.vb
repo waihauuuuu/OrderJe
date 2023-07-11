@@ -1,4 +1,4 @@
-﻿'DONE!
+﻿'Customer Login
 Imports System.Data.OleDb
 
 Public Class CustomerLogin
@@ -53,10 +53,6 @@ Public Class CustomerLogin
                     'retrieve the user ID and username from the database
                     'Share the data to another form 
                     GlobalVariables.UserID = reader("User ID")
-                    GlobalVariables.Username = reader("Username")
-                    If Not IsDBNull(reader("Picture")) Then
-                        GlobalVariables.ProfilePicture = reader("Picture")
-                    End If
                     'change form
                     Me.Hide()
                     CustomerHomepage.Show()

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class AdminTransactionHistory
+Partial Class Menu
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
@@ -22,35 +22,27 @@ Partial Class AdminTransactionHistory
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnRemove = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button5
-        '
-        Me.Button5.BackColor = System.Drawing.Color.White
-        Me.Button5.Image = Global.OMC21.My.Resources.Resources.icons8_notification_35
-        Me.Button5.Location = New System.Drawing.Point(551, 33)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(45, 45)
-        Me.Button5.TabIndex = 98
-        Me.Button5.UseVisualStyleBackColor = False
-        '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
-        Me.Label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label14.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.Color.White
         Me.Label14.Location = New System.Drawing.Point(208, 42)
         Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(157, 23)
-        Me.Label14.TabIndex = 99
-        Me.Label14.Text = "Transaction History"
+        Me.Label14.Size = New System.Drawing.Size(49, 23)
+        Me.Label14.TabIndex = 72
+        Me.Label14.Text = "Menu"
         '
         'PictureBox1
         '
@@ -60,28 +52,59 @@ Partial Class AdminTransactionHistory
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(90, 100)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 100
+        Me.PictureBox1.TabIndex = 71
         Me.PictureBox1.TabStop = False
+        '
+        'btnRemove
+        '
+        Me.btnRemove.Location = New System.Drawing.Point(160, 419)
+        Me.btnRemove.Name = "btnRemove"
+        Me.btnRemove.Size = New System.Drawing.Size(75, 23)
+        Me.btnRemove.TabIndex = 74
+        Me.btnRemove.Text = "Remove"
+        Me.btnRemove.UseVisualStyleBackColor = True
+        '
+        'btnAdd
+        '
+        Me.btnAdd.Location = New System.Drawing.Point(355, 419)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(123, 23)
+        Me.btnAdd.TabIndex = 75
+        Me.btnAdd.Text = "Add New Menu"
+        Me.btnAdd.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.White
+        Me.Button5.Image = Global.OMC21.My.Resources.Resources.icons8_notification_35
+        Me.Button5.Location = New System.Drawing.Point(551, 33)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(45, 45)
+        Me.Button5.TabIndex = 84
+        Me.Button5.UseVisualStyleBackColor = False
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(45, 128)
+        Me.DataGridView1.Location = New System.Drawing.Point(45, 122)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(527, 311)
-        Me.DataGridView1.TabIndex = 101
+        Me.DataGridView1.Size = New System.Drawing.Size(529, 265)
+        Me.DataGridView1.TabIndex = 85
         '
-        'AdminTransactionHistory
+        'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.btnAdd)
+        Me.Controls.Add(Me.btnRemove)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Button5)
         Me.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Name = "AdminTransactionHistory"
+        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.Name = "Menu"
         Me.Size = New System.Drawing.Size(622, 470)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -90,8 +113,10 @@ Partial Class AdminTransactionHistory
 
     End Sub
 
-    Friend WithEvents Button5 As Button
     Friend WithEvents Label14 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnRemove As Button
+    Friend WithEvents btnAdd As Button
+    Friend WithEvents Button5 As Button
     Friend WithEvents DataGridView1 As DataGridView
 End Class

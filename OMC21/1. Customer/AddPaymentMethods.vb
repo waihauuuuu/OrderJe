@@ -1,4 +1,5 @@
-﻿Public Class AddPaymentMethods
+﻿'Add Payment Methods
+Public Class AddPaymentMethods
     Private Sub BtnAddMethod_Click(sender As Object, e As EventArgs) Handles btnAddMethod.Click
         'parent form named "CustomerEditProfile"
         Dim CustomerEditProfile As CustomerEditProfile = TryCast(Me.ParentForm, CustomerEditProfile)
@@ -11,7 +12,6 @@
         End If
     End Sub
 
-    'TO DO LIST
     ' > After btnAddCard clicked in "AddBankCard" usercontrol
     ' > retrieve data from database
     ' > display on lstMethod

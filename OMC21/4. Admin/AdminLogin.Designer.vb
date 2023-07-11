@@ -24,11 +24,12 @@ Partial Class AdminLogin
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AdminLogin))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.btnLogin = New System.Windows.Forms.Button()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.CloseMinimize1 = New OMC21.CloseMinimize()
         Me.btnBack = New System.Windows.Forms.Button()
+        Me.CloseMinimize1 = New OMC21.CloseMinimize()
+        Me.cboShowPassword = New System.Windows.Forms.CheckBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -43,29 +44,29 @@ Partial Class AdminLogin
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'Button2
+        'btnLogin
         '
-        Me.Button2.BackColor = System.Drawing.Color.Gray
-        Me.Button2.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button2.Location = New System.Drawing.Point(358, 238)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(96, 39)
-        Me.Button2.TabIndex = 32
-        Me.Button2.Text = "LOG IN"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnLogin.BackColor = System.Drawing.Color.Gray
+        Me.btnLogin.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnLogin.Location = New System.Drawing.Point(358, 238)
+        Me.btnLogin.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(96, 39)
+        Me.btnLogin.TabIndex = 32
+        Me.btnLogin.Text = "LOG IN"
+        Me.btnLogin.UseVisualStyleBackColor = False
         '
-        'TextBox2
+        'txtPassword
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.ForeColor = System.Drawing.SystemColors.InactiveCaption
-        Me.TextBox2.Location = New System.Drawing.Point(282, 192)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(251, 24)
-        Me.TextBox2.TabIndex = 31
-        Me.TextBox2.Text = "Password"
+        Me.txtPassword.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPassword.ForeColor = System.Drawing.SystemColors.InactiveCaption
+        Me.txtPassword.Location = New System.Drawing.Point(281, 180)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Size = New System.Drawing.Size(251, 24)
+        Me.txtPassword.TabIndex = 31
+        Me.txtPassword.Text = "Password"
         '
         'Label1
         '
@@ -78,16 +79,6 @@ Partial Class AdminLogin
         Me.Label1.Size = New System.Drawing.Size(161, 23)
         Me.Label1.TabIndex = 34
         Me.Label1.Text = "Administrator Login"
-        '
-        'CloseMinimize1
-        '
-        Me.CloseMinimize1.BackColor = System.Drawing.Color.Transparent
-        Me.CloseMinimize1.ForeColor = System.Drawing.Color.Transparent
-        Me.CloseMinimize1.Location = New System.Drawing.Point(590, 5)
-        Me.CloseMinimize1.Margin = New System.Windows.Forms.Padding(4)
-        Me.CloseMinimize1.Name = "CloseMinimize1"
-        Me.CloseMinimize1.Size = New System.Drawing.Size(64, 36)
-        Me.CloseMinimize1.TabIndex = 35
         '
         'btnBack
         '
@@ -102,17 +93,40 @@ Partial Class AdminLogin
         Me.btnBack.TabIndex = 36
         Me.btnBack.UseVisualStyleBackColor = False
         '
+        'CloseMinimize1
+        '
+        Me.CloseMinimize1.BackColor = System.Drawing.Color.Transparent
+        Me.CloseMinimize1.ForeColor = System.Drawing.Color.Transparent
+        Me.CloseMinimize1.Location = New System.Drawing.Point(590, 5)
+        Me.CloseMinimize1.Margin = New System.Windows.Forms.Padding(4)
+        Me.CloseMinimize1.Name = "CloseMinimize1"
+        Me.CloseMinimize1.Size = New System.Drawing.Size(64, 36)
+        Me.CloseMinimize1.TabIndex = 35
+        '
+        'cboShowPassword
+        '
+        Me.cboShowPassword.AutoSize = True
+        Me.cboShowPassword.Font = New System.Drawing.Font("Comic Sans MS", 9.0!)
+        Me.cboShowPassword.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.cboShowPassword.Location = New System.Drawing.Point(281, 211)
+        Me.cboShowPassword.Name = "cboShowPassword"
+        Me.cboShowPassword.Size = New System.Drawing.Size(109, 21)
+        Me.cboShowPassword.TabIndex = 37
+        Me.cboShowPassword.Text = "Show password"
+        Me.cboShowPassword.UseVisualStyleBackColor = True
+        '
         'AdminLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(660, 415)
+        Me.Controls.Add(Me.cboShowPassword)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.CloseMinimize1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.btnLogin)
+        Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.PictureBox1)
         Me.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -127,9 +141,10 @@ Partial Class AdminLogin
     End Sub
 
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents btnLogin As Button
+    Friend WithEvents txtPassword As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents CloseMinimize1 As CloseMinimize
     Friend WithEvents btnBack As Button
+    Friend WithEvents cboShowPassword As CheckBox
 End Class

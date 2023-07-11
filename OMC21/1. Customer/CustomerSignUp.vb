@@ -1,4 +1,4 @@
-﻿'DONE!
+﻿'Customer Sign Up
 Imports System.Data.OleDb
 Imports System.IO
 Imports System.Text.RegularExpressions
@@ -46,11 +46,21 @@ Public Class CustomerSignUp
             'Connect database
             Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
             'insert into is a statement of SQL, CustomerDatabase is datatable name
-            Dim strsql As String = "INSERT INTO UserDatabase ([Full Name], [Username], [Email], [Phone Number], [Village], [Password (encrypted)], [Picture], [User Type]) Values(@fullname, @username, @email, @phone, @village, @password, @picture, @usertype)"
+            Dim strsql As String = "INSERT INTO UserDatabase ([User ID], [Full Name], [Username], [Email], [Phone Number], [Village], [Password (encrypted)], [Picture], [User Type]) Values(@id, @fullname, @username, @email, @phone, @village, @password, @picture, @usertype)"
             Dim mycmd As New OleDbCommand(strsql, mycon)
 
             mycon.Open()
 
+            Dim rowCount As Integer = 0
+            Dim sqlCount As String = "SELECT COUNT(*) FROM UserDatabase WHERE [User Type] = 'Customer'"
+            Using commandCount As New OleDbCommand(sqlCount, mycon)
+                rowCount = CInt(commandCount.ExecuteScalar())
+            End Using
+
+            'Generate the ID based on the row count
+            Dim UserID As String = "U" & (rowCount + 1).ToString("D3")
+
+            mycmd.Parameters.AddWithValue("@id", UserID)
             mycmd.Parameters.AddWithValue("@fullname", txtFullName.Text)
             mycmd.Parameters.AddWithValue("@username", txtUsername.Text)
             mycmd.Parameters.AddWithValue("@email", txtEmail.Text)
@@ -119,4 +129,5 @@ Public Class CustomerSignUp
     Private Sub LblLogin_MouseLeave(sender As Object, e As EventArgs) Handles lblLogin.MouseLeave
         lblLogin.ForeColor = Color.FromName("MenuHighlight")
     End Sub
+
 End Class

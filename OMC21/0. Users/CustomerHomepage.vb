@@ -1,4 +1,6 @@
-﻿Imports System.IO
+﻿'Customer Homepage
+Imports System.Data.OleDb
+Imports System.IO
 Public Class CustomerHomepage
     Private Sub BtnEditProfile_Click(sender As Object, e As EventArgs) Handles btnEditProfile.Click
         Me.Hide()
@@ -6,13 +8,27 @@ Public Class CustomerHomepage
     End Sub
 
     Private Sub Homepage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Display username, Profile pic
-        lblUsername.Text = GlobalVariables.Username
-        If Not String.IsNullOrEmpty(GlobalVariables.ProfilePicture) AndAlso File.Exists(GlobalVariables.ProfilePicture) Then
-            picProfile.Image = Image.FromFile(GlobalVariables.ProfilePicture)
-        Else
-            picProfile.Image = My.Resources.profilePic
-        End If
+        Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
+        Dim strsql As String = "SELECT * FROM UserDatabase WHERE [User ID] = @id"
+        Dim mycmd As New OleDbCommand(strsql, mycon)
+        mycmd.Parameters.AddWithValue("@id", GlobalVariables.UserID)
+        Try
+            mycon.Open()
+            Dim reader As OleDbDataReader = mycmd.ExecuteReader()
+            'Display username, userID, Profile pic
+            If reader.Read() Then
+                'Display username, Profile pic
+                lblUsername.Text = reader("Username").ToString
+                If Not String.IsNullOrEmpty(reader("Picture").ToString) AndAlso File.Exists(reader("Picture").ToString) Then
+                    picProfile.Image = Image.FromFile(reader("Picture").ToString)
+                Else
+                    picProfile.Image = My.Resources.profilePic
+                End If
+            End If
+            reader.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
         btnHome.BackColor = Color.FromArgb(180, 20, 20)
         iconHome.BackColor = Color.FromArgb(180, 20, 20)
     End Sub
@@ -63,9 +79,10 @@ Public Class CustomerHomepage
 
     Private Sub BtnGames_Click(sender As Object, e As EventArgs) Handles btnGames.Click, iconGames.Click
         Resett()
-        'Usercontrol in progress...
+        Dim MiniGames As New MiniGames()
         btnGames.BackColor = Color.FromArgb(180, 20, 20)
         iconGames.BackColor = Color.FromArgb(180, 20, 20)
+        MiniGames.Parent = pnlContainer
     End Sub
 
     Private Sub BtnDelivery_Click(sender As Object, e As EventArgs) Handles btnDelivery.Click, iconDelivery.Click

@@ -1,4 +1,5 @@
-﻿Public Class ViewFeedBack
+﻿'Customer 'Feedback'
+Public Class ViewFeedBack
     Sub Resett()
         'Set all buttons to colour White
         btnCafe.BackColor = Color.White

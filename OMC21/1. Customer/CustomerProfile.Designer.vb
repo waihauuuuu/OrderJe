@@ -41,7 +41,6 @@ Partial Class CustomerProfile
         Me.rbMale = New System.Windows.Forms.RadioButton()
         Me.rbFemale = New System.Windows.Forms.RadioButton()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.OpenFileDialog2 = New System.Windows.Forms.OpenFileDialog()
         Me.btnChangePassword = New System.Windows.Forms.Button()
         CType(Me.picProfile, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -226,10 +225,6 @@ Partial Class CustomerProfile
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'OpenFileDialog2
-        '
-        Me.OpenFileDialog2.FileName = "OpenFileDialog2"
-        '
         'btnChangePassword
         '
         Me.btnChangePassword.Location = New System.Drawing.Point(41, 309)
@@ -292,6 +287,5 @@ Partial Class CustomerProfile
     Friend WithEvents rbMale As RadioButton
     Friend WithEvents rbFemale As RadioButton
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
-    Friend WithEvents OpenFileDialog2 As OpenFileDialog
     Friend WithEvents btnChangePassword As Button
 End Class

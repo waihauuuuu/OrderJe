@@ -52,11 +52,21 @@ Public Class RiderSignUp
             'Connect database
             Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
             'insert into is a statement of SQL, CustomerDatabase is datatable name
-            Dim strsql As String = "INSERT INTO UserDatabase ([Full Name], [Username], [Email], [Phone Number], [Vehicle Type], [Number Plate], [Password (encrypted)], [Picture], [User Type]) Values(@fullname, @username, @email, @phone, @vehicle, @numberplate, @password, @picture, @usertype)"
+            Dim strsql As String = "INSERT INTO UserDatabase ([User ID], [Full Name], [Username], [Email], [Phone Number], [Vehicle Type], [Number Plate], [Password (encrypted)], [Picture], [User Type]) Values(@id, @fullname, @username, @email, @phone, @vehicle, @numberplate, @password, @picture, @usertype)"
             Dim mycmd As New OleDbCommand(strsql, mycon)
 
             mycon.Open()
 
+            Dim rowCount As Integer = 0
+            Dim sqlCount As String = "SELECT COUNT(*) FROM UserDatabase WHERE [User Type] = 'Rider'"
+            Using commandCount As New OleDbCommand(sqlCount, mycon)
+                rowCount = CInt(commandCount.ExecuteScalar())
+            End Using
+
+            'Generate the ID based on the row count
+            Dim UserID As String = "R" & (rowCount + 1).ToString("D3")
+
+            mycmd.Parameters.AddWithValue("@id", UserID)
             mycmd.Parameters.AddWithValue("@fullname", txtFullName.Text)
             mycmd.Parameters.AddWithValue("@username", txtUsername.Text)
             mycmd.Parameters.AddWithValue("@email", txtEmail.Text)

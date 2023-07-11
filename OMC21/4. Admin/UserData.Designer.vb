@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class RegistrationAproval
+Partial Class UserData
     Inherits System.Windows.Forms.UserControl
 
     'UserControl overrides dispose to clean up the component list.
@@ -28,6 +28,7 @@ Partial Class RegistrationAproval
         Me.btnRider = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -90,11 +91,22 @@ Partial Class RegistrationAproval
         Me.Button1.Text = "Cafe Owner"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.White
+        Me.Button5.Image = Global.OMC21.My.Resources.Resources.icons8_notification_35
+        Me.Button5.Location = New System.Drawing.Point(551, 33)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(45, 45)
+        Me.Button5.TabIndex = 76
+        Me.Button5.UseVisualStyleBackColor = False
+        '
         'RegistrationAproval
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnRider)
@@ -117,4 +129,5 @@ Partial Class RegistrationAproval
     Friend WithEvents btnRider As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button1 As Button
+    Friend WithEvents Button5 As Button
 End Class

@@ -35,7 +35,7 @@ Partial Class AddBankCard
         Me.lblName = New System.Windows.Forms.Label()
         Me.txtBank = New System.Windows.Forms.TextBox()
         Me.txtName = New System.Windows.Forms.TextBox()
-        Me.txtNumber = New System.Windows.Forms.TextBox()
+        Me.txtCardNum = New System.Windows.Forms.TextBox()
         Me.txtCVV = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -43,6 +43,8 @@ Partial Class AddBankCard
         Me.Label8 = New System.Windows.Forms.Label()
         Me.btnAddCard = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtExpired = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -172,21 +174,21 @@ Partial Class AddBankCard
         Me.txtName.Size = New System.Drawing.Size(203, 24)
         Me.txtName.TabIndex = 43
         '
-        'txtNumber
+        'txtCardNum
         '
-        Me.txtNumber.ForeColor = System.Drawing.SystemColors.InactiveCaption
-        Me.txtNumber.Location = New System.Drawing.Point(41, 394)
-        Me.txtNumber.Name = "txtNumber"
-        Me.txtNumber.Size = New System.Drawing.Size(203, 24)
-        Me.txtNumber.TabIndex = 44
-        Me.txtNumber.Text = "XXXX XXXX XXXX XXXX"
+        Me.txtCardNum.ForeColor = System.Drawing.SystemColors.InactiveCaption
+        Me.txtCardNum.Location = New System.Drawing.Point(41, 394)
+        Me.txtCardNum.Name = "txtCardNum"
+        Me.txtCardNum.Size = New System.Drawing.Size(203, 24)
+        Me.txtCardNum.TabIndex = 44
+        Me.txtCardNum.Text = "XXXX XXXX XXXX XXXX"
         '
         'txtCVV
         '
         Me.txtCVV.ForeColor = System.Drawing.SystemColors.InactiveCaption
-        Me.txtCVV.Location = New System.Drawing.Point(281, 394)
+        Me.txtCVV.Location = New System.Drawing.Point(399, 394)
         Me.txtCVV.Name = "txtCVV"
-        Me.txtCVV.Size = New System.Drawing.Size(203, 24)
+        Me.txtCVV.Size = New System.Drawing.Size(85, 24)
         Me.txtCVV.TabIndex = 45
         Me.txtCVV.Text = "XXX "
         '
@@ -214,7 +216,7 @@ Partial Class AddBankCard
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Comic Sans MS", 9.0!)
-        Me.Label7.Location = New System.Drawing.Point(278, 374)
+        Me.Label7.Location = New System.Drawing.Point(396, 374)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(31, 17)
         Me.Label7.TabIndex = 48
@@ -253,11 +255,32 @@ Partial Class AddBankCard
         Me.btnBack.TabIndex = 51
         Me.btnBack.UseVisualStyleBackColor = False
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Comic Sans MS", 9.0!)
+        Me.Label2.Location = New System.Drawing.Point(278, 374)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(82, 17)
+        Me.Label2.TabIndex = 53
+        Me.Label2.Text = "Expired Date"
+        '
+        'txtExpired
+        '
+        Me.txtExpired.ForeColor = System.Drawing.SystemColors.InactiveCaption
+        Me.txtExpired.Location = New System.Drawing.Point(281, 394)
+        Me.txtExpired.Name = "txtExpired"
+        Me.txtExpired.Size = New System.Drawing.Size(99, 24)
+        Me.txtExpired.TabIndex = 52
+        Me.txtExpired.Text = "XX/XX "
+        '
         'AddBankCard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(158, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.txtExpired)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.btnAddCard)
         Me.Controls.Add(Me.Label8)
@@ -265,7 +288,7 @@ Partial Class AddBankCard
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtCVV)
-        Me.Controls.Add(Me.txtNumber)
+        Me.Controls.Add(Me.txtCardNum)
         Me.Controls.Add(Me.txtName)
         Me.Controls.Add(Me.txtBank)
         Me.Controls.Add(Me.Panel1)
@@ -295,7 +318,7 @@ Partial Class AddBankCard
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents txtBank As TextBox
     Friend WithEvents txtName As TextBox
-    Friend WithEvents txtNumber As TextBox
+    Friend WithEvents txtCardNum As TextBox
     Friend WithEvents txtCVV As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label6 As Label
@@ -303,4 +326,6 @@ Partial Class AddBankCard
     Friend WithEvents Label8 As Label
     Friend WithEvents btnAddCard As Button
     Friend WithEvents btnBack As Button
+    Friend WithEvents Label2 As Label
+    Friend WithEvents txtExpired As TextBox
 End Class

@@ -29,12 +29,12 @@ Partial Class RiderViewFeedback
         Me.lblUserID = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Star5 = New System.Windows.Forms.Button()
+        Me.Star4 = New System.Windows.Forms.Button()
+        Me.Star3 = New System.Windows.Forms.Button()
+        Me.Star2 = New System.Windows.Forms.Button()
+        Me.Star1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -78,7 +78,7 @@ Partial Class RiderViewFeedback
         Me.lblUsername.AutoSize = True
         Me.lblUsername.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUsername.ForeColor = System.Drawing.Color.White
-        Me.lblUsername.Location = New System.Drawing.Point(160, 129)
+        Me.lblUsername.Location = New System.Drawing.Point(146, 129)
         Me.lblUsername.Name = "lblUsername"
         Me.lblUsername.Size = New System.Drawing.Size(80, 23)
         Me.lblUsername.TabIndex = 76
@@ -89,7 +89,7 @@ Partial Class RiderViewFeedback
         Me.lblUserID.AutoSize = True
         Me.lblUserID.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUserID.ForeColor = System.Drawing.Color.White
-        Me.lblUserID.Location = New System.Drawing.Point(244, 167)
+        Me.lblUserID.Location = New System.Drawing.Point(230, 167)
         Me.lblUserID.Name = "lblUserID"
         Me.lblUserID.Size = New System.Drawing.Size(58, 23)
         Me.lblUserID.TabIndex = 77
@@ -100,7 +100,7 @@ Partial Class RiderViewFeedback
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(162, 167)
+        Me.Label1.Location = New System.Drawing.Point(148, 167)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(76, 23)
         Me.Label1.TabIndex = 78
@@ -111,56 +111,11 @@ Partial Class RiderViewFeedback
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(363, 129)
+        Me.Label2.Location = New System.Drawing.Point(326, 129)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(57, 23)
         Me.Label2.TabIndex = 79
         Me.Label2.Text = "Rating"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(367, 167)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(20, 23)
-        Me.Button1.TabIndex = 80
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(393, 167)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(20, 23)
-        Me.Button2.TabIndex = 81
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(471, 167)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(20, 23)
-        Me.Button3.TabIndex = 82
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(445, 167)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(20, 23)
-        Me.Button4.TabIndex = 83
-        Me.Button4.Text = "Button4"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(419, 167)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(20, 23)
-        Me.Button5.TabIndex = 84
-        Me.Button5.Text = "Button5"
-        Me.Button5.UseVisualStyleBackColor = True
         '
         'FlowLayoutPanel1
         '
@@ -169,18 +124,98 @@ Partial Class RiderViewFeedback
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(526, 220)
         Me.FlowLayoutPanel1.TabIndex = 85
         '
+        'Star5
+        '
+        Me.Star5.AutoSize = True
+        Me.Star5.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Star5.FlatAppearance.BorderSize = 0
+        Me.Star5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Star5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Star5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Star5.Font = New System.Drawing.Font("Comic Sans MS", 30.0!)
+        Me.Star5.Location = New System.Drawing.Point(514, 144)
+        Me.Star5.Name = "Star5"
+        Me.Star5.Size = New System.Drawing.Size(69, 68)
+        Me.Star5.TabIndex = 90
+        Me.Star5.Text = "★"
+        Me.Star5.UseVisualStyleBackColor = False
+        '
+        'Star4
+        '
+        Me.Star4.AutoSize = True
+        Me.Star4.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Star4.FlatAppearance.BorderSize = 0
+        Me.Star4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Star4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Star4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Star4.Font = New System.Drawing.Font("Comic Sans MS", 30.0!)
+        Me.Star4.Location = New System.Drawing.Point(463, 144)
+        Me.Star4.Name = "Star4"
+        Me.Star4.Size = New System.Drawing.Size(69, 68)
+        Me.Star4.TabIndex = 89
+        Me.Star4.Text = "★"
+        Me.Star4.UseVisualStyleBackColor = False
+        '
+        'Star3
+        '
+        Me.Star3.AutoSize = True
+        Me.Star3.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Star3.FlatAppearance.BorderSize = 0
+        Me.Star3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Star3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Star3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Star3.Font = New System.Drawing.Font("Comic Sans MS", 30.0!)
+        Me.Star3.Location = New System.Drawing.Point(413, 144)
+        Me.Star3.Name = "Star3"
+        Me.Star3.Size = New System.Drawing.Size(69, 68)
+        Me.Star3.TabIndex = 88
+        Me.Star3.Text = "★"
+        Me.Star3.UseVisualStyleBackColor = False
+        '
+        'Star2
+        '
+        Me.Star2.AutoSize = True
+        Me.Star2.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Star2.FlatAppearance.BorderSize = 0
+        Me.Star2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Star2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Star2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Star2.Font = New System.Drawing.Font("Comic Sans MS", 30.0!)
+        Me.Star2.Location = New System.Drawing.Point(363, 144)
+        Me.Star2.Name = "Star2"
+        Me.Star2.Size = New System.Drawing.Size(69, 68)
+        Me.Star2.TabIndex = 87
+        Me.Star2.Text = "★"
+        Me.Star2.UseVisualStyleBackColor = False
+        '
+        'Star1
+        '
+        Me.Star1.AutoSize = True
+        Me.Star1.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Star1.FlatAppearance.BorderSize = 0
+        Me.Star1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Star1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Star1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Star1.Font = New System.Drawing.Font("Comic Sans MS", 30.0!)
+        Me.Star1.Location = New System.Drawing.Point(314, 144)
+        Me.Star1.Name = "Star1"
+        Me.Star1.Size = New System.Drawing.Size(69, 68)
+        Me.Star1.TabIndex = 86
+        Me.Star1.Text = "★"
+        Me.Star1.UseVisualStyleBackColor = False
+        '
         'RiderViewFeedback
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.Controls.Add(Me.FlowLayoutPanel1)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Star5)
+        Me.Controls.Add(Me.Star4)
+        Me.Controls.Add(Me.Star3)
+        Me.Controls.Add(Me.Star2)
+        Me.Controls.Add(Me.Star1)
+        Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblUserID)
         Me.Controls.Add(Me.lblUsername)
@@ -205,10 +240,10 @@ Partial Class RiderViewFeedback
     Friend WithEvents lblUserID As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+    Friend WithEvents Star5 As Button
+    Friend WithEvents Star4 As Button
+    Friend WithEvents Star3 As Button
+    Friend WithEvents Star2 As Button
+    Friend WithEvents Star1 As Button
 End Class

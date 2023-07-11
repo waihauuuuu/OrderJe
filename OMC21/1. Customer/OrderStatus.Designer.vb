@@ -23,6 +23,7 @@ Partial Class OrderStatus
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(OrderStatus))
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.picDelivery = New System.Windows.Forms.PictureBox()
@@ -36,6 +37,9 @@ Partial Class OrderStatus
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lblPhone = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.picDelivery, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picProfile, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -49,17 +53,18 @@ Partial Class OrderStatus
         Me.Label14.Location = New System.Drawing.Point(208, 42)
         Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(109, 23)
+        Me.Label14.Size = New System.Drawing.Size(73, 23)
         Me.Label14.TabIndex = 72
-        Me.Label14.Text = "Order Status"
+        Me.Label14.Text = "Delivery"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(221, 161)
+        Me.Label1.Location = New System.Drawing.Point(220, 154)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(140, 17)
+        Me.Label1.Size = New System.Drawing.Size(183, 23)
         Me.Label1.TabIndex = 73
         Me.Label1.Text = "Estimated delivery time"
         '
@@ -92,7 +97,7 @@ Partial Class OrderStatus
         '
         Me.lblTimer.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
         Me.lblTimer.ForeColor = System.Drawing.Color.White
-        Me.lblTimer.Location = New System.Drawing.Point(232, 198)
+        Me.lblTimer.Location = New System.Drawing.Point(232, 199)
         Me.lblTimer.Name = "lblTimer"
         Me.lblTimer.Size = New System.Drawing.Size(106, 41)
         Me.lblTimer.TabIndex = 75
@@ -116,14 +121,14 @@ Partial Class OrderStatus
         Me.lblUsername.ForeColor = System.Drawing.Color.White
         Me.lblUsername.Location = New System.Drawing.Point(221, 347)
         Me.lblUsername.Name = "lblUsername"
-        Me.lblUsername.Size = New System.Drawing.Size(61, 17)
+        Me.lblUsername.Size = New System.Drawing.Size(24, 17)
         Me.lblUsername.TabIndex = 77
-        Me.lblUsername.Text = "Username"
+        Me.lblUsername.Text = "Ali"
         '
         'picProfile
         '
         Me.picProfile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.picProfile.Image = Global.OMC21.My.Resources.Resources.profilePic
+        Me.picProfile.Image = CType(resources.GetObject("picProfile.Image"), System.Drawing.Image)
         Me.picProfile.Location = New System.Drawing.Point(45, 306)
         Me.picProfile.Name = "picProfile"
         Me.picProfile.Size = New System.Drawing.Size(141, 138)
@@ -137,9 +142,9 @@ Partial Class OrderStatus
         Me.lblUserID.ForeColor = System.Drawing.Color.White
         Me.lblUserID.Location = New System.Drawing.Point(290, 373)
         Me.lblUserID.Name = "lblUserID"
-        Me.lblUserID.Size = New System.Drawing.Size(44, 17)
+        Me.lblUserID.Size = New System.Drawing.Size(34, 17)
         Me.lblUserID.TabIndex = 79
-        Me.lblUserID.Text = "XXXX"
+        Me.lblUserID.Text = "R001"
         '
         'Label2
         '
@@ -167,15 +172,49 @@ Partial Class OrderStatus
         Me.lblPhone.ForeColor = System.Drawing.Color.White
         Me.lblPhone.Location = New System.Drawing.Point(332, 414)
         Me.lblPhone.Name = "lblPhone"
-        Me.lblPhone.Size = New System.Drawing.Size(112, 17)
+        Me.lblPhone.Size = New System.Drawing.Size(88, 17)
         Me.lblPhone.TabIndex = 82
-        Me.lblPhone.Text = "XXX-XXXXXXXX"
+        Me.lblPhone.Text = "012-23344556"
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.White
+        Me.Button1.Image = Global.OMC21.My.Resources.Resources.icons8_cart_35
+        Me.Button1.Location = New System.Drawing.Point(551, 33)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(45, 45)
+        Me.Button1.TabIndex = 84
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.White
+        Me.Button5.Image = Global.OMC21.My.Resources.Resources.icons8_notification_35
+        Me.Button5.Location = New System.Drawing.Point(491, 33)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(45, 45)
+        Me.Button5.TabIndex = 83
+        Me.Button5.UseVisualStyleBackColor = False
+        '
+        'Label4
+        '
+        Me.Label4.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(344, 199)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(62, 41)
+        Me.Label4.TabIndex = 85
+        Me.Label4.Text = "Minute"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'OrderStatus
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.lblPhone)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -213,4 +252,7 @@ Partial Class OrderStatus
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents lblPhone As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Label4 As Label
 End Class

@@ -28,6 +28,7 @@ Partial Class CafeOwnerTransactionHistory
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -88,11 +89,22 @@ Partial Class CafeOwnerTransactionHistory
         Me.Button1.Text = "Search"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Button5
+        '
+        Me.Button5.BackColor = System.Drawing.Color.White
+        Me.Button5.Image = Global.OMC21.My.Resources.Resources.icons8_notification_35
+        Me.Button5.Location = New System.Drawing.Point(551, 33)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(45, 45)
+        Me.Button5.TabIndex = 84
+        Me.Button5.UseVisualStyleBackColor = False
+        '
         'CafeOwnerTransactionHistory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.DateTimePicker1)
         Me.Controls.Add(Me.Button1)
@@ -115,4 +127,5 @@ Partial Class CafeOwnerTransactionHistory
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Button1 As Button
+    Friend WithEvents Button5 As Button
 End Class

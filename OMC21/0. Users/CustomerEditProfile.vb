@@ -1,4 +1,5 @@
-﻿Imports System.Data.OleDb
+﻿'Customer 'Edit Profile'
+Imports System.Data.OleDb
 Imports System.IO
 Public Class CustomerEditProfile
     Private connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb"
@@ -14,7 +15,7 @@ Public Class CustomerEditProfile
                 'Display username, userID, Profile pic
                 If reader.Read() Then
                     lblUsername.Text = reader("Username").ToString
-                    lblUserID.Text = "U" & (100 + GlobalVariables.UserID)
+                    lblUserID.Text = GlobalVariables.UserID
                     If Not String.IsNullOrEmpty(reader("Picture")) AndAlso File.Exists(reader("Picture")) Then
                         picProfile.Image = Image.FromFile(reader("Picture"))
                     Else
@@ -176,10 +177,11 @@ Public Class CustomerEditProfile
         Resett()
 
         'Add new usercontrol
-        'IN PROGRESS...
+        Dim AboutUs As New AboutUs()
         btnAboutUs.BackColor = Color.MediumBlue
         iconAboutUs.BackColor = Color.MediumBlue
         Me.BackColor = Color.MediumBlue
+        AboutUs.Parent = pnlContainer
     End Sub
 
     Private Sub BtnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click

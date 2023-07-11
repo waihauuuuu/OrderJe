@@ -1,4 +1,5 @@
-﻿Imports System.Data.OleDb
+﻿'Personal Details
+Imports System.Data.OleDb
 Imports System.IO
 
 Public Class CustomerProfile
@@ -45,14 +46,16 @@ Public Class CustomerProfile
                                    "[Picture] = IIf(@picture IS NULL, [Picture], @picture) WHERE [User ID] = @id"
 
             Using mycmd As New OleDbCommand(strsql, mycon)
-                mycmd.Parameters.AddWithValue("@fullname", If(txtFullName.Text.Trim() = "", DBNull.Value, txtFullName.Text))
-                mycmd.Parameters.AddWithValue("@username", If(txtUsername.Text.Trim() = "", DBNull.Value, txtUsername.Text))
-                mycmd.Parameters.AddWithValue("@email", If(txtEmail.Text.Trim() = "", DBNull.Value, txtEmail.Text))
-                mycmd.Parameters.AddWithValue("@phone", If(txtPhone.Text.Trim() = "", DBNull.Value, txtPhone.Text))
-                mycmd.Parameters.AddWithValue("@village", If(txtVillage.Text.Trim() = "", DBNull.Value, txtVillage.Text))
-                mycmd.Parameters.AddWithValue("@picture", If(picProfile.Image Is Nothing, DBNull.Value, GlobalVariables.ProfilePicture))
-                mycmd.Parameters.AddWithValue("@id", GlobalVariables.UserID)
-
+                Dim reader As OleDbDataReader = mycmd.ExecuteReader()
+                If reader.Read() Then
+                    mycmd.Parameters.AddWithValue("@fullname", If(txtFullName.Text.Trim() = "", DBNull.Value, txtFullName.Text))
+                    mycmd.Parameters.AddWithValue("@username", If(txtUsername.Text.Trim() = "", DBNull.Value, txtUsername.Text))
+                    mycmd.Parameters.AddWithValue("@email", If(txtEmail.Text.Trim() = "", DBNull.Value, txtEmail.Text))
+                    mycmd.Parameters.AddWithValue("@phone", If(txtPhone.Text.Trim() = "", DBNull.Value, txtPhone.Text))
+                    mycmd.Parameters.AddWithValue("@village", If(txtVillage.Text.Trim() = "", DBNull.Value, txtVillage.Text))
+                    mycmd.Parameters.AddWithValue("@picture", If("@picture", If(picProfile.Image, DBNull.Value)))
+                    mycmd.Parameters.AddWithValue("@id", GlobalVariables.UserID)
+                End If
                 Dim result As DialogResult = MessageBox.Show("Are you sure you want to save the changes?", "Save Changes", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 If result = DialogResult.Yes Then
                     Try
@@ -60,7 +63,7 @@ Public Class CustomerProfile
                         mycmd.ExecuteNonQuery()
                         MessageBox.Show("Your information has been updated successfully!", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         Dim CustomerEditProfile As CustomerEditProfile = TryCast(Me.ParentForm, CustomerEditProfile)
-                        If parentForm IsNot Nothing Then
+                        If ParentForm IsNot Nothing Then
                             CustomerEditProfile.RefreshParentForm()
                         End If
                     Catch ex As Exception
@@ -76,16 +79,18 @@ Public Class CustomerProfile
             Dim strsql As String = "SELECT * FROM UserDatabase WHERE [User ID] = @id"
             Dim mycmd As New OleDbCommand(strsql, mycon)
             mycmd.Parameters.AddWithValue("@id", GlobalVariables.UserID)
-            OpenFileDialog1.Title = "Open Picture"
-            OpenFileDialog1.FileName = ""
-            OpenFileDialog1.Filter = "Images|*.jpg;*.png;*.bmp;*.gif"
-            If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
-                Try
-                    picProfile.Image = Image.FromFile(OpenFileDialog1.FileName)
-                    GlobalVariables.ProfilePicture = OpenFileDialog1.FileName ' Update the profile picture path in GlobalVariables
-                Catch ex As Exception
-                    MessageBox.Show(ex.Message)
-                End Try
+            Dim reader As OleDbDataReader = mycmd.ExecuteReader()
+            If reader.Read() Then
+                OpenFileDialog1.Title = "Open Picture"
+                OpenFileDialog1.FileName = ""
+                OpenFileDialog1.Filter = "Images|*.jpg;*.png;*.bmp;*.gif"
+                If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
+                    Try
+                        picProfile.Image = Image.FromFile(reader("Picture").ToString)
+                    Catch ex As Exception
+                        MessageBox.Show(ex.Message)
+                    End Try
+                End If
             End If
         End Using
     End Sub
