@@ -19,7 +19,7 @@ Public Class CustomerEditProfile
                     If Not String.IsNullOrEmpty(reader("Picture")) AndAlso File.Exists(reader("Picture")) Then
                         picProfile.Image = Image.FromFile(reader("Picture"))
                     Else
-                        picProfile.Image = My.Resources.profilePic
+                        picProfile.Image = My.Resources.profilePic 'no profile pic
                     End If
                 End If
 

@@ -31,7 +31,7 @@ Partial Class FbRider
         Me.btnBad = New System.Windows.Forms.Button()
         Me.btnMid = New System.Windows.Forms.Button()
         Me.btnGood = New System.Windows.Forms.Button()
-        Me.txtCommentRider = New System.Windows.Forms.TextBox()
+        Me.txtComment = New System.Windows.Forms.TextBox()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnSend = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -91,41 +91,47 @@ Partial Class FbRider
         '
         'btnBad
         '
+        Me.btnBad.BackColor = System.Drawing.Color.White
+        Me.btnBad.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBad.Location = New System.Drawing.Point(25, 172)
         Me.btnBad.Name = "btnBad"
         Me.btnBad.Size = New System.Drawing.Size(61, 62)
         Me.btnBad.TabIndex = 5
         Me.btnBad.Text = "Bad"
-        Me.btnBad.UseVisualStyleBackColor = True
+        Me.btnBad.UseVisualStyleBackColor = False
         '
         'btnMid
         '
+        Me.btnMid.BackColor = System.Drawing.Color.White
+        Me.btnMid.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMid.Location = New System.Drawing.Point(108, 172)
         Me.btnMid.Name = "btnMid"
         Me.btnMid.Size = New System.Drawing.Size(61, 62)
         Me.btnMid.TabIndex = 6
         Me.btnMid.Text = "Mid"
-        Me.btnMid.UseVisualStyleBackColor = True
+        Me.btnMid.UseVisualStyleBackColor = False
         '
         'btnGood
         '
+        Me.btnGood.BackColor = System.Drawing.Color.White
+        Me.btnGood.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGood.Location = New System.Drawing.Point(190, 172)
         Me.btnGood.Name = "btnGood"
         Me.btnGood.Size = New System.Drawing.Size(61, 62)
         Me.btnGood.TabIndex = 7
         Me.btnGood.Text = "Good"
-        Me.btnGood.UseVisualStyleBackColor = True
+        Me.btnGood.UseVisualStyleBackColor = False
         '
-        'txtCommentRider
+        'txtComment
         '
-        Me.txtCommentRider.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCommentRider.ForeColor = System.Drawing.SystemColors.InactiveCaption
-        Me.txtCommentRider.Location = New System.Drawing.Point(15, 257)
-        Me.txtCommentRider.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.txtCommentRider.Name = "txtCommentRider"
-        Me.txtCommentRider.Size = New System.Drawing.Size(275, 24)
-        Me.txtCommentRider.TabIndex = 8
-        Me.txtCommentRider.Text = "Comment"
+        Me.txtComment.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtComment.ForeColor = System.Drawing.SystemColors.InactiveCaption
+        Me.txtComment.Location = New System.Drawing.Point(15, 257)
+        Me.txtComment.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.txtComment.Name = "txtComment"
+        Me.txtComment.Size = New System.Drawing.Size(275, 24)
+        Me.txtComment.TabIndex = 8
+        Me.txtComment.Text = "Comment"
         '
         'btnClear
         '
@@ -152,7 +158,7 @@ Partial Class FbRider
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(152, Byte), Integer), CType(CType(152, Byte), Integer))
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.btnSend)
-        Me.Controls.Add(Me.txtCommentRider)
+        Me.Controls.Add(Me.txtComment)
         Me.Controls.Add(Me.btnGood)
         Me.Controls.Add(Me.btnMid)
         Me.Controls.Add(Me.btnBad)
@@ -179,7 +185,7 @@ Partial Class FbRider
     Friend WithEvents btnBad As Button
     Friend WithEvents btnMid As Button
     Friend WithEvents btnGood As Button
-    Friend WithEvents txtCommentRider As TextBox
+    Friend WithEvents txtComment As TextBox
     Friend WithEvents btnClear As Button
     Friend WithEvents btnSend As Button
 End Class

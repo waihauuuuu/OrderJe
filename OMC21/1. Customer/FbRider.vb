@@ -4,52 +4,68 @@ Imports System.Runtime.InteropServices.WindowsRuntime
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar
 
 Public Class FbRider
-    Dim buttons = {btnBad, btnMid, btnGood}
-    Dim rating As Integer
-
-    Private Sub Button_Click(sender As Object, e As EventArgs) Handles btnBad.Click, btnMid.Click, btnGood.Click
-        Dim selectedButton As System.Windows.Forms.Button = DirectCast(sender, System.Windows.Forms.Button)
-        Dim selectedRate As Integer = Array.IndexOf(buttons, selectedButton) + 1
-
-        For Each button As Button In buttons
-            If Array.IndexOf(buttons, button) < selectedRate Then
-                rating += 3
-            End If
-        Next
-
-        rating = selectedRate
-    End Sub
-
-
+    Dim Rate As Integer = 0
     Private Sub BtnSend_Click(sender As Object, e As EventArgs) Handles btnSend.Click
 
-
-        If String.IsNullOrWhiteSpace(txtCommentRider.Text) OrElse rating = 0 Then
+        If String.IsNullOrWhiteSpace(txtComment.Text) OrElse Rate = 0 Then
             MsgBox("Please enter a comment and provide a rating before sending.", MsgBoxStyle.Exclamation, "Incomplete Information")
         Else
-            Dim feedback As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
-            'insert into is a statement of SQL, Feedback is datatable name
-            Dim strsql As String = "INSERT INTO Feedback ([Comment],[Rating],[Feedback Target]) Values(@comment,@rating, @target)"
-            Dim mycmd As New OleDbCommand(strsql, feedback)
+            Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
+            Dim strsql As String = "INSERT INTO [Feedback] ([Comment],[Rating],[Feedback Target], [User ID]) Values(@comment,@rating, @target, @id)"
+            Dim mycmd As New OleDbCommand(strsql, mycon)
 
-            feedback.Open()
+            mycon.Open()
 
-            mycmd.Parameters.AddWithValue("@comment", txtCommentRider.Text)
-            mycmd.Parameters.AddWithValue("@rating", rating)
+            mycmd.Parameters.AddWithValue("@comment", txtComment.Text)
+            mycmd.Parameters.AddWithValue("@rating", Rate)
             mycmd.Parameters.AddWithValue("@target", "Rider")
+            mycmd.Parameters.AddWithValue("@id", GlobalVariables.UserID)
 
             mycmd.ExecuteNonQuery()
-            feedback.Close() 'database
+            mycon.Close() 'database
             MsgBox("Thank you!", 0 + MsgBoxStyle.Information, "Feedback")
 
         End If
     End Sub
 
     Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
-        rating = 1
-        txtCommentRider.Text = " "
+        Rate = 0
+        txtComment.Text = " "
+    End Sub
+    Private Sub TxtComment_Enter(sender As Object, e As EventArgs) Handles txtComment.Enter
+        If txtComment.ForeColor = Color.FromName("InactiveCaption") Then
+            txtComment.Clear()
+            txtComment.ForeColor = Color.FromName("ControlText")
+        End If
     End Sub
 
+    Private Sub TxtComment_Leave(sender As Object, e As EventArgs) Handles txtComment.Leave
+        If String.IsNullOrWhiteSpace(txtComment.Text) Then
+            txtComment.ForeColor = Color.FromName("InactiveCaption")
+            txtComment.Text = "Comment"
+        End If
+    End Sub
+    Sub Resett()
+        btnBad.BackColor = Color.White
+        btnMid.BackColor = Color.White
+        btnGood.BackColor = Color.White
+    End Sub
+    Private Sub BtnBad_Click(sender As Object, e As EventArgs) Handles btnBad.Click
+        Resett()
+        btnBad.BackColor = Color.Gray
+        Rate = 1
+    End Sub
 
+    Private Sub BtnMid_Click(sender As Object, e As EventArgs) Handles btnMid.Click
+        Resett()
+        btnMid.BackColor = Color.Gray
+        Rate = 3
+    End Sub
+
+    Private Sub BtnGood_Click(sender As Object, e As EventArgs) Handles btnGood.Click
+        Resett()
+        btnGood.BackColor = Color.Gray
+        Rate = 5
+    End Sub
 End Class
 

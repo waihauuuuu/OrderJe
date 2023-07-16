@@ -32,8 +32,6 @@ Partial Class Payment
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.RadioButton6 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
         Me.RadioButton4 = New System.Windows.Forms.RadioButton()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -43,8 +41,6 @@ Partial Class Payment
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -52,6 +48,15 @@ Partial Class Payment
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.btnCheckOut = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.pnlOrderSummary.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -159,34 +164,6 @@ Partial Class Payment
         Me.Label9.TabIndex = 59
         Me.Label9.Text = "CVV :"
         '
-        'RadioButton6
-        '
-        Me.RadioButton6.AutoSize = True
-        Me.RadioButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.RadioButton6.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton6.ForeColor = System.Drawing.Color.White
-        Me.RadioButton6.Location = New System.Drawing.Point(235, 49)
-        Me.RadioButton6.Margin = New System.Windows.Forms.Padding(4)
-        Me.RadioButton6.Name = "RadioButton6"
-        Me.RadioButton6.Size = New System.Drawing.Size(73, 21)
-        Me.RadioButton6.TabIndex = 58
-        Me.RadioButton6.Text = "QR Code" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.RadioButton6.UseVisualStyleBackColor = True
-        '
-        'RadioButton5
-        '
-        Me.RadioButton5.AutoSize = True
-        Me.RadioButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.RadioButton5.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton5.ForeColor = System.Drawing.Color.White
-        Me.RadioButton5.Location = New System.Drawing.Point(78, 49)
-        Me.RadioButton5.Margin = New System.Windows.Forms.Padding(4)
-        Me.RadioButton5.Name = "RadioButton5"
-        Me.RadioButton5.Size = New System.Drawing.Size(90, 21)
-        Me.RadioButton5.TabIndex = 57
-        Me.RadioButton5.Text = "Credit Card" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.RadioButton5.UseVisualStyleBackColor = True
-        '
         'RadioButton4
         '
         Me.RadioButton4.AutoSize = True
@@ -243,12 +220,16 @@ Partial Class Payment
         'pnlOrderSummary
         '
         Me.pnlOrderSummary.BackColor = System.Drawing.Color.White
+        Me.pnlOrderSummary.Controls.Add(Me.Label17)
+        Me.pnlOrderSummary.Controls.Add(Me.Label16)
+        Me.pnlOrderSummary.Controls.Add(Me.Label15)
+        Me.pnlOrderSummary.Controls.Add(Me.Label8)
+        Me.pnlOrderSummary.Controls.Add(Me.Label7)
+        Me.pnlOrderSummary.Controls.Add(Me.Label6)
         Me.pnlOrderSummary.Controls.Add(Me.Label5)
         Me.pnlOrderSummary.Controls.Add(Me.Label4)
         Me.pnlOrderSummary.Controls.Add(Me.Label3)
         Me.pnlOrderSummary.Controls.Add(Me.Label2)
-        Me.pnlOrderSummary.Controls.Add(Me.RadioButton2)
-        Me.pnlOrderSummary.Controls.Add(Me.RadioButton1)
         Me.pnlOrderSummary.Controls.Add(Me.Label1)
         Me.pnlOrderSummary.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.pnlOrderSummary.ForeColor = System.Drawing.SystemColors.ControlText
@@ -301,30 +282,6 @@ Partial Class Payment
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "___________________________"
         '
-        'RadioButton2
-        '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton2.Location = New System.Drawing.Point(19, 136)
-        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(4)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(14, 13)
-        Me.RadioButton2.TabIndex = 2
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.UseVisualStyleBackColor = True
-        '
-        'RadioButton1
-        '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton1.Location = New System.Drawing.Point(19, 89)
-        Me.RadioButton1.Margin = New System.Windows.Forms.Padding(4)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(14, 13)
-        Me.RadioButton1.TabIndex = 1
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.UseVisualStyleBackColor = True
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -373,6 +330,7 @@ Partial Class Payment
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.FlowLayoutPanel1)
         Me.GroupBox2.Controls.Add(Me.RadioButton3)
         Me.GroupBox2.Controls.Add(Me.RadioButton4)
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
@@ -385,8 +343,8 @@ Partial Class Payment
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.RadioButton6)
-        Me.GroupBox3.Controls.Add(Me.RadioButton5)
+        Me.GroupBox3.Controls.Add(Me.Button2)
+        Me.GroupBox3.Controls.Add(Me.Button1)
         Me.GroupBox3.ForeColor = System.Drawing.Color.White
         Me.GroupBox3.Location = New System.Drawing.Point(22, 276)
         Me.GroupBox3.Name = "GroupBox3"
@@ -397,13 +355,107 @@ Partial Class Payment
         '
         'btnCheckOut
         '
-        Me.btnCheckOut.ForeColor = System.Drawing.Color.White
+        Me.btnCheckOut.ForeColor = System.Drawing.Color.Black
         Me.btnCheckOut.Location = New System.Drawing.Point(171, 413)
         Me.btnCheckOut.Name = "btnCheckOut"
         Me.btnCheckOut.Size = New System.Drawing.Size(97, 28)
         Me.btnCheckOut.TabIndex = 74
-        Me.btnCheckOut.Text = "Check Out"
+        Me.btnCheckOut.Text = "Pay"
         Me.btnCheckOut.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Location = New System.Drawing.Point(49, 35)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(133, 54)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Bank card"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.ForeColor = System.Drawing.Color.Black
+        Me.Button2.Location = New System.Drawing.Point(226, 35)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(133, 54)
+        Me.Button2.TabIndex = 1
+        Me.Button2.Text = "Ewallet"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(132, 257)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(32, 17)
+        Me.Label6.TabIndex = 7
+        Me.Label6.Text = "0.00"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(132, 279)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(32, 17)
+        Me.Label7.TabIndex = 8
+        Me.Label7.Text = "0.00"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(132, 301)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(32, 17)
+        Me.Label8.TabIndex = 9
+        Me.Label8.Text = "0.00"
+        '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(237, 15)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(149, 186)
+        Me.FlowLayoutPanel1.TabIndex = 10
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(12, 56)
+        Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(61, 17)
+        Me.Label15.TabIndex = 10
+        Me.Label15.Text = "Food item"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(132, 56)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(32, 17)
+        Me.Label16.TabIndex = 11
+        Me.Label16.Text = "0.00"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(74, 56)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(59, 17)
+        Me.Label17.TabIndex = 12
+        Me.Label17.Text = "Quantity"
         '
         'Payment
         '
@@ -440,7 +492,6 @@ Partial Class Payment
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
-        Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -456,8 +507,6 @@ Partial Class Payment
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents RadioButton6 As RadioButton
-    Friend WithEvents RadioButton5 As RadioButton
     Friend WithEvents RadioButton4 As RadioButton
     Friend WithEvents RadioButton3 As RadioButton
     Friend WithEvents ComboBox1 As ComboBox
@@ -467,8 +516,6 @@ Partial Class Payment
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label14 As Label
@@ -476,4 +523,13 @@ Partial Class Payment
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents btnCheckOut As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label17 As Label
 End Class

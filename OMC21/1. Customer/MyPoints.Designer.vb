@@ -24,7 +24,7 @@ Partial Class MyPoints
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnMain = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -46,7 +46,7 @@ Partial Class MyPoints
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gold
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.btnMain)
         Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.Label4)
@@ -56,14 +56,14 @@ Partial Class MyPoints
         Me.Panel1.Size = New System.Drawing.Size(432, 140)
         Me.Panel1.TabIndex = 54
         '
-        'Button1
+        'btnMain
         '
-        Me.Button1.Location = New System.Drawing.Point(157, 103)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(103, 23)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Order Now"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnMain.Location = New System.Drawing.Point(157, 103)
+        Me.btnMain.Name = "btnMain"
+        Me.btnMain.Size = New System.Drawing.Size(103, 23)
+        Me.btnMain.TabIndex = 4
+        Me.btnMain.Text = "Back to main"
+        Me.btnMain.UseVisualStyleBackColor = True
         '
         'Label6
         '
@@ -128,5 +128,5 @@ Partial Class MyPoints
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnMain As Button
 End Class

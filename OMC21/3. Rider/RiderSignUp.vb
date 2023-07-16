@@ -3,7 +3,6 @@ Imports System.IO
 Imports System.Text.RegularExpressions
 
 Public Class RiderSignUp
-
     Private Sub LblLogin_Click(sender As Object, e As EventArgs) Handles lblLogin.Click
         'change form when button clicked
         Me.Hide()
@@ -100,7 +99,7 @@ Public Class RiderSignUp
         Return Regex.IsMatch(email, pattern)
     End Function
 
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowPassword.CheckedChanged
+    Private Sub ChkShowPassword_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowPassword.CheckedChanged
         'User can show or hide password
         If chkShowPassword.Checked = True Then
             txtPassword.UseSystemPasswordChar = False

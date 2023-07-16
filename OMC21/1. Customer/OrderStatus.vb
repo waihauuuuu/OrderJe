@@ -28,6 +28,19 @@ Public Class OrderStatus
         lblTimer.Text = minutes.ToString("00") & ":" & seconds.ToString("00")
     End Sub
 
+    Private Sub BtnCart_Click(sender As Object, e As EventArgs) Handles btnCart.Click
+        Dim CustomerHomepage As CustomerHomepage = TryCast(Me.ParentForm, CustomerHomepage)
+        Dim panel As Panel = TryCast(ParentForm.Controls("pnlContainer"), Panel)
+        If panel IsNot Nothing Then
+            'change usercontrol
+            Dim Cart As New Cart
+            panel.Controls.Clear()
+            panel.Controls.Add(Cart)
+        End If
+        CustomerHomepage.btnDelivery.BackColor = Color.FromArgb(30, 30, 30)
+        CustomerHomepage.iconDelivery.BackColor = Color.FromArgb(30, 30, 30)
+    End Sub
+
     'If cafe owner and rider accept the order
     'Show this usercontrol
     'Elseif cafe owner accept the order, rider not accept the order

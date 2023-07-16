@@ -25,18 +25,22 @@ Partial Class RiderHomepage
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RiderHomepage))
         Me.pnlContainer = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.iconFeedback = New System.Windows.Forms.Button()
         Me.btnEditProfile = New System.Windows.Forms.Button()
         Me.btnFeedback = New System.Windows.Forms.Button()
-        Me.iconHome = New System.Windows.Forms.Button()
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.btnHome = New System.Windows.Forms.Button()
-        Me.picProfile = New System.Windows.Forms.PictureBox()
         Me.lblLogout = New System.Windows.Forms.Label()
+        Me.CloseMinimize1 = New OMC21.CloseMinimize()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnLogout = New System.Windows.Forms.Button()
-        Me.CloseMinimize1 = New OMC21.CloseMinimize()
+        Me.iconFeedback = New System.Windows.Forms.Button()
+        Me.iconHome = New System.Windows.Forms.Button()
+        Me.picProfile = New System.Windows.Forms.PictureBox()
+        Me.pnlContainer.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picProfile, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -44,6 +48,8 @@ Partial Class RiderHomepage
         '
         Me.pnlContainer.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.pnlContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnlContainer.Controls.Add(Me.PictureBox1)
+        Me.pnlContainer.Controls.Add(Me.Label1)
         Me.pnlContainer.Location = New System.Drawing.Point(144, 38)
         Me.pnlContainer.Name = "pnlContainer"
         Me.pnlContainer.Size = New System.Drawing.Size(622, 470)
@@ -64,20 +70,6 @@ Partial Class RiderHomepage
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(147, 470)
         Me.Panel1.TabIndex = 6
-        '
-        'iconFeedback
-        '
-        Me.iconFeedback.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.iconFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.iconFeedback.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
-        Me.iconFeedback.ForeColor = System.Drawing.Color.White
-        Me.iconFeedback.Image = Global.OMC21.My.Resources.Resources.Feedback
-        Me.iconFeedback.Location = New System.Drawing.Point(-1, 250)
-        Me.iconFeedback.Name = "iconFeedback"
-        Me.iconFeedback.Size = New System.Drawing.Size(48, 43)
-        Me.iconFeedback.TabIndex = 25
-        Me.iconFeedback.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.iconFeedback.UseVisualStyleBackColor = False
         '
         'btnEditProfile
         '
@@ -105,20 +97,6 @@ Partial Class RiderHomepage
         Me.btnFeedback.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnFeedback.UseVisualStyleBackColor = False
         '
-        'iconHome
-        '
-        Me.iconHome.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.iconHome.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.iconHome.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
-        Me.iconHome.ForeColor = System.Drawing.Color.White
-        Me.iconHome.Image = CType(resources.GetObject("iconHome.Image"), System.Drawing.Image)
-        Me.iconHome.Location = New System.Drawing.Point(-1, 207)
-        Me.iconHome.Name = "iconHome"
-        Me.iconHome.Size = New System.Drawing.Size(48, 43)
-        Me.iconHome.TabIndex = 21
-        Me.iconHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.iconHome.UseVisualStyleBackColor = False
-        '
         'lblUsername
         '
         Me.lblUsername.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -145,17 +123,6 @@ Partial Class RiderHomepage
         Me.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHome.UseVisualStyleBackColor = False
         '
-        'picProfile
-        '
-        Me.picProfile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.picProfile.Image = Global.OMC21.My.Resources.Resources.profilePic
-        Me.picProfile.Location = New System.Drawing.Point(25, 19)
-        Me.picProfile.Name = "picProfile"
-        Me.picProfile.Size = New System.Drawing.Size(96, 94)
-        Me.picProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picProfile.TabIndex = 0
-        Me.picProfile.TabStop = False
-        '
         'lblLogout
         '
         Me.lblLogout.AutoSize = True
@@ -166,6 +133,37 @@ Partial Class RiderHomepage
         Me.lblLogout.Size = New System.Drawing.Size(58, 23)
         Me.lblLogout.TabIndex = 7
         Me.lblLogout.Text = "Logout"
+        '
+        'CloseMinimize1
+        '
+        Me.CloseMinimize1.BackColor = System.Drawing.Color.Transparent
+        Me.CloseMinimize1.ForeColor = System.Drawing.Color.Transparent
+        Me.CloseMinimize1.Location = New System.Drawing.Point(700, 2)
+        Me.CloseMinimize1.Margin = New System.Windows.Forms.Padding(5)
+        Me.CloseMinimize1.Name = "CloseMinimize1"
+        Me.CloseMinimize1.Size = New System.Drawing.Size(79, 37)
+        Me.CloseMinimize1.TabIndex = 13
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 30.0!)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(25, 43)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(303, 56)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Welcome Back!"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.OMC21.My.Resources.Resources.riderHome
+        Me.PictureBox1.Location = New System.Drawing.Point(-35, 119)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(547, 321)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 3
+        Me.PictureBox1.TabStop = False
         '
         'Button1
         '
@@ -193,15 +191,44 @@ Partial Class RiderHomepage
         Me.btnLogout.TabIndex = 9
         Me.btnLogout.UseVisualStyleBackColor = False
         '
-        'CloseMinimize1
+        'iconFeedback
         '
-        Me.CloseMinimize1.BackColor = System.Drawing.Color.Transparent
-        Me.CloseMinimize1.ForeColor = System.Drawing.Color.Transparent
-        Me.CloseMinimize1.Location = New System.Drawing.Point(700, 2)
-        Me.CloseMinimize1.Margin = New System.Windows.Forms.Padding(5)
-        Me.CloseMinimize1.Name = "CloseMinimize1"
-        Me.CloseMinimize1.Size = New System.Drawing.Size(79, 37)
-        Me.CloseMinimize1.TabIndex = 13
+        Me.iconFeedback.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.iconFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.iconFeedback.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
+        Me.iconFeedback.ForeColor = System.Drawing.Color.White
+        Me.iconFeedback.Image = Global.OMC21.My.Resources.Resources.Feedback
+        Me.iconFeedback.Location = New System.Drawing.Point(-1, 250)
+        Me.iconFeedback.Name = "iconFeedback"
+        Me.iconFeedback.Size = New System.Drawing.Size(48, 43)
+        Me.iconFeedback.TabIndex = 25
+        Me.iconFeedback.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.iconFeedback.UseVisualStyleBackColor = False
+        '
+        'iconHome
+        '
+        Me.iconHome.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.iconHome.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.iconHome.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
+        Me.iconHome.ForeColor = System.Drawing.Color.White
+        Me.iconHome.Image = CType(resources.GetObject("iconHome.Image"), System.Drawing.Image)
+        Me.iconHome.Location = New System.Drawing.Point(-1, 207)
+        Me.iconHome.Name = "iconHome"
+        Me.iconHome.Size = New System.Drawing.Size(48, 43)
+        Me.iconHome.TabIndex = 21
+        Me.iconHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.iconHome.UseVisualStyleBackColor = False
+        '
+        'picProfile
+        '
+        Me.picProfile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.picProfile.Image = Global.OMC21.My.Resources.Resources.profilePic
+        Me.picProfile.Location = New System.Drawing.Point(25, 19)
+        Me.picProfile.Name = "picProfile"
+        Me.picProfile.Size = New System.Drawing.Size(96, 94)
+        Me.picProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picProfile.TabIndex = 0
+        Me.picProfile.TabStop = False
         '
         'RiderHomepage
         '
@@ -221,7 +248,10 @@ Partial Class RiderHomepage
         Me.Name = "RiderHomepage"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "RiderHomepage"
+        Me.pnlContainer.ResumeLayout(False)
+        Me.pnlContainer.PerformLayout()
         Me.Panel1.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picProfile, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -240,4 +270,6 @@ Partial Class RiderHomepage
     Friend WithEvents lblLogout As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents CloseMinimize1 As CloseMinimize
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label1 As Label
 End Class

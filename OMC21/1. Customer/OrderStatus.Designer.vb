@@ -37,7 +37,7 @@ Partial Class OrderStatus
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lblPhone = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnCart = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.picDelivery, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -176,15 +176,15 @@ Partial Class OrderStatus
         Me.lblPhone.TabIndex = 82
         Me.lblPhone.Text = "012-23344556"
         '
-        'Button1
+        'btnCart
         '
-        Me.Button1.BackColor = System.Drawing.Color.White
-        Me.Button1.Image = Global.OMC21.My.Resources.Resources.icons8_cart_35
-        Me.Button1.Location = New System.Drawing.Point(551, 33)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(45, 45)
-        Me.Button1.TabIndex = 84
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnCart.BackColor = System.Drawing.Color.White
+        Me.btnCart.Image = Global.OMC21.My.Resources.Resources.icons8_cart_35
+        Me.btnCart.Location = New System.Drawing.Point(551, 33)
+        Me.btnCart.Name = "btnCart"
+        Me.btnCart.Size = New System.Drawing.Size(45, 45)
+        Me.btnCart.TabIndex = 84
+        Me.btnCart.UseVisualStyleBackColor = False
         '
         'Button5
         '
@@ -213,7 +213,7 @@ Partial Class OrderStatus
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnCart)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.lblPhone)
         Me.Controls.Add(Me.Label3)
@@ -252,7 +252,7 @@ Partial Class OrderStatus
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents lblPhone As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnCart As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents Label4 As Label
 End Class

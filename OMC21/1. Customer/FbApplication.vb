@@ -37,7 +37,7 @@ Public Class FbApplication
         Else
             Dim feedback As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
             'insert into is a statement of SQL, Feedback is datatable name
-            Dim strsql As String = "INSERT INTO Feedback ([Comment],[Rating],[Feedback Target]) Values(@comment,@rating, @target)"
+            Dim strsql As String = "INSERT INTO Feedback ([Comment],[Rating],[Feedback Target], [User ID]) Values(@comment,@rating, @target, @id)"
             Dim mycmd As New OleDbCommand(strsql, feedback)
 
             feedback.Open()
@@ -45,6 +45,7 @@ Public Class FbApplication
             mycmd.Parameters.AddWithValue("@comment", txtComment.Text)
             mycmd.Parameters.AddWithValue("@rating", rate)
             mycmd.Parameters.AddWithValue("@target", "Application")
+            mycmd.Parameters.AddWithValue("@id", GlobalVariables.UserID)
 
             mycmd.ExecuteNonQuery()
             feedback.Close() 'database

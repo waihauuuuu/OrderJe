@@ -153,9 +153,59 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Public ReadOnly Property CafeHome() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("CafeHome", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Public ReadOnly Property car_racing_icon2() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("car racing icon2", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Public ReadOnly Property car1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("car1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Public ReadOnly Property car2() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("car2", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Public ReadOnly Property car3() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("car3", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Public ReadOnly Property car4() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("car4", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -176,6 +226,26 @@ Namespace My.Resources
         Public ReadOnly Property Customer() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Customer", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Public ReadOnly Property CustomerHome() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("CustomerHome", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Public ReadOnly Property delete() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("delete", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -406,6 +476,16 @@ Namespace My.Resources
         Public ReadOnly Property Rider() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Rider", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Public ReadOnly Property riderHome() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("riderHome", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

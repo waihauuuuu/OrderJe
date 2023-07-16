@@ -26,11 +26,11 @@ Partial Class UserData
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnCustomer = New System.Windows.Forms.Button()
         Me.btnRider = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.UserDataGrid = New System.Windows.Forms.DataGridView()
+        Me.btnCafeOwner = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.UserDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label14
@@ -58,38 +58,41 @@ Partial Class UserData
         '
         'btnCustomer
         '
+        Me.btnCustomer.BackColor = System.Drawing.Color.Gainsboro
         Me.btnCustomer.Location = New System.Drawing.Point(45, 120)
         Me.btnCustomer.Name = "btnCustomer"
         Me.btnCustomer.Size = New System.Drawing.Size(90, 47)
         Me.btnCustomer.TabIndex = 72
         Me.btnCustomer.Text = "Customer"
-        Me.btnCustomer.UseVisualStyleBackColor = True
+        Me.btnCustomer.UseVisualStyleBackColor = False
         '
         'btnRider
         '
+        Me.btnRider.BackColor = System.Drawing.Color.Gainsboro
         Me.btnRider.Location = New System.Drawing.Point(134, 120)
         Me.btnRider.Name = "btnRider"
         Me.btnRider.Size = New System.Drawing.Size(90, 47)
         Me.btnRider.TabIndex = 73
         Me.btnRider.Text = "Rider"
-        Me.btnRider.UseVisualStyleBackColor = True
+        Me.btnRider.UseVisualStyleBackColor = False
         '
-        'DataGridView1
+        'UserDataGrid
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(45, 164)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(527, 279)
-        Me.DataGridView1.TabIndex = 74
+        Me.UserDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.UserDataGrid.Location = New System.Drawing.Point(45, 164)
+        Me.UserDataGrid.Name = "UserDataGrid"
+        Me.UserDataGrid.Size = New System.Drawing.Size(527, 279)
+        Me.UserDataGrid.TabIndex = 74
         '
-        'Button1
+        'btnCafeOwner
         '
-        Me.Button1.Location = New System.Drawing.Point(223, 120)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(86, 47)
-        Me.Button1.TabIndex = 75
-        Me.Button1.Text = "Cafe Owner"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnCafeOwner.BackColor = System.Drawing.Color.Gainsboro
+        Me.btnCafeOwner.Location = New System.Drawing.Point(223, 120)
+        Me.btnCafeOwner.Name = "btnCafeOwner"
+        Me.btnCafeOwner.Size = New System.Drawing.Size(86, 47)
+        Me.btnCafeOwner.TabIndex = 75
+        Me.btnCafeOwner.Text = "Cafe Owner"
+        Me.btnCafeOwner.UseVisualStyleBackColor = False
         '
         'Button5
         '
@@ -101,24 +104,24 @@ Partial Class UserData
         Me.Button5.TabIndex = 76
         Me.Button5.UseVisualStyleBackColor = False
         '
-        'RegistrationAproval
+        'UserData
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.UserDataGrid)
+        Me.Controls.Add(Me.btnCafeOwner)
         Me.Controls.Add(Me.btnRider)
         Me.Controls.Add(Me.btnCustomer)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.PictureBox1)
         Me.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.Name = "RegistrationAproval"
+        Me.Name = "UserData"
         Me.Size = New System.Drawing.Size(622, 470)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.UserDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -127,7 +130,7 @@ Partial Class UserData
     Friend WithEvents Label14 As Label
     Friend WithEvents btnCustomer As Button
     Friend WithEvents btnRider As Button
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Button1 As Button
+    Friend WithEvents UserDataGrid As DataGridView
+    Friend WithEvents btnCafeOwner As Button
     Friend WithEvents Button5 As Button
 End Class

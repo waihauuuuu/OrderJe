@@ -22,31 +22,32 @@ Partial Class CafeOwnerViewFeedback
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.PanelComment = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.lblRating = New System.Windows.Forms.Label()
         Me.Star5 = New System.Windows.Forms.Button()
         Me.Star4 = New System.Windows.Forms.Button()
         Me.Star3 = New System.Windows.Forms.Button()
         Me.Star2 = New System.Windows.Forms.Button()
         Me.Star1 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'FlowLayoutPanel1
+        'PanelComment
         '
-        Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.FlowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(45, 240)
-        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(526, 209)
-        Me.FlowLayoutPanel1.TabIndex = 98
+        Me.PanelComment.AutoScroll = True
+        Me.PanelComment.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.PanelComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PanelComment.Location = New System.Drawing.Point(0, 240)
+        Me.PanelComment.Name = "PanelComment"
+        Me.PanelComment.Size = New System.Drawing.Size(622, 230)
+        Me.PanelComment.TabIndex = 98
         '
         'Label2
         '
@@ -70,17 +71,6 @@ Partial Class CafeOwnerViewFeedback
         Me.Label14.Size = New System.Drawing.Size(80, 23)
         Me.Label14.TabIndex = 87
         Me.Label14.Text = "Feedback"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.OMC21.My.Resources.Resources.OrderJeLogo
-        Me.PictureBox2.Location = New System.Drawing.Point(45, -5)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(90, 100)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 88
-        Me.PictureBox2.TabStop = False
         '
         'Label1
         '
@@ -113,26 +103,16 @@ Partial Class CafeOwnerViewFeedback
         Me.ComboBox1.Size = New System.Drawing.Size(196, 25)
         Me.ComboBox1.TabIndex = 101
         '
-        'Label4
+        'lblRating
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(198, 171)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(77, 23)
-        Me.Label4.TabIndex = 102
-        Me.Label4.Text = "lblRating"
-        '
-        'Button6
-        '
-        Me.Button6.BackColor = System.Drawing.Color.White
-        Me.Button6.Image = Global.OMC21.My.Resources.Resources.icons8_notification_35
-        Me.Button6.Location = New System.Drawing.Point(551, 33)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(45, 45)
-        Me.Button6.TabIndex = 103
-        Me.Button6.UseVisualStyleBackColor = False
+        Me.lblRating.AutoSize = True
+        Me.lblRating.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
+        Me.lblRating.ForeColor = System.Drawing.Color.White
+        Me.lblRating.Location = New System.Drawing.Point(198, 171)
+        Me.lblRating.Name = "lblRating"
+        Me.lblRating.Size = New System.Drawing.Size(77, 23)
+        Me.lblRating.TabIndex = 102
+        Me.lblRating.Text = "lblRating"
         '
         'Star5
         '
@@ -214,17 +194,38 @@ Partial Class CafeOwnerViewFeedback
         Me.Star1.Text = "★"
         Me.Star1.UseVisualStyleBackColor = False
         '
+        'Button6
+        '
+        Me.Button6.BackColor = System.Drawing.Color.White
+        Me.Button6.Image = Global.OMC21.My.Resources.Resources.icons8_notification_35
+        Me.Button6.Location = New System.Drawing.Point(551, 33)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(45, 45)
+        Me.Button6.TabIndex = 103
+        Me.Button6.UseVisualStyleBackColor = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.OMC21.My.Resources.Resources.OrderJeLogo
+        Me.PictureBox2.Location = New System.Drawing.Point(45, -5)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(90, 100)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 88
+        Me.PictureBox2.TabStop = False
+        '
         'CafeOwnerViewFeedback
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.lblRating)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.FlowLayoutPanel1)
+        Me.Controls.Add(Me.PanelComment)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.PictureBox2)
@@ -243,14 +244,14 @@ Partial Class CafeOwnerViewFeedback
 
     End Sub
 
-    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+    Friend WithEvents PanelComment As FlowLayoutPanel
     Friend WithEvents Label2 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Label4 As Label
+    Friend WithEvents lblRating As Label
     Friend WithEvents Button6 As Button
     Friend WithEvents Star5 As Button
     Friend WithEvents Star4 As Button

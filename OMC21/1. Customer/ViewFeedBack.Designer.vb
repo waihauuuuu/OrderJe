@@ -28,7 +28,7 @@ Partial Class ViewFeedBack
         Me.btnApplication = New System.Windows.Forms.Button()
         Me.pnlContainerIn = New System.Windows.Forms.Panel()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.btnCart = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -99,15 +99,15 @@ Partial Class ViewFeedBack
         Me.Button5.TabIndex = 7
         Me.Button5.UseVisualStyleBackColor = False
         '
-        'Button6
+        'btnCart
         '
-        Me.Button6.BackColor = System.Drawing.Color.White
-        Me.Button6.Image = Global.OMC21.My.Resources.Resources.icons8_cart_35
-        Me.Button6.Location = New System.Drawing.Point(551, 33)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(45, 45)
-        Me.Button6.TabIndex = 8
-        Me.Button6.UseVisualStyleBackColor = False
+        Me.btnCart.BackColor = System.Drawing.Color.White
+        Me.btnCart.Image = Global.OMC21.My.Resources.Resources.icons8_cart_35
+        Me.btnCart.Location = New System.Drawing.Point(551, 33)
+        Me.btnCart.Name = "btnCart"
+        Me.btnCart.Size = New System.Drawing.Size(45, 45)
+        Me.btnCart.TabIndex = 8
+        Me.btnCart.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
@@ -126,7 +126,7 @@ Partial Class ViewFeedBack
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.Controls.Add(Me.pnlContainerIn)
-        Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.btnCart)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.btnApplication)
         Me.Controls.Add(Me.btnRider)
@@ -150,5 +150,5 @@ Partial Class ViewFeedBack
     Friend WithEvents btnApplication As Button
     Friend WithEvents pnlContainerIn As Panel
     Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
+    Friend WithEvents btnCart As Button
 End Class

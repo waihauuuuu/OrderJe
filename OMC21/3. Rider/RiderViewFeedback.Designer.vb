@@ -22,33 +22,34 @@ Partial Class RiderViewFeedback
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.picProfile = New System.Windows.Forms.PictureBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.lblUserID = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.PanelComment = New System.Windows.Forms.FlowLayoutPanel()
         Me.Star5 = New System.Windows.Forms.Button()
         Me.Star4 = New System.Windows.Forms.Button()
         Me.Star3 = New System.Windows.Forms.Button()
         Me.Star2 = New System.Windows.Forms.Button()
         Me.Star1 = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.lblRating = New System.Windows.Forms.Label()
+        CType(Me.picProfile, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'PictureBox1
+        'picProfile
         '
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Image = Global.OMC21.My.Resources.Resources.profilePic
-        Me.PictureBox1.Location = New System.Drawing.Point(45, 114)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(90, 98)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.picProfile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.picProfile.Image = Global.OMC21.My.Resources.Resources.profilePic
+        Me.picProfile.Location = New System.Drawing.Point(45, 114)
+        Me.picProfile.Name = "picProfile"
+        Me.picProfile.Size = New System.Drawing.Size(90, 98)
+        Me.picProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picProfile.TabIndex = 0
+        Me.picProfile.TabStop = False
         '
         'Label14
         '
@@ -117,12 +118,13 @@ Partial Class RiderViewFeedback
         Me.Label2.TabIndex = 79
         Me.Label2.Text = "Rating"
         '
-        'FlowLayoutPanel1
+        'PanelComment
         '
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(45, 231)
-        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(526, 220)
-        Me.FlowLayoutPanel1.TabIndex = 85
+        Me.PanelComment.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.PanelComment.Location = New System.Drawing.Point(0, 231)
+        Me.PanelComment.Name = "PanelComment"
+        Me.PanelComment.Size = New System.Drawing.Size(622, 239)
+        Me.PanelComment.TabIndex = 85
         '
         'Star5
         '
@@ -204,46 +206,59 @@ Partial Class RiderViewFeedback
         Me.Star1.Text = "★"
         Me.Star1.UseVisualStyleBackColor = False
         '
+        'lblRating
+        '
+        Me.lblRating.AutoSize = True
+        Me.lblRating.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
+        Me.lblRating.ForeColor = System.Drawing.Color.White
+        Me.lblRating.Location = New System.Drawing.Point(488, 129)
+        Me.lblRating.Name = "lblRating"
+        Me.lblRating.Size = New System.Drawing.Size(77, 23)
+        Me.lblRating.TabIndex = 103
+        Me.lblRating.Text = "lblRating"
+        '
         'RiderViewFeedback
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Controls.Add(Me.lblRating)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Star5)
         Me.Controls.Add(Me.Star4)
         Me.Controls.Add(Me.Star3)
         Me.Controls.Add(Me.Star2)
         Me.Controls.Add(Me.Star1)
-        Me.Controls.Add(Me.FlowLayoutPanel1)
+        Me.Controls.Add(Me.PanelComment)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblUserID)
         Me.Controls.Add(Me.lblUsername)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.picProfile)
         Me.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "RiderViewFeedback"
         Me.Size = New System.Drawing.Size(622, 470)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picProfile, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents picProfile As PictureBox
     Friend WithEvents Label14 As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents lblUsername As Label
     Friend WithEvents lblUserID As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+    Friend WithEvents PanelComment As FlowLayoutPanel
     Friend WithEvents Star5 As Button
     Friend WithEvents Star4 As Button
     Friend WithEvents Star3 As Button
     Friend WithEvents Star2 As Button
     Friend WithEvents Star1 As Button
+    Friend WithEvents lblRating As Label
 End Class

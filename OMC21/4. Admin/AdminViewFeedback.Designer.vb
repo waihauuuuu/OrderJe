@@ -22,7 +22,7 @@ Partial Class AdminViewFeedback
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.PanelComment = New System.Windows.Forms.FlowLayoutPanel()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -32,15 +32,18 @@ Partial Class AdminViewFeedback
         Me.Star2 = New System.Windows.Forms.Button()
         Me.Star1 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.lblRating = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'FlowLayoutPanel1
+        'PanelComment
         '
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 215)
-        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(622, 255)
-        Me.FlowLayoutPanel1.TabIndex = 1
+        Me.PanelComment.AutoScroll = True
+        Me.PanelComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PanelComment.Location = New System.Drawing.Point(0, 215)
+        Me.PanelComment.Name = "PanelComment"
+        Me.PanelComment.Size = New System.Drawing.Size(622, 255)
+        Me.PanelComment.TabIndex = 1
         '
         'Label14
         '
@@ -166,10 +169,22 @@ Partial Class AdminViewFeedback
         Me.Button5.TabIndex = 97
         Me.Button5.UseVisualStyleBackColor = False
         '
+        'lblRating
+        '
+        Me.lblRating.AutoSize = True
+        Me.lblRating.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
+        Me.lblRating.ForeColor = System.Drawing.Color.Black
+        Me.lblRating.Location = New System.Drawing.Point(207, 126)
+        Me.lblRating.Name = "lblRating"
+        Me.lblRating.Size = New System.Drawing.Size(77, 23)
+        Me.lblRating.TabIndex = 103
+        Me.lblRating.Text = "lblRating"
+        '
         'AdminViewFeedback
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.lblRating)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Star5)
@@ -179,7 +194,7 @@ Partial Class AdminViewFeedback
         Me.Controls.Add(Me.Star1)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.FlowLayoutPanel1)
+        Me.Controls.Add(Me.PanelComment)
         Me.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "AdminViewFeedback"
@@ -190,7 +205,7 @@ Partial Class AdminViewFeedback
 
     End Sub
 
-    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+    Friend WithEvents PanelComment As FlowLayoutPanel
     Friend WithEvents Label14 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label2 As Label
@@ -200,4 +215,5 @@ Partial Class AdminViewFeedback
     Friend WithEvents Star2 As Button
     Friend WithEvents Star1 As Button
     Friend WithEvents Button5 As Button
+    Friend WithEvents lblRating As Label
 End Class

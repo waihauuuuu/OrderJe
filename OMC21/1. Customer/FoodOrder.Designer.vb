@@ -22,10 +22,10 @@ Partial Class FoodOrder
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cboCafe = New System.Windows.Forms.ComboBox()
         Me.btnSideDish = New System.Windows.Forms.Button()
         Me.btnBeverages = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.pnlCart = New System.Windows.Forms.Panel()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
@@ -37,23 +37,24 @@ Partial Class FoodOrder
         Me.Label14 = New System.Windows.Forms.Label()
         Me.TLPMenu = New System.Windows.Forms.TableLayoutPanel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnCart = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.pnlCart.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ComboBox1
+        'cboCafe
         '
-        Me.ComboBox1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"All Cafe", "Cafe V2", "Cafe V3", "Cafe V4", "Cafe V5", "Cafe V6"})
-        Me.ComboBox1.Location = New System.Drawing.Point(35, 127)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(112, 25)
-        Me.ComboBox1.TabIndex = 46
-        Me.ComboBox1.Text = "All Cafe"
+        Me.cboCafe.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.cboCafe.FormattingEnabled = True
+        Me.cboCafe.Items.AddRange(New Object() {"All Café", "Café Mesra", "V2 Gee & S Café", "V3 Island One Café", "V4 Razak zaitom Café", "V5 Afifah Beta Café", "V6 Harraz Café", "V5 Dapur Ibrahim Café", "V5 Manje Burger", "Sayang Café"})
+        Me.cboCafe.Location = New System.Drawing.Point(23, 127)
+        Me.cboCafe.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.cboCafe.Name = "cboCafe"
+        Me.cboCafe.Size = New System.Drawing.Size(183, 25)
+        Me.cboCafe.TabIndex = 46
+        Me.cboCafe.Text = "All Cafe"
         '
         'btnSideDish
         '
@@ -81,15 +82,15 @@ Partial Class FoodOrder
         Me.btnBeverages.Text = "Beverages"
         Me.btnBeverages.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'txtSearch
         '
-        Me.TextBox1.ForeColor = System.Drawing.SystemColors.InactiveCaption
-        Me.TextBox1.Location = New System.Drawing.Point(186, 127)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(283, 24)
-        Me.TextBox1.TabIndex = 41
-        Me.TextBox1.Text = "Search"
+        Me.txtSearch.ForeColor = System.Drawing.SystemColors.InactiveCaption
+        Me.txtSearch.Location = New System.Drawing.Point(232, 128)
+        Me.txtSearch.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(283, 24)
+        Me.txtSearch.TabIndex = 41
+        Me.txtSearch.Text = "Search"
         '
         'pnlCart
         '
@@ -226,15 +227,15 @@ Partial Class FoodOrder
         Me.PictureBox1.TabIndex = 55
         Me.PictureBox1.TabStop = False
         '
-        'Button1
+        'btnCart
         '
-        Me.Button1.BackColor = System.Drawing.Color.White
-        Me.Button1.Image = Global.OMC21.My.Resources.Resources.icons8_cart_35
-        Me.Button1.Location = New System.Drawing.Point(551, 33)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(45, 45)
-        Me.Button1.TabIndex = 73
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnCart.BackColor = System.Drawing.Color.White
+        Me.btnCart.Image = Global.OMC21.My.Resources.Resources.icons8_cart_35
+        Me.btnCart.Location = New System.Drawing.Point(551, 33)
+        Me.btnCart.Name = "btnCart"
+        Me.btnCart.Size = New System.Drawing.Size(45, 45)
+        Me.btnCart.TabIndex = 73
+        Me.btnCart.UseVisualStyleBackColor = False
         '
         'Button5
         '
@@ -246,21 +247,31 @@ Partial Class FoodOrder
         Me.Button5.TabIndex = 72
         Me.Button5.UseVisualStyleBackColor = False
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(532, 129)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(64, 23)
+        Me.Button2.TabIndex = 74
+        Me.Button2.Text = "Search"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'FoodOrder
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnCart)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.TLPMenu)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.pnlCart)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cboCafe)
         Me.Controls.Add(Me.btnSideDish)
         Me.Controls.Add(Me.btnBeverages)
         Me.Controls.Add(Me.btnFood)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtSearch)
         Me.Controls.Add(Me.PictureBox1)
         Me.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.Maroon
@@ -275,10 +286,10 @@ Partial Class FoodOrder
 
     End Sub
 
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cboCafe As ComboBox
     Friend WithEvents btnSideDish As Button
     Friend WithEvents btnBeverages As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtSearch As TextBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents pnlCart As Panel
     Friend WithEvents Button8 As Button
@@ -290,6 +301,7 @@ Partial Class FoodOrder
     Friend WithEvents btnFood As Button
     Friend WithEvents Label14 As Label
     Friend WithEvents TLPMenu As TableLayoutPanel
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnCart As Button
     Friend WithEvents Button5 As Button
+    Friend WithEvents Button2 As Button
 End Class

@@ -24,26 +24,30 @@ Partial Class CustomerHomepage
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CustomerHomepage))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.iconFeedback = New System.Windows.Forms.Button()
         Me.btnEditProfile = New System.Windows.Forms.Button()
-        Me.iconDelivery = New System.Windows.Forms.Button()
         Me.btnFeedback = New System.Windows.Forms.Button()
-        Me.iconGames = New System.Windows.Forms.Button()
         Me.btnDelivery = New System.Windows.Forms.Button()
-        Me.iconCafe = New System.Windows.Forms.Button()
         Me.btnGames = New System.Windows.Forms.Button()
-        Me.iconHome = New System.Windows.Forms.Button()
         Me.btnCafe = New System.Windows.Forms.Button()
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.btnHome = New System.Windows.Forms.Button()
-        Me.picProfile = New System.Windows.Forms.PictureBox()
         Me.pnlContainer = New System.Windows.Forms.Panel()
+        Me.lblLogout = New System.Windows.Forms.Label()
         Me.CloseMinimize2 = New OMC21.CloseMinimize()
         Me.CloseMinimize3 = New OMC21.CloseMinimize()
-        Me.lblLogout = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.btnLogout = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.iconFeedback = New System.Windows.Forms.Button()
+        Me.iconDelivery = New System.Windows.Forms.Button()
+        Me.iconGames = New System.Windows.Forms.Button()
+        Me.iconCafe = New System.Windows.Forms.Button()
+        Me.iconHome = New System.Windows.Forms.Button()
+        Me.picProfile = New System.Windows.Forms.PictureBox()
         Me.CloseMinimize4 = New OMC21.CloseMinimize()
         Me.Panel1.SuspendLayout()
+        Me.pnlContainer.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picProfile, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -69,21 +73,6 @@ Partial Class CustomerHomepage
         Me.Panel1.Size = New System.Drawing.Size(147, 470)
         Me.Panel1.TabIndex = 0
         '
-        'iconFeedback
-        '
-        Me.iconFeedback.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.iconFeedback.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.iconFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.iconFeedback.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
-        Me.iconFeedback.ForeColor = System.Drawing.Color.White
-        Me.iconFeedback.Image = Global.OMC21.My.Resources.Resources.Feedback
-        Me.iconFeedback.Location = New System.Drawing.Point(-1, 379)
-        Me.iconFeedback.Name = "iconFeedback"
-        Me.iconFeedback.Size = New System.Drawing.Size(48, 43)
-        Me.iconFeedback.TabIndex = 25
-        Me.iconFeedback.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.iconFeedback.UseVisualStyleBackColor = False
-        '
         'btnEditProfile
         '
         Me.btnEditProfile.BackColor = System.Drawing.Color.Gray
@@ -95,21 +84,6 @@ Partial Class CustomerHomepage
         Me.btnEditProfile.TabIndex = 21
         Me.btnEditProfile.Text = "Edit Profile"
         Me.btnEditProfile.UseVisualStyleBackColor = False
-        '
-        'iconDelivery
-        '
-        Me.iconDelivery.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.iconDelivery.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.iconDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.iconDelivery.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
-        Me.iconDelivery.ForeColor = System.Drawing.Color.White
-        Me.iconDelivery.Image = Global.OMC21.My.Resources.Resources.Delivery1
-        Me.iconDelivery.Location = New System.Drawing.Point(-1, 336)
-        Me.iconDelivery.Name = "iconDelivery"
-        Me.iconDelivery.Size = New System.Drawing.Size(48, 43)
-        Me.iconDelivery.TabIndex = 24
-        Me.iconDelivery.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.iconDelivery.UseVisualStyleBackColor = False
         '
         'btnFeedback
         '
@@ -126,21 +100,6 @@ Partial Class CustomerHomepage
         Me.btnFeedback.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnFeedback.UseVisualStyleBackColor = False
         '
-        'iconGames
-        '
-        Me.iconGames.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.iconGames.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.iconGames.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.iconGames.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
-        Me.iconGames.ForeColor = System.Drawing.Color.White
-        Me.iconGames.Image = Global.OMC21.My.Resources.Resources.MiniGame
-        Me.iconGames.Location = New System.Drawing.Point(-1, 293)
-        Me.iconGames.Name = "iconGames"
-        Me.iconGames.Size = New System.Drawing.Size(48, 43)
-        Me.iconGames.TabIndex = 23
-        Me.iconGames.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.iconGames.UseVisualStyleBackColor = False
-        '
         'btnDelivery
         '
         Me.btnDelivery.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
@@ -156,21 +115,6 @@ Partial Class CustomerHomepage
         Me.btnDelivery.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnDelivery.UseVisualStyleBackColor = False
         '
-        'iconCafe
-        '
-        Me.iconCafe.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.iconCafe.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.iconCafe.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.iconCafe.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
-        Me.iconCafe.ForeColor = System.Drawing.Color.White
-        Me.iconCafe.Image = Global.OMC21.My.Resources.Resources.Cafe
-        Me.iconCafe.Location = New System.Drawing.Point(-1, 250)
-        Me.iconCafe.Name = "iconCafe"
-        Me.iconCafe.Size = New System.Drawing.Size(48, 43)
-        Me.iconCafe.TabIndex = 22
-        Me.iconCafe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.iconCafe.UseVisualStyleBackColor = False
-        '
         'btnGames
         '
         Me.btnGames.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
@@ -185,21 +129,6 @@ Partial Class CustomerHomepage
         Me.btnGames.Text = "Mini Games"
         Me.btnGames.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnGames.UseVisualStyleBackColor = False
-        '
-        'iconHome
-        '
-        Me.iconHome.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.iconHome.FlatAppearance.BorderColor = System.Drawing.Color.Black
-        Me.iconHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.iconHome.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
-        Me.iconHome.ForeColor = System.Drawing.Color.White
-        Me.iconHome.Image = CType(resources.GetObject("iconHome.Image"), System.Drawing.Image)
-        Me.iconHome.Location = New System.Drawing.Point(-1, 207)
-        Me.iconHome.Name = "iconHome"
-        Me.iconHome.Size = New System.Drawing.Size(48, 43)
-        Me.iconHome.TabIndex = 21
-        Me.iconHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.iconHome.UseVisualStyleBackColor = False
         '
         'btnCafe
         '
@@ -242,25 +171,26 @@ Partial Class CustomerHomepage
         Me.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHome.UseVisualStyleBackColor = False
         '
-        'picProfile
-        '
-        Me.picProfile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.picProfile.Image = Global.OMC21.My.Resources.Resources.profilePic
-        Me.picProfile.Location = New System.Drawing.Point(25, 19)
-        Me.picProfile.Name = "picProfile"
-        Me.picProfile.Size = New System.Drawing.Size(96, 94)
-        Me.picProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.picProfile.TabIndex = 0
-        Me.picProfile.TabStop = False
-        '
         'pnlContainer
         '
         Me.pnlContainer.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.pnlContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pnlContainer.Controls.Add(Me.PictureBox1)
+        Me.pnlContainer.Controls.Add(Me.Label1)
         Me.pnlContainer.Location = New System.Drawing.Point(144, 38)
         Me.pnlContainer.Name = "pnlContainer"
         Me.pnlContainer.Size = New System.Drawing.Size(622, 470)
         Me.pnlContainer.TabIndex = 2
+        '
+        'lblLogout
+        '
+        Me.lblLogout.AutoSize = True
+        Me.lblLogout.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
+        Me.lblLogout.Location = New System.Drawing.Point(41, 515)
+        Me.lblLogout.Name = "lblLogout"
+        Me.lblLogout.Size = New System.Drawing.Size(58, 23)
+        Me.lblLogout.TabIndex = 5
+        Me.lblLogout.Text = "Logout"
         '
         'CloseMinimize2
         '
@@ -280,15 +210,15 @@ Partial Class CustomerHomepage
         Me.CloseMinimize3.Size = New System.Drawing.Size(68, 51)
         Me.CloseMinimize3.TabIndex = 0
         '
-        'lblLogout
+        'Label1
         '
-        Me.lblLogout.AutoSize = True
-        Me.lblLogout.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
-        Me.lblLogout.Location = New System.Drawing.Point(41, 515)
-        Me.lblLogout.Name = "lblLogout"
-        Me.lblLogout.Size = New System.Drawing.Size(58, 23)
-        Me.lblLogout.TabIndex = 5
-        Me.lblLogout.Text = "Logout"
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 30.0!)
+        Me.Label1.Location = New System.Drawing.Point(25, 43)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(303, 56)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Welcome Back!"
         '
         'btnLogout
         '
@@ -303,14 +233,110 @@ Partial Class CustomerHomepage
         Me.btnLogout.TabIndex = 4
         Me.btnLogout.UseVisualStyleBackColor = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.OMC21.My.Resources.Resources.CustomerHome
+        Me.PictureBox1.Location = New System.Drawing.Point(-47, 116)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(547, 321)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
+        'iconFeedback
+        '
+        Me.iconFeedback.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.iconFeedback.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.iconFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.iconFeedback.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
+        Me.iconFeedback.ForeColor = System.Drawing.Color.White
+        Me.iconFeedback.Image = Global.OMC21.My.Resources.Resources.Feedback
+        Me.iconFeedback.Location = New System.Drawing.Point(-1, 379)
+        Me.iconFeedback.Name = "iconFeedback"
+        Me.iconFeedback.Size = New System.Drawing.Size(48, 43)
+        Me.iconFeedback.TabIndex = 25
+        Me.iconFeedback.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.iconFeedback.UseVisualStyleBackColor = False
+        '
+        'iconDelivery
+        '
+        Me.iconDelivery.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.iconDelivery.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.iconDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.iconDelivery.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
+        Me.iconDelivery.ForeColor = System.Drawing.Color.White
+        Me.iconDelivery.Image = Global.OMC21.My.Resources.Resources.Delivery1
+        Me.iconDelivery.Location = New System.Drawing.Point(-1, 336)
+        Me.iconDelivery.Name = "iconDelivery"
+        Me.iconDelivery.Size = New System.Drawing.Size(48, 43)
+        Me.iconDelivery.TabIndex = 24
+        Me.iconDelivery.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.iconDelivery.UseVisualStyleBackColor = False
+        '
+        'iconGames
+        '
+        Me.iconGames.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.iconGames.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.iconGames.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.iconGames.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
+        Me.iconGames.ForeColor = System.Drawing.Color.White
+        Me.iconGames.Image = Global.OMC21.My.Resources.Resources.MiniGame
+        Me.iconGames.Location = New System.Drawing.Point(-1, 293)
+        Me.iconGames.Name = "iconGames"
+        Me.iconGames.Size = New System.Drawing.Size(48, 43)
+        Me.iconGames.TabIndex = 23
+        Me.iconGames.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.iconGames.UseVisualStyleBackColor = False
+        '
+        'iconCafe
+        '
+        Me.iconCafe.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.iconCafe.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.iconCafe.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.iconCafe.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
+        Me.iconCafe.ForeColor = System.Drawing.Color.White
+        Me.iconCafe.Image = Global.OMC21.My.Resources.Resources.Cafe
+        Me.iconCafe.Location = New System.Drawing.Point(-1, 250)
+        Me.iconCafe.Name = "iconCafe"
+        Me.iconCafe.Size = New System.Drawing.Size(48, 43)
+        Me.iconCafe.TabIndex = 22
+        Me.iconCafe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.iconCafe.UseVisualStyleBackColor = False
+        '
+        'iconHome
+        '
+        Me.iconHome.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.iconHome.FlatAppearance.BorderColor = System.Drawing.Color.Black
+        Me.iconHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.iconHome.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
+        Me.iconHome.ForeColor = System.Drawing.Color.White
+        Me.iconHome.Image = CType(resources.GetObject("iconHome.Image"), System.Drawing.Image)
+        Me.iconHome.Location = New System.Drawing.Point(-1, 207)
+        Me.iconHome.Name = "iconHome"
+        Me.iconHome.Size = New System.Drawing.Size(48, 43)
+        Me.iconHome.TabIndex = 21
+        Me.iconHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.iconHome.UseVisualStyleBackColor = False
+        '
+        'picProfile
+        '
+        Me.picProfile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.picProfile.Image = Global.OMC21.My.Resources.Resources.profilePic
+        Me.picProfile.Location = New System.Drawing.Point(25, 19)
+        Me.picProfile.Name = "picProfile"
+        Me.picProfile.Size = New System.Drawing.Size(96, 94)
+        Me.picProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picProfile.TabIndex = 0
+        Me.picProfile.TabStop = False
+        '
         'CloseMinimize4
         '
         Me.CloseMinimize4.BackColor = System.Drawing.Color.Transparent
         Me.CloseMinimize4.ForeColor = System.Drawing.Color.Transparent
-        Me.CloseMinimize4.Location = New System.Drawing.Point(700, 2)
-        Me.CloseMinimize4.Margin = New System.Windows.Forms.Padding(4)
+        Me.CloseMinimize4.Location = New System.Drawing.Point(700, 5)
+        Me.CloseMinimize4.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.CloseMinimize4.Name = "CloseMinimize4"
-        Me.CloseMinimize4.Size = New System.Drawing.Size(68, 36)
+        Me.CloseMinimize4.Size = New System.Drawing.Size(80, 29)
         Me.CloseMinimize4.TabIndex = 6
         '
         'CustomerHomepage
@@ -332,6 +358,9 @@ Partial Class CustomerHomepage
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Homepage"
         Me.Panel1.ResumeLayout(False)
+        Me.pnlContainer.ResumeLayout(False)
+        Me.pnlContainer.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picProfile, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -358,5 +387,7 @@ Partial Class CustomerHomepage
     Friend WithEvents iconGames As Button
     Friend WithEvents iconCafe As Button
     Friend WithEvents iconHome As Button
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label1 As Label
     Friend WithEvents CloseMinimize4 As CloseMinimize
 End Class

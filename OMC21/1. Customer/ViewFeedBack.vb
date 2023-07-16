@@ -36,4 +36,17 @@ Public Class ViewFeedBack
         btnCafe.BackColor = Color.Gray
         FbCafe.Parent = pnlContainerIn
     End Sub
+
+    Private Sub BtnCart_Click(sender As Object, e As EventArgs) Handles btnCart.Click
+        Dim CustomerHomepage As CustomerHomepage = TryCast(Me.ParentForm, CustomerHomepage)
+        Dim panel As Panel = TryCast(ParentForm.Controls("pnlContainer"), Panel)
+        If panel IsNot Nothing Then
+            'change usercontrol
+            Dim Cart As New Cart
+            panel.Controls.Clear()
+            panel.Controls.Add(Cart)
+            CustomerHomepage.btnFeedback.BackColor = Color.FromArgb(30, 30, 30)
+            CustomerHomepage.iconFeedback.BackColor = Color.FromArgb(30, 30, 30)
+        End If
+    End Sub
 End Class

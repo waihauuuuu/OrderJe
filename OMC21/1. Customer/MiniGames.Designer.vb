@@ -23,33 +23,33 @@ Partial Class MiniGames
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.btnTicTacToe = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.btnMemoryMatching = New System.Windows.Forms.Button()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.btnCarRacing = New System.Windows.Forms.Button()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.btnPuzzle = New System.Windows.Forms.Button()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.btnCart = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -64,6 +64,17 @@ Partial Class MiniGames
         Me.Panel1.Size = New System.Drawing.Size(256, 149)
         Me.Panel1.TabIndex = 19
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(152, 29)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(89, 16)
+        Me.Label2.TabIndex = 15
+        Me.Label2.Text = "TIC TAC TOE"
+        '
         'btnTicTacToe
         '
         Me.btnTicTacToe.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
@@ -75,6 +86,17 @@ Partial Class MiniGames
         Me.btnTicTacToe.TabIndex = 14
         Me.btnTicTacToe.Text = "Play"
         Me.btnTicTacToe.UseVisualStyleBackColor = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox2.Image = Global.OMC21.My.Resources.Resources.tic_tac_toe_icon2
+        Me.PictureBox2.Location = New System.Drawing.Point(14, 16)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(117, 118)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 13
+        Me.PictureBox2.TabStop = False
         '
         'Label1
         '
@@ -98,6 +120,16 @@ Partial Class MiniGames
         Me.Panel2.Size = New System.Drawing.Size(256, 149)
         Me.Panel2.TabIndex = 20
         '
+        'Label4
+        '
+        Me.Label4.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(156, 29)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(85, 38)
+        Me.Label4.TabIndex = 17
+        Me.Label4.Text = "MEMORY MATCHING"
+        '
         'btnMemoryMatching
         '
         Me.btnMemoryMatching.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
@@ -110,6 +142,17 @@ Partial Class MiniGames
         Me.btnMemoryMatching.Text = "Play"
         Me.btnMemoryMatching.UseVisualStyleBackColor = False
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox3.Image = Global.OMC21.My.Resources.Resources.memory_icon_removebg_preview
+        Me.PictureBox3.Location = New System.Drawing.Point(14, 16)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(117, 118)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 13
+        Me.PictureBox3.TabStop = False
+        '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.White
@@ -120,6 +163,17 @@ Partial Class MiniGames
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(256, 149)
         Me.Panel3.TabIndex = 21
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(152, 33)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(85, 16)
+        Me.Label3.TabIndex = 16
+        Me.Label3.Text = "CAR RACING"
         '
         'btnCarRacing
         '
@@ -133,6 +187,17 @@ Partial Class MiniGames
         Me.btnCarRacing.Text = "Play"
         Me.btnCarRacing.UseVisualStyleBackColor = False
         '
+        'PictureBox4
+        '
+        Me.PictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox4.Image = Global.OMC21.My.Resources.Resources.car_racing_icon2
+        Me.PictureBox4.Location = New System.Drawing.Point(14, 16)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(117, 118)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox4.TabIndex = 13
+        Me.PictureBox4.TabStop = False
+        '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.White
@@ -143,6 +208,17 @@ Partial Class MiniGames
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(256, 149)
         Me.Panel4.TabIndex = 22
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(170, 33)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(53, 16)
+        Me.Label5.TabIndex = 17
+        Me.Label5.Text = "PUZZLE"
         '
         'btnPuzzle
         '
@@ -167,48 +243,15 @@ Partial Class MiniGames
         Me.PictureBox5.TabIndex = 13
         Me.PictureBox5.TabStop = False
         '
-        'PictureBox4
+        'btnCart
         '
-        Me.PictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox4.Image = Global.OMC21.My.Resources.Resources.car_racing_icon2
-        Me.PictureBox4.Location = New System.Drawing.Point(14, 16)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(117, 118)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 13
-        Me.PictureBox4.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox3.Image = Global.OMC21.My.Resources.Resources.memory_icon_removebg_preview
-        Me.PictureBox3.Location = New System.Drawing.Point(14, 16)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(117, 118)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 13
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox2.Image = Global.OMC21.My.Resources.Resources.tic_tac_toe_icon2
-        Me.PictureBox2.Location = New System.Drawing.Point(14, 16)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(117, 118)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 13
-        Me.PictureBox2.TabStop = False
-        '
-        'Button6
-        '
-        Me.Button6.BackColor = System.Drawing.Color.White
-        Me.Button6.Image = Global.OMC21.My.Resources.Resources.icons8_cart_35
-        Me.Button6.Location = New System.Drawing.Point(551, 33)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(45, 45)
-        Me.Button6.TabIndex = 18
-        Me.Button6.UseVisualStyleBackColor = False
+        Me.btnCart.BackColor = System.Drawing.Color.White
+        Me.btnCart.Image = Global.OMC21.My.Resources.Resources.icons8_cart_35
+        Me.btnCart.Location = New System.Drawing.Point(551, 33)
+        Me.btnCart.Name = "btnCart"
+        Me.btnCart.Size = New System.Drawing.Size(45, 45)
+        Me.btnCart.TabIndex = 18
+        Me.btnCart.UseVisualStyleBackColor = False
         '
         'Button5
         '
@@ -231,49 +274,6 @@ Partial Class MiniGames
         Me.PictureBox1.TabIndex = 15
         Me.PictureBox1.TabStop = False
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(152, 29)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(89, 16)
-        Me.Label2.TabIndex = 15
-        Me.Label2.Text = "TIC TAC TOE"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(152, 33)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(85, 16)
-        Me.Label3.TabIndex = 16
-        Me.Label3.Text = "CAR RACING"
-        '
-        'Label4
-        '
-        Me.Label4.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(156, 29)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(85, 38)
-        Me.Label4.TabIndex = 17
-        Me.Label4.Text = "MEMORY MATCHING"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(170, 33)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(53, 16)
-        Me.Label5.TabIndex = 17
-        Me.Label5.Text = "PUZZLE"
-        '
         'MiniGames
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
@@ -283,25 +283,25 @@ Partial Class MiniGames
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.btnCart)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "MiniGames"
         Me.Size = New System.Drawing.Size(622, 470)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -311,7 +311,7 @@ Partial Class MiniGames
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnTicTacToe As Button
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Button6 As Button
+    Friend WithEvents btnCart As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox

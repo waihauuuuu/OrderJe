@@ -130,6 +130,12 @@
     <Compile Include="0. Users\CafeOwnerHomepage.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="0. Users\Comment.Designer.vb">
+      <DependentUpon>Comment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="0. Users\Comment.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="0. Users\GlobalVariables.vb" />
     <Compile Include="0. Users\ModuleEncrypt.vb" />
     <Compile Include="0. Users\RiderEditProfile.Designer.vb">
@@ -149,6 +155,30 @@
     </Compile>
     <Compile Include="0. Users\SplashScreen.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="0. Users\TransactionItem.Designer.vb">
+      <DependentUpon>TransactionItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="0. Users\TransactionItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="1. Customer\AddedCart.Designer.vb">
+      <DependentUpon>AddedCart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1. Customer\AddedCart.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="1. Customer\AddOrder.Designer.vb">
+      <DependentUpon>AddOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1. Customer\AddOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1. Customer\Cart.Designer.vb">
+      <DependentUpon>Cart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1. Customer\Cart.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="1. Customer\ChangePassword.Designer.vb">
       <DependentUpon>ChangePassword.vb</DependentUpon>
@@ -337,6 +367,12 @@
     <Compile Include="4. Admin\AdminViewFeedback.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="5. Game\CarRacing.Designer.vb">
+      <DependentUpon>CarRacing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="5. Game\CarRacing.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="CloseMinimize.Designer.vb">
       <DependentUpon>CloseMinimize.vb</DependentUpon>
@@ -430,6 +466,9 @@
     <EmbeddedResource Include="0. Users\CafeOwnerHomepage.resx">
       <DependentUpon>CafeOwnerHomepage.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="0. Users\Comment.resx">
+      <DependentUpon>Comment.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="0. Users\RiderEditProfile.resx">
       <DependentUpon>RiderEditProfile.vb</DependentUpon>
     </EmbeddedResource>
@@ -438,6 +477,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="0. Users\SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0. Users\TransactionItem.resx">
+      <DependentUpon>TransactionItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1. Customer\AddedCart.resx">
+      <DependentUpon>AddedCart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1. Customer\AddOrder.resx">
+      <DependentUpon>AddOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1. Customer\Cart.resx">
+      <DependentUpon>Cart.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="1. Customer\ChangePassword.resx">
       <DependentUpon>ChangePassword.vb</DependentUpon>
@@ -532,6 +583,9 @@
     <EmbeddedResource Include="4. Admin\AdminViewFeedback.resx">
       <DependentUpon>AdminViewFeedback.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="5. Game\CarRacing.resx">
+      <DependentUpon>CarRacing.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CloseMinimize.resx">
       <DependentUpon>CloseMinimize.vb</DependentUpon>
     </EmbeddedResource>
@@ -568,6 +622,7 @@
     <EmbeddedResource Include="4. Admin\UserData.resx">
       <DependentUpon>UserData.vb</DependentUpon>
     </EmbeddedResource>
+    <None Include="Resources\Resources.resx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
@@ -747,6 +802,16 @@
     <Content Include="OrderJeDatabase.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\riderHome.png" />
+    <None Include="Resources\CafeHome.jpg" />
+    <None Include="Resources\CustomerHome.jpg" />
+    <None Include="Resources\delete.jpg" />
+    <None Include="Resources\car21.png" />
+    <None Include="Resources\car12.png" />
+    <None Include="Resources\car11.png" />
+    <None Include="Resources\car4.png" />
+    <None Include="Resources\car3.png" />
+    <None Include="Resources\car2.png" />
     <None Include="Resources\puzzle icon.png" />
     <None Include="Resources\car racing icon2.png" />
     <None Include="Resources\memory_icon-removebg-preview.png" />

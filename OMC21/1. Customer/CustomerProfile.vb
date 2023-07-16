@@ -1,5 +1,4 @@
-﻿'Personal Details
-Imports System.Data.OleDb
+﻿Imports System.Data.OleDb
 Imports System.IO
 
 Public Class CustomerProfile
@@ -20,8 +19,15 @@ Public Class CustomerProfile
                     txtUsername.Text = reader("Username").ToString()
                     txtEmail.Text = reader("Email").ToString()
                     txtPhone.Text = reader("Phone Number").ToString()
+                    If reader("Gender").ToString() = "Male" Then
+                        rbMale.Checked = True
+                    ElseIf reader("Gender").ToString() = "Female" Then
+                        rbFemale.Checked = True
+                    Else
+                        rbMale.Checked = False
+                        rbFemale.Checked = False
+                    End If
                     txtVillage.Text = reader("Village").ToString()
-
 
                     If Not String.IsNullOrEmpty(reader("Picture")) AndAlso File.Exists(reader("Picture")) Then
                         picProfile.Image = Image.FromFile(reader("Picture"))
@@ -33,33 +39,44 @@ Public Class CustomerProfile
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
             End Try
+            mycon.Close()
         End Using
     End Sub
 
     Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+        Dim gender As String
+        If rbMale.Checked Then
+            gender = "Male"
+        ElseIf rbFemale.Checked Then
+            gender = "Female"
+        Else
+            gender = Nothing
+        End If
         Using mycon As New OleDbConnection(connectionString)
             Dim strsql As String = "UPDATE UserDatabase SET [Full Name] = IIf(@fullname='', [Full Name], @fullname), " &
                                    "[Username] = IIf(@username='', [Username], @username), " &
                                    "[Email] = IIf(@email='', [Email], @email), " &
                                    "[Phone Number] = IIf(@phone='', [Phone Number], @phone), " &
+                                   "[Gender] = IIf(@gender='', [Gender], @gender), " &
                                    "[Village] = IIf(@village='', [Village], @village), " &
                                    "[Picture] = IIf(@picture IS NULL, [Picture], @picture) WHERE [User ID] = @id"
 
             Using mycmd As New OleDbCommand(strsql, mycon)
-                Dim reader As OleDbDataReader = mycmd.ExecuteReader()
-                If reader.Read() Then
-                    mycmd.Parameters.AddWithValue("@fullname", If(txtFullName.Text.Trim() = "", DBNull.Value, txtFullName.Text))
-                    mycmd.Parameters.AddWithValue("@username", If(txtUsername.Text.Trim() = "", DBNull.Value, txtUsername.Text))
-                    mycmd.Parameters.AddWithValue("@email", If(txtEmail.Text.Trim() = "", DBNull.Value, txtEmail.Text))
-                    mycmd.Parameters.AddWithValue("@phone", If(txtPhone.Text.Trim() = "", DBNull.Value, txtPhone.Text))
-                    mycmd.Parameters.AddWithValue("@village", If(txtVillage.Text.Trim() = "", DBNull.Value, txtVillage.Text))
-                    mycmd.Parameters.AddWithValue("@picture", If("@picture", If(picProfile.Image, DBNull.Value)))
-                    mycmd.Parameters.AddWithValue("@id", GlobalVariables.UserID)
-                End If
+                Dim imageName As String = Guid.NewGuid().ToString() + ".png" 'create unique name for doc or image 
+                Dim imagePath As String = Path.Combine(Path.GetTempPath(), imageName) 'combine guid and image name = image path
+                picProfile.Image?.Save(imagePath, System.Drawing.Imaging.ImageFormat.Png) 'if picturebox contain image, then save image as png
+                mycon.Open()
+                mycmd.Parameters.AddWithValue("@fullname", If(txtFullName.Text.Trim() = "", DBNull.Value, txtFullName.Text))
+                mycmd.Parameters.AddWithValue("@username", If(txtUsername.Text.Trim() = "", DBNull.Value, txtUsername.Text))
+                mycmd.Parameters.AddWithValue("@email", If(txtEmail.Text.Trim() = "", DBNull.Value, txtEmail.Text))
+                mycmd.Parameters.AddWithValue("@phone", If(txtPhone.Text.Trim() = "", DBNull.Value, txtPhone.Text))
+                mycmd.Parameters.AddWithValue("@gender", If(String.IsNullOrWhiteSpace(gender), DBNull.Value, gender))
+                mycmd.Parameters.AddWithValue("@village", If(txtVillage.Text.Trim() = "", DBNull.Value, txtVillage.Text))
+                mycmd.Parameters.AddWithValue("@picture", If(picProfile.Image IsNot Nothing, imagePath, DBNull.Value))
+                mycmd.Parameters.AddWithValue("@id", GlobalVariables.UserID)
                 Dim result As DialogResult = MessageBox.Show("Are you sure you want to save the changes?", "Save Changes", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 If result = DialogResult.Yes Then
                     Try
-                        mycon.Open()
                         mycmd.ExecuteNonQuery()
                         MessageBox.Show("Your information has been updated successfully!", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
                         Dim CustomerEditProfile As CustomerEditProfile = TryCast(Me.ParentForm, CustomerEditProfile)
@@ -70,6 +87,7 @@ Public Class CustomerProfile
                         MessageBox.Show(ex.Message)
                     End Try
                 End If
+                mycon.Close()
             End Using
         End Using
     End Sub
@@ -79,19 +97,17 @@ Public Class CustomerProfile
             Dim strsql As String = "SELECT * FROM UserDatabase WHERE [User ID] = @id"
             Dim mycmd As New OleDbCommand(strsql, mycon)
             mycmd.Parameters.AddWithValue("@id", GlobalVariables.UserID)
+            mycon.Open()
             Dim reader As OleDbDataReader = mycmd.ExecuteReader()
             If reader.Read() Then
                 OpenFileDialog1.Title = "Open Picture"
                 OpenFileDialog1.FileName = ""
                 OpenFileDialog1.Filter = "Images|*.jpg;*.png;*.bmp;*.gif"
                 If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
-                    Try
-                        picProfile.Image = Image.FromFile(reader("Picture").ToString)
-                    Catch ex As Exception
-                        MessageBox.Show(ex.Message)
-                    End Try
+                    picProfile.Image = System.Drawing.Image.FromFile(OpenFileDialog1.FileName)
                 End If
             End If
+            mycon.Close()
         End Using
     End Sub
 
