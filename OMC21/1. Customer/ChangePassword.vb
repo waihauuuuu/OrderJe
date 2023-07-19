@@ -13,29 +13,39 @@ Public Class ChangePassword
 
             'store the password in the database CustomerDatabase
             Dim mycon As New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Msi\source\repos\OMC21\OMC21\OrderJeDatabase.accdb")
-            Dim strsql As String = "UPDATE CustomerDatabase SET [Password (encrypted)] = @password WHERE [ID] = @id"
-            Dim mycmd As New OleDb.OleDbCommand(strsql, mycon)
+            Dim usersql As String = "UPDATE CustomerDatabase SET [Password (encrypted)] = @password WHERE [User ID] = @id"
+            Dim usercmd As New OleDb.OleDbCommand(usersql, mycon)
 
             'sets the value of the parameter to the text entered in the "txtUsername" control
-            mycmd.Parameters.AddWithValue("@password", EncryptPassword(txtPassword.Text))
-            mycmd.Parameters.AddWithValue("@id", GlobalVariables.UserID)
+            usercmd.Parameters.AddWithValue("@password", EncryptPassword(txtPassword.Text))
+            usercmd.Parameters.AddWithValue("@id", GlobalVariables.UserID)
 
             mycon.Open()
-            mycmd.ExecuteNonQuery()
+            usercmd.ExecuteNonQuery()
             mycon.Close()
 
             MsgBox("Password changed!", 0 + MsgBoxStyle.Information, "Change Password Status")
 
             'change form to CustomerProfile
-            Me.Hide()
-            Dim CustomerEditProfile As CustomerEditProfile = TryCast(Me.ParentForm, CustomerEditProfile)
+            Dim strsql As String = "SELECT * FROM UserDatabase WHERE [User ID] = '" & GlobalVariables.UserID & "'"
+            Dim mycmd As New OleDbCommand(strsql, mycon)
+            mycon.Open()
+            Dim reader As OleDbDataReader = mycmd.ExecuteScalar
             Dim panel As Panel = TryCast(ParentForm.Controls("pnlContainer"), Panel)
-            If panel IsNot Nothing Then
-                'change usercontrol
-                Dim CustomerProfile As New CustomerProfile
-                panel.Controls.Clear()
-                panel.Controls.Add(CustomerProfile)
+            If reader.Read() Then
+                If reader("User Type") = "Customer" Then
+                    Dim CustomerEditProfile As CustomerEditProfile = TryCast(Me.ParentForm, CustomerEditProfile)
+                    Dim CustomerProfile As New CustomerProfile
+                    panel.Controls.Clear()
+                    panel.Controls.Add(CustomerProfile)
+                ElseIf reader("User Type") = "Rider" Then
+                    Dim RiderEditProfile As RiderEditProfile = TryCast(Me.ParentForm, RiderEditProfile)
+                    Dim RiderProfile As New RiderProfile
+                    panel.Controls.Clear()
+                    panel.Controls.Add(RiderProfile)
+                End If
             End If
+            mycon.Close()
 
         Else
             MsgBox("Password does not match!", 0 + MsgBoxStyle.Information, "Change Password Status")

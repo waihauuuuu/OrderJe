@@ -19,10 +19,10 @@ Public Class CafeOwnerTransactionHistory
         Dim ordersql As String = "SELECT * FROM [Transaction History] WHERE [Status] = 'Done'"
         Dim ordercmd As New OleDbCommand(ordersql, mycon)
 
-        Dim TransactionItem As New TransactionItem
         mycon.Open()
         Dim orderreader As OleDbDataReader = ordercmd.ExecuteReader
         While orderreader.Read()
+            Dim TransactionItem As New TransactionItem
             Dim cartsql As String = "SELECT * FROM [CART] WHERE [Cafe Name] = '" & CafeOwnerHomepage.lblCafeName.Text & "'"
             Dim cartcmd As New OleDbCommand(cartsql, mycon)
             Dim cartreader As OleDbDataReader = cartcmd.ExecuteReader
@@ -30,7 +30,7 @@ Public Class CafeOwnerTransactionHistory
             TransactionItem.lblDate.Text = orderreader("Datetime")
             While cartreader.Read()
                 TransactionItem.lblCorner.Text = "Food Name: " & cartreader("Food Name") & " x" & cartreader("Quantity")
-                TransactionItem.lblTotal.Text = "Total: RM" & cartreader("Cost")
+                TransactionItem.lblTotal.Text = "Total: " & cartreader("Cost")
             End While
             PanelTransactionHistory.Controls.Add(TransactionItem)
         End While

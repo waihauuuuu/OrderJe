@@ -41,6 +41,7 @@ Partial Class CafeOwnerNotification
         '
         'PanelNotification
         '
+        Me.PanelNotification.AutoScroll = True
         Me.PanelNotification.Location = New System.Drawing.Point(55, 122)
         Me.PanelNotification.Name = "PanelNotification"
         Me.PanelNotification.Size = New System.Drawing.Size(512, 348)

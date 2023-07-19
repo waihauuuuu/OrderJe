@@ -86,4 +86,12 @@
         btnData.BackColor = Color.FromArgb(50, 50, 50)
         iconData.BackColor = Color.FromArgb(50, 50, 50)
     End Sub
+
+    Private Sub Logout_Click(sender As Object, e As EventArgs) Handles lblLogout.Click, btnLogout.Click
+        Dim response = MsgBox("Are you sure you want log out?", 4 + MsgBoxStyle.Question, "Confirmation")
+        If response = MsgBoxResult.Yes Then
+            Me.Hide()
+            AdminLogin.Show()
+        End If
+    End Sub
 End Class

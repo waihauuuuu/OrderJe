@@ -8,10 +8,10 @@ Public Class CustomerTransactionHistory
         Dim ordersql As String = "SELECT * FROM [Transaction History] WHERE [Status] = 'Done' AND [User ID] = '" & GlobalVariables.UserID & "'"
         Dim ordercmd As New OleDbCommand(ordersql, mycon)
 
-        Dim TransactionItem As New TransactionItem
         mycon.Open()
         Dim orderreader As OleDbDataReader = ordercmd.ExecuteReader
         While orderreader.Read()
+            Dim TransactionItem As New TransactionItem
             TransactionItem.lblOrder.Text = "Order" & orderreader("Order ID")
             order = TransactionItem.lblOrder.Text
             TransactionItem.lblCorner.Text = "Card Number: " & orderreader("Card Number")

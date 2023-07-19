@@ -1,5 +1,6 @@
 ﻿'Customer 'Feedback'
 Imports System.Data.OleDb
+Imports System.IO
 
 Public Class ViewFeedBack
     Public Shared riderid As String
@@ -31,8 +32,13 @@ Public Class ViewFeedBack
         Dim reader As OleDbDataReader = mycmd.ExecuteReader
         While reader.Read()
             riderid = reader("User ID")
-            FbRider.lblRiderName = reader("Username")
-            FbRider.lblUserID = reader("User ID")
+            FbRider.lblRiderName.Text = reader("Username")
+            FbRider.lblUserID.Text = reader("User ID")
+            If Not String.IsNullOrEmpty(reader("Picture").ToString) AndAlso File.Exists(reader("Picture").ToString) Then
+                FbRider.picProfile.Image = Image.FromFile(reader("Picture").ToString)
+            Else
+                FbRider.picProfile.Image = My.Resources.profilePic
+            End If
             FbRider.Parent = pnlContainerIn
         End While
         mycon.Close()

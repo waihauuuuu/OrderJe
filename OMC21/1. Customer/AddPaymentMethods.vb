@@ -22,7 +22,7 @@ Public Class AddPaymentMethods
             mycon.Open()
             Dim reader As OleDbDataReader = mycmd.ExecuteReader()
             While reader.Read()
-                If (reader("Bank Name").Length > 8) Then
+                If (reader("Bank Name").Length > 7) Then
                     lstMethod.Items.Add(reader("Bank Name") & vbTab & vbTab & vbTab & reader("Bank Number"))
                 Else
                     lstMethod.Items.Add(reader("Bank Name") & vbTab & vbTab & vbTab & vbTab & reader("Bank Number"))

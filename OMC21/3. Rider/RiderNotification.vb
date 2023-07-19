@@ -1,7 +1,7 @@
 ﻿Imports System.Data.OleDb
 
 Public Class RiderNotification
-    Public Shared id As String
+    Public Shared id As Integer
     Private Sub RiderNotification_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
 
@@ -11,12 +11,12 @@ Public Class RiderNotification
         Dim usersql As String = "SELECT * FROM [UserDatabase]"
         Dim usercmd As New OleDbCommand(usersql, mycon)
 
-        Dim RiderOrder As New RiderOrder
         mycon.Open()
 
         Dim riderreader As OleDbDataReader = ridercmd.ExecuteReader
 
         While riderreader.Read()
+            Dim RiderOrder As New RiderOrder
             id = riderreader("Order ID")
             RiderOrder.lblOrderID.Text = riderreader("Order ID")
             RiderOrder.lblUserID.Text = riderreader("User ID")

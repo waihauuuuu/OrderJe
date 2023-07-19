@@ -25,12 +25,12 @@ Partial Class CafeOwnerHome
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.lblHi = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.btnNotification = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -70,15 +70,17 @@ Partial Class CafeOwnerHome
         Me.Panel1.Size = New System.Drawing.Size(639, 299)
         Me.Panel1.TabIndex = 34
         '
-        'Label3
+        'Label4
         '
-        Me.Label3.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(380, 106)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(213, 35)
-        Me.Label3.TabIndex = 1
-        Me.Label3.Text = "Welcome back to OrderJe!" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label4.Font = New System.Drawing.Font("Comic Sans MS", 9.0!)
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(380, 141)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(213, 123)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Expand your reach and streamline operations. Join us to showcase your menu to a w" &
+    "ider audience and boost your orders. Partner with OrderJe for a seamless deliver" &
+    "y experience." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'lblHi
         '
@@ -89,6 +91,16 @@ Partial Class CafeOwnerHome
         Me.lblHi.Size = New System.Drawing.Size(108, 25)
         Me.lblHi.TabIndex = 2
         Me.lblHi.Text = "Hi Username!"
+        '
+        'Label3
+        '
+        Me.Label3.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(380, 106)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(213, 35)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "Welcome back to OrderJe!" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'PictureBox2
         '
@@ -120,18 +132,6 @@ Partial Class CafeOwnerHome
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 24
         Me.PictureBox1.TabStop = False
-        '
-        'Label4
-        '
-        Me.Label4.Font = New System.Drawing.Font("Comic Sans MS", 9.0!)
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(380, 141)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(213, 123)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Expand your reach and streamline operations. Join us to showcase your menu to a w" &
-    "ider audience and boost your orders. Partner with [Delivery App Name] for a seam" &
-    "less delivery experience." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'CafeOwnerHome
         '

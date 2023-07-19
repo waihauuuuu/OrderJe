@@ -30,7 +30,7 @@ Public Class AdminViewFeedback
             comment.lblComment.Text = reader("Comment")
 
             overall += CDbl(reader("Rating")) / Count
-            lblRating.Text = overall
+            lblRating.Text = Format(overall, "0.0")
             RoundOverall = CStr(Math.Round(overall))
 
             Select Case RoundOverall
@@ -71,6 +71,7 @@ Public Class AdminViewFeedback
                         comment.picProfile.Image = My.Resources.profilePic
                     End If
                 End If
+                PanelComment.Controls.Add(comment)
             End While
             Userreader.Close()
         End While

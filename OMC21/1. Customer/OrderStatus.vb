@@ -74,6 +74,17 @@ Public Class OrderStatus
             mycon.Close()
 
             MsgBox("Order Received!", 0 + MsgBoxStyle.Information, "Order")
+
+            Dim CustomerHomepage As CustomerHomepage = TryCast(Me.ParentForm, CustomerHomepage)
+            Dim panel As Panel = TryCast(ParentForm.Controls("pnlContainer"), Panel)
+            If panel IsNot Nothing Then
+                'change usercontrol
+                Dim CustomerHome As New CustomerHome
+                panel.Controls.Clear()
+                panel.Controls.Add(CustomerHome)
+            End If
+            CustomerHomepage.btnHome.BackColor = Color.FromArgb(180, 20, 20)
+            CustomerHomepage.iconHome.BackColor = Color.FromArgb(180, 20, 20)
         End If
     End Sub
 End Class

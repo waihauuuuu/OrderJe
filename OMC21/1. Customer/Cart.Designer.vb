@@ -25,7 +25,6 @@ Partial Class Cart
         Me.Label14 = New System.Windows.Forms.Label()
         Me.CartPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.btnCheckOut = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -63,16 +62,6 @@ Partial Class Cart
         Me.btnCheckOut.Text = "Check Out"
         Me.btnCheckOut.UseVisualStyleBackColor = False
         '
-        'Button5
-        '
-        Me.Button5.BackColor = System.Drawing.Color.White
-        Me.Button5.Image = Global.OMC21.My.Resources.Resources.icons8_notification_35
-        Me.Button5.Location = New System.Drawing.Point(551, 33)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(45, 45)
-        Me.Button5.TabIndex = 73
-        Me.Button5.UseVisualStyleBackColor = False
-        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.OMC21.My.Resources.Resources.OrderJeLogo
@@ -91,7 +80,6 @@ Partial Class Cart
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.Controls.Add(Me.btnCheckOut)
         Me.Controls.Add(Me.CartPanel)
-        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.PictureBox1)
         Me.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -106,7 +94,6 @@ Partial Class Cart
 
     Friend WithEvents Label14 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Button5 As Button
     Friend WithEvents CartPanel As FlowLayoutPanel
     Friend WithEvents btnCheckOut As Button
 End Class

@@ -6,7 +6,7 @@ Public Class CafeOwnerViewFeedback
 
     Private Sub CafeOwnerViewFeedback_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
-        Dim strsql As String = "SELECT * FROM [Feedback] WHERE [Feedback Target] = 'Café'"
+        Dim strsql As String = "SELECT * FROM [Feedback] WHERE [Feedback Target] = '" & CafeOwnerHomepage.lblCafeName.Text & "'"
         Dim mycmd As New OleDbCommand(strsql, mycon)
 
         Dim strUsersql As String = "SELECT * FROM [UserDatabase] WHERE [User Type] = 'Customer'"
@@ -32,7 +32,7 @@ Public Class CafeOwnerViewFeedback
             comment.lblComment.Text = reader("Comment")
 
             overall += CDbl(reader("Rating")) / Count
-            lblRating.Text = overall
+            lblRating.Text = Format(overall, "0.0")
             RoundOverall = CStr(Math.Round(overall))
 
             Select Case RoundOverall
@@ -73,6 +73,7 @@ Public Class CafeOwnerViewFeedback
                         comment.picProfile.Image = My.Resources.profilePic
                     End If
                 End If
+                PanelComment.Controls.Add(comment)
             End While
             Userreader.Close()
         End While

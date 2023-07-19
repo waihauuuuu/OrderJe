@@ -10,18 +10,10 @@ Public Class CustomerHomepage
     Private Sub Homepage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Resett()
         Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
-        Dim xstrsql As String = "SELECT * FROM [Transaction History] WHERE [User ID] = '" & GlobalVariables.UserID & "'"
-        Dim xmycmd As New OleDbCommand(xstrsql, mycon)
-        mycon.Open()
-        Dim xreader As OleDbDataReader = xmycmd.ExecuteReader
-        While xreader.Read()
-            If (xreader("Status") = "Declined") Then
-                MsgBox("Your order declined!", 4 + MsgBoxStyle.Information, "Order")
-            End If
-        End While
 
         Dim strsql As String = "SELECT * FROM UserDatabase WHERE [User ID] = @id"
         Dim mycmd As New OleDbCommand(strsql, mycon)
+        mycon.Open()
         mycmd.Parameters.AddWithValue("@id", GlobalVariables.UserID)
         Try
             Dim reader As OleDbDataReader = mycmd.ExecuteReader()
@@ -107,26 +99,28 @@ Public Class CustomerHomepage
 
         mycon.Open()
         Dim reader As OleDbDataReader = mycmd.ExecuteReader
+        Dim status As String
         While reader.Read()
-            If reader("Status") = "3rd Stage" Then
-                Dim OrderStatus As New OrderStatus()
-                btnDelivery.BackColor = Color.FromArgb(180, 20, 20)
-                iconDelivery.BackColor = Color.FromArgb(180, 20, 20)
-                OrderStatus.Parent = pnlContainer
-            ElseIf (reader("Status") = "1st Stage") Or (reader("Status") = "2nd Stage") Then
-                MsgBox("Your order haven't accepted!", 0 + MsgBoxStyle.Information, "Order")
-                Dim CustomerHome As New CustomerHome()
-                btnHome.BackColor = Color.FromArgb(180, 20, 20)
-                iconHome.BackColor = Color.FromArgb(180, 20, 20)
-                CustomerHome.Parent = pnlContainer
-            Else
-                MsgBox("You have no order!", 0 + MsgBoxStyle.Information, "Order")
-                Dim CustomerHome As New CustomerHome()
-                btnHome.BackColor = Color.FromArgb(180, 20, 20)
-                iconHome.BackColor = Color.FromArgb(180, 20, 20)
-                CustomerHome.Parent = pnlContainer
-            End If
+            status = reader("Status")
         End While
+        If status = "3rd Stage" Then
+            Dim OrderStatus As New OrderStatus()
+            btnDelivery.BackColor = Color.FromArgb(180, 20, 20)
+            iconDelivery.BackColor = Color.FromArgb(180, 20, 20)
+            OrderStatus.Parent = pnlContainer
+        ElseIf (status = "1st Stage") Or (status = "2nd Stage") Then
+            MsgBox("Your order haven't accepted!", 0 + MsgBoxStyle.Information, "Order")
+            Dim CustomerHome As New CustomerHome()
+            btnHome.BackColor = Color.FromArgb(180, 20, 20)
+            iconHome.BackColor = Color.FromArgb(180, 20, 20)
+            CustomerHome.Parent = pnlContainer
+        Else
+            MsgBox("You have no order!", 0 + MsgBoxStyle.Information, "Order")
+            Dim CustomerHome As New CustomerHome()
+            btnHome.BackColor = Color.FromArgb(180, 20, 20)
+            iconHome.BackColor = Color.FromArgb(180, 20, 20)
+            CustomerHome.Parent = pnlContainer
+        End If
         mycon.Close()
     End Sub
 

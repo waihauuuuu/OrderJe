@@ -6,7 +6,7 @@ Public Class AddedCart
         Dim response = MsgBox("Are you sure to remove this order?", 4 + MsgBoxStyle.Question, "Remove Order")
         If response = MsgBoxResult.Yes Then
             Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb"
-            Dim strsql As String = "DELETE FROM [Cart] WHERE ID = " & Cart.CartID
+            Dim strsql As String = "DELETE FROM [Cart] WHERE [Cart ID] = " & Cart.CartID
             Using mycon As New OleDbConnection(connectionString)
                 Using mycmd As New OleDbCommand(strsql, mycon)
                     mycon.Open()

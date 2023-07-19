@@ -2,16 +2,25 @@
 
 Public Class CustomerReceipt
     Private Sub BtnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-
+        Dim CustomerHomepage As CustomerHomepage = TryCast(Me.ParentForm, CustomerHomepage)
+        Dim panel As Panel = TryCast(ParentForm.Controls("pnlContainer"), Panel)
+        If panel IsNot Nothing Then
+            'change usercontrol
+            Dim CustomerHome As New CustomerHome
+            panel.Controls.Clear()
+            panel.Controls.Add(CustomerHome)
+        End If
+        CustomerHomepage.btnHome.BackColor = Color.FromArgb(180, 20, 20)
+        CustomerHomepage.iconHome.BackColor = Color.FromArgb(180, 20, 20)
     End Sub
 
     Private Sub CustomerReceipt_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
 
-        Dim cartsql As String = "SELECT * FROM [Cart] WHERE [User ID] = '" & GlobalVariables.UserID & "'"
+        Dim cartsql As String = "SELECT * FROM [Cart] WHERE [User ID] = '" & GlobalVariables.UserID & "' AND [Status] = 'Purchased'"
         Dim cartcmd As New OleDbCommand(cartsql, mycon)
 
-        Dim ordersql As String = "SELECT * FROM [Transaction History] WHERE [Order ID] = '" & Payment.orderID & "'"
+        Dim ordersql As String = "SELECT * FROM [Transaction History] WHERE [Order ID] = " & Payment.orderID
         Dim ordercmd As New OleDbCommand(ordersql, mycon)
         mycon.Open()
 

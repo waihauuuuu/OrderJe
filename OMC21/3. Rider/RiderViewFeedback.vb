@@ -4,10 +4,10 @@ Imports System.IO
 Public Class RiderViewFeedback
     Private Sub RiderViewFeedback_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
-        Dim strsql As String = "SELECT * FROM [Feedback] WHERE [Feedback Target] = 'Rider'"
+        Dim strsql As String = "SELECT * FROM [Feedback] WHERE [Feedback Target] = '" & GlobalVariables.UserID & "'"
         Dim mycmd As New OleDbCommand(strsql, mycon)
 
-        Dim strUsersql As String = "SELECT * FROM [UserDatabase] WHERE [User Type] = 'Rider'"
+        Dim strUsersql As String = "SELECT * FROM [UserDatabase]"
         Dim Usercmd As New OleDbCommand(strUsersql, mycon)
 
         Dim Count As Integer = 0
@@ -30,7 +30,7 @@ Public Class RiderViewFeedback
             comment.lblComment.Text = reader("Comment")
 
             overall += CDbl(reader("Rating")) / Count
-            lblRating.Text = overall
+            lblRating.Text = Format(overall, "0.0")
             RoundOverall = CStr(Math.Round(overall))
 
             Select Case RoundOverall
@@ -64,8 +64,10 @@ Public Class RiderViewFeedback
                 If Userreader("User ID") = GlobalVariables.UserID Then
                     lblUsername.Text = Userreader("Username").ToString()
                     lblUserID.Text = Userreader("User ID").ToString()
-                    If Not String.IsNullOrEmpty(Userreader("Picture")) AndAlso File.Exists(Userreader("Picture").ToString()) Then
-                        picProfile.Image = Image.FromFile(Userreader("Picture").ToString())
+                    If Not String.IsNullOrEmpty(Userreader("Picture")) AndAlso File.Exists(Userreader("Picture")) Then
+                        picProfile.Image = Image.FromFile(Userreader("Picture"))
+                    Else
+                        picProfile.Image = My.Resources.profilePic
                     End If
                 End If
 
@@ -81,6 +83,7 @@ Public Class RiderViewFeedback
                         End If
                     End If
                 End If
+                PanelComment.Controls.Add(comment)
             End While
             Userreader.Close()
         End While

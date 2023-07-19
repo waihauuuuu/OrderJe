@@ -5,7 +5,7 @@ Public Class RiderOrder
         Dim response As String = MsgBox("Are you confirm to accept this order?", 4 + MsgBoxStyle.Question, "Order")
         If response = vbYes Then
             Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
-            Dim strsql As String = "UPDATE [Transaction History] SET [Status] = @status AND [Rider ID] = @id WHERE [Status] = '2nd Stage' AND [Order ID] = @id"
+            Dim strsql As String = "UPDATE [Transaction History] SET [Status] = @status, [Rider ID] = @id WHERE [Status] = '2nd Stage' AND [Order ID] = @orderid"
             Dim mycmd As New OleDbCommand(strsql, mycon)
             mycon.Open()
 
@@ -25,7 +25,7 @@ Public Class RiderOrder
         Dim response As String = MsgBox("Are you confirm to decline this order?", 4 + MsgBoxStyle.Question, "Order")
         If response = vbYes Then
             Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
-            Dim strsql As String = "UPDATE [Transaction History] SET [Status] = @status WHERE [Status] = '2nd Stage' AND [Order ID] = @id"
+            Dim strsql As String = "UPDATE [Transaction History] SET [Status] = @status WHERE [Status] = '2nd Stage' AND [Order ID] = @orderid"
             Dim mycmd As New OleDbCommand(strsql, mycon)
             mycon.Open()
 

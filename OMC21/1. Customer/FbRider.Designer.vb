@@ -32,8 +32,8 @@ Partial Class FbRider
         Me.btnGood = New System.Windows.Forms.Button()
         Me.btnMid = New System.Windows.Forms.Button()
         Me.btnBad = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.picProfile = New System.Windows.Forms.PictureBox()
+        CType(Me.picProfile, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblRiderName
@@ -138,17 +138,17 @@ Partial Class FbRider
         Me.btnBad.TabIndex = 5
         Me.btnBad.UseVisualStyleBackColor = False
         '
-        'PictureBox1
+        'picProfile
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.White
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Image = Global.OMC21.My.Resources.Resources.profilePic
-        Me.PictureBox1.Location = New System.Drawing.Point(15, 14)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(84, 92)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.picProfile.BackColor = System.Drawing.Color.White
+        Me.picProfile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.picProfile.Image = Global.OMC21.My.Resources.Resources.profilePic
+        Me.picProfile.Location = New System.Drawing.Point(15, 14)
+        Me.picProfile.Name = "picProfile"
+        Me.picProfile.Size = New System.Drawing.Size(84, 92)
+        Me.picProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.picProfile.TabIndex = 0
+        Me.picProfile.TabStop = False
         '
         'FbRider
         '
@@ -165,18 +165,18 @@ Partial Class FbRider
         Me.Controls.Add(Me.lblUserID)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblRiderName)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.picProfile)
         Me.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Name = "FbRider"
         Me.Size = New System.Drawing.Size(404, 240)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picProfile, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents picProfile As PictureBox
     Friend WithEvents lblRiderName As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents lblUserID As Label

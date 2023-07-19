@@ -2,7 +2,7 @@
 Imports System.Text.RegularExpressions
 
 Public Class Payment
-    Public Shared orderID As String
+    Public Shared orderID As Integer
     Dim dblSubtotal As Double
     Dim dblDelivery As Double
     Dim dblPoint As Double
@@ -19,7 +19,7 @@ Public Class Payment
 
         Dim reader As OleDbDataReader = mycmd.ExecuteReader
         While reader.Read()
-            If (reader("Bank Name").Length > 8) Then
+            If (reader("Bank Name").Length > 7) Then
                 cboBank.Items.Add(reader("Bank Name") & vbTab & reader("Bank Number"))
             Else
                 cboBank.Items.Add(reader("Bank Name") & vbTab & vbTab & reader("Bank Number"))
@@ -29,7 +29,7 @@ Public Class Payment
     End Sub
     Private Sub Payment_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         RefreshForm()
-        Dim strsql1 As String = "SELECT * FROM [Cart] WHERE [User ID] = '" & GlobalVariables.UserID & "'"
+        Dim strsql1 As String = "SELECT * FROM [Cart] WHERE [User ID] = '" & GlobalVariables.UserID & "' AND [Status] = 'Cart'"
         Dim mycmd1 As New OleDbCommand(strsql1, mycon)
         mycon.Open()
         Dim reader1 As OleDbDataReader = mycmd1.ExecuteReader
@@ -42,6 +42,8 @@ Public Class Payment
         lblSubtotal.Text = Format(dblSubtotal, "0.00")
         mycon.Close()
         lblDatetime.Text = Date.Now.ToString("dd/MM/yyyy")
+        dblTotal = dblSubtotal
+        lblTotal.Text = Format(dblTotal, "0.00")
     End Sub
     Private Sub BtnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
         cboBank.Items.Clear()
@@ -55,20 +57,10 @@ Public Class Payment
             Dim response = MsgBox("Are you sure to purchase?", 4 + MsgBoxStyle.Question, "Purchase")
             If response = vbYes Then
                 Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
-                Dim strsql As String = "INSERT INTO [Transaction History] ([Order ID], [User ID], [Card Number], [Subtotal], [Points], [Delivery/Pickup], [Total], [Datetime], [Status]) Values(@orderid, @id, @cardnumber, @subtotal, @points, @dp, @total, @datetime, @status)"
+                Dim strsql As String = "INSERT INTO [Transaction History] ([User ID], [Card Number], [Subtotal], [Points], [Delivery/Pickup], [Total], [Datetime], [Status]) Values(@id, @cardnumber, @subtotal, @points, @dp, @total, @datetime, @status)"
                 Dim mycmd As New OleDbCommand(strsql, mycon)
                 mycon.Open()
 
-                Dim rowCount As Integer = 0
-                Dim sqlCount As String = "SELECT COUNT(*) FROM [Transaction History]"
-                Using commandCount As New OleDbCommand(sqlCount, mycon)
-                    rowCount = CInt(commandCount.ExecuteScalar())
-                End Using
-
-                'Generate the ID based on the row count
-                Dim ID As String = "#" & (rowCount + 1)
-
-                mycmd.Parameters.AddWithValue("@orderid", ID)
                 mycmd.Parameters.AddWithValue("@id", GlobalVariables.UserID)
                 Dim cardNumber As String = cboBank.SelectedItem.ToString()
                 Dim numericPart As String = Regex.Replace(cardNumber, "[^\d]", "")
@@ -88,11 +80,15 @@ Public Class Payment
                 mycon.Open()
 
                 Dim reader As OleDbDataReader = ordercmd.ExecuteReader
+                While reader.Read()
+                    orderID = reader("Order ID")
+                End While
 
-                Dim idsql As String = "UPDATE [CART] SET [Order ID] = @orderid WHERE [User ID] = '" & GlobalVariables.UserID & "' AND [Status] = 'Cart'"
+                Dim idsql As String = "UPDATE [CART] SET [Order ID] = @orderid, [Status] = @status WHERE [User ID] = '" & GlobalVariables.UserID & "' AND [Status] = 'Cart'"
                 Dim idcmd As New OleDbCommand(idsql, mycon)
 
-                idcmd.Parameters.AddWithValue("@orderid", reader("Order ID"))
+                idcmd.Parameters.AddWithValue("@orderid", orderID)
+                idcmd.Parameters.AddWithValue("@status", "Purchased")
 
                 idcmd.ExecuteNonQuery()
                 mycon.Close()
@@ -114,7 +110,7 @@ Public Class Payment
 
     Private Sub Rdb_CheckedChanged(sender As Object, e As EventArgs) Handles rdbStandard.CheckedChanged, rdbPickup.CheckedChanged
         Dim Count As Integer = 0
-        Dim Countsql As String = "SELECT COUNT(*) FROM [Cart] WHERE [Order ID] = '" & orderID & "'"
+        Dim Countsql As String = "SELECT COUNT(*) FROM [Cart] WHERE [User ID] = '" & GlobalVariables.UserID & "' AND [Status] = 'Cart'"
         mycon.Open()
 
         Using Countcommand As New OleDbCommand(Countsql, mycon)
@@ -126,17 +122,43 @@ Public Class Payment
             dblDelivery = 0
         End If
         lblDelivery.Text = Format(dblDelivery, "0.00")
-        dblTotal = dblSubtotal + dblDelivery
+        dblTotal += dblDelivery
         lblTotal.Text = Format(dblTotal, "0.00")
         mycon.Close()
     End Sub
 
-    Private Sub RdbPoints_CheckedChanged(sender As Object, e As EventArgs)
+    Private Sub ChkPoints_CheckedChanged(sender As Object, e As EventArgs) Handles chkPoints.CheckedChanged
+        Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
+        Dim Count As Integer = 0
+        Dim sqlCount As String = "SELECT COUNT(*) FROM [CART] WHERE [User ID] = '" & GlobalVariables.UserID & "' AND [Status] = 'History'"
+
+        Dim strsql As String = "SELECT * FROM [CART]"
+        Dim mycmd As New OleDbCommand(strsql, mycon)
+
+        mycon.Open()
+        Dim reader As OleDbDataReader = mycmd.ExecuteReader
+
+        Using commandCount As New OleDbCommand(sqlCount, mycon)
+            Count = CInt(commandCount.ExecuteScalar())
+        End Using
+
+        While reader.Read()
+            If reader("Quantity") > 1 Then
+                Count += reader("Quantity")
+                Count -= 1
+            End If
+        End While
+
+        mycon.Close()
+
         If chkPoints.Checked = True Then
-            dblPoint = MyPoints.Points
+            dblPoint = Count / 10
+            lblPoints.Text = Format(dblPoint, "0.00")
+        ElseIf chkPoints.Checked = False Then
+            dblPoint = 0
             lblPoints.Text = Format(dblPoint, "0.00")
         End If
-        dblTotal = dblSubtotal - dblPoint
+        dblTotal -= dblPoint
         lblTotal.Text = Format(dblTotal, "0.00")
     End Sub
 End Class

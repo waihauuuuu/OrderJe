@@ -81,6 +81,7 @@ Partial Class ViewFeedBack
         '
         'pnlContainerIn
         '
+        Me.pnlContainerIn.AutoScroll = True
         Me.pnlContainerIn.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.pnlContainerIn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.pnlContainerIn.Location = New System.Drawing.Point(0, 149)

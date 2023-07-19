@@ -42,6 +42,7 @@ Partial Class CafeOwnerTransactionHistory
         '
         'PanelTransactionHistory
         '
+        Me.PanelTransactionHistory.AutoScroll = True
         Me.PanelTransactionHistory.Location = New System.Drawing.Point(74, 121)
         Me.PanelTransactionHistory.Name = "PanelTransactionHistory"
         Me.PanelTransactionHistory.Size = New System.Drawing.Size(480, 349)

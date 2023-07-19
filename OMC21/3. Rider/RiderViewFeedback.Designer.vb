@@ -121,6 +121,7 @@ Partial Class RiderViewFeedback
         '
         'PanelComment
         '
+        Me.PanelComment.AutoScroll = True
         Me.PanelComment.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.PanelComment.Location = New System.Drawing.Point(0, 231)
         Me.PanelComment.Name = "PanelComment"

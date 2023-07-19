@@ -86,5 +86,6 @@ Public Class UserData
         Else
             MessageBox.Show("Please select a row to remove.", "No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
+        mycon.Close()
     End Sub
 End Class

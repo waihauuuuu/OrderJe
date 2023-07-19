@@ -22,12 +22,16 @@ Public Class OTPForm
 
                 mycon.Open()
                 Dim reader As OleDbDataReader = mycmd.ExecuteReader()
-                Dim usertype = reader("User Type")
+                Dim usertype As String
+
+                While reader.Read()
+                    usertype = reader("User Type")
+                End While
                 If usertype = "Customer" Then
                     Dim customerHomepage As New CustomerHomepage()
                     Me.Hide()
                     customerHomepage.Show()
-                ElseIf usertype = reader("Rider") Then
+                ElseIf usertype = "Rider" Then
                     Dim RiderHomepage As New RiderHomepage()
                     Me.Hide()
                     RiderHomepage.Show()
