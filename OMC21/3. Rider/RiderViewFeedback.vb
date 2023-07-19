@@ -7,11 +7,11 @@ Public Class RiderViewFeedback
         Dim strsql As String = "SELECT * FROM [Feedback] WHERE [Feedback Target] = 'Rider'"
         Dim mycmd As New OleDbCommand(strsql, mycon)
 
-        Dim strUsersql As String = "SELECT * FROM [UserDatabase] WHERE [User Type]"
+        Dim strUsersql As String = "SELECT * FROM [UserDatabase] WHERE [User Type] = 'Rider'"
         Dim Usercmd As New OleDbCommand(strUsersql, mycon)
 
         Dim Count As Integer = 0
-        Dim sqlCount As String = "SELECT COUNT(*) FROM [Feedback] WHERE [Feedback Target] = 'Rider'"
+        Dim sqlCount As String = "SELECT COUNT(*) FROM [Feedback] WHERE [Feedback Target] = '" & GlobalVariables.UserID & "'"
 
         Dim overall As Double
         Dim RoundOverall As String
@@ -86,5 +86,18 @@ Public Class RiderViewFeedback
         End While
         reader.Close()
         mycon.Close()
+    End Sub
+
+    Private Sub BtnNotification_Click(sender As Object, e As EventArgs) Handles btnNotification.Click
+        Dim RiderHomepage As RiderHomepage = TryCast(Me.ParentForm, RiderHomepage)
+        Dim panel As Panel = TryCast(ParentForm.Controls("pnlContainer"), Panel)
+        If panel IsNot Nothing Then
+            'change usercontrol
+            Dim RiderNotification As New RiderNotification
+            panel.Controls.Clear()
+            panel.Controls.Add(RiderNotification)
+        End If
+        RiderHomepage.btnFeedback.BackColor = Color.FromArgb(30, 30, 30)
+        RiderHomepage.iconFeedback.BackColor = Color.FromArgb(30, 30, 30)
     End Sub
 End Class

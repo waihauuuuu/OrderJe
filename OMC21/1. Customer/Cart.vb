@@ -7,22 +7,16 @@ Public Class Cart
     Private Sub Cart_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
 
-        Dim rowCount As Integer = 0
-        Dim sqlCount As String = "SELECT COUNT(*) FROM [Cart] WHERE [User ID] = '" & GlobalVariables.UserID & "'"
-
         Dim strsql As String = "SELECT * FROM [Cart] WHERE [User ID] = '" & GlobalVariables.UserID & "'"
         Dim mycmd As New OleDbCommand(strsql, mycon)
 
         mycon.Open()
-        Using commandCount As New OleDbCommand(sqlCount, mycon)
-            rowCount = CInt(commandCount.ExecuteScalar())
-        End Using
 
         Dim reader As OleDbDataReader = mycmd.ExecuteReader
-        For i = 0 To rowCount - 1
-            If reader.Read() Then
+        While reader.Read()
+            If reader("Status") = "Cart" Then
                 Dim AddedCart As New AddedCart()
-                CartID = reader("ID")
+                CartID = reader("Cart ID")
                 AddedCart.lblFoodName.Text = reader("Food Name")
                 AddedCart.lblCafeName.Text = reader("Cafe Name")
                 AddedCart.lblCost.Text = reader("Cost")
@@ -31,8 +25,26 @@ Public Class Cart
                     AddedCart.picFood.Image = Image.FromFile(reader("Picture"))
                 End If
                 CartPanel.Controls.Add(AddedCart)
+            Else
+                Dim label As New Label With {
+                    .Text = "Empty",
+                    .AutoSize = True
+                }
+
+                'Calculate the center position of the form
+                Dim centerX As Integer = Me.Width \ 2
+                Dim centerY As Integer = Me.Height \ 2
+
+                'Calculate the label position based on its size
+                Dim labelX As Integer = centerX - (label.Width \ 2)
+                Dim labelY As Integer = centerY - (label.Height \ 2)
+
+                label.Location = New Point(labelX, labelY)
+                label.Anchor = AnchorStyles.None
+
+                Me.Controls.Add(label)
             End If
-        Next
+        End While
         mycon.Close()
     End Sub
 

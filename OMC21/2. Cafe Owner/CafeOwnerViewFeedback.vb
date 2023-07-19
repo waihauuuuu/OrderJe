@@ -3,6 +3,7 @@ Imports System.Data.OleDb
 Imports System.IO
 
 Public Class CafeOwnerViewFeedback
+
     Private Sub CafeOwnerViewFeedback_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
         Dim strsql As String = "SELECT * FROM [Feedback] WHERE [Feedback Target] = 'Café'"
@@ -12,7 +13,7 @@ Public Class CafeOwnerViewFeedback
         Dim Usercmd As New OleDbCommand(strUsersql, mycon)
 
         Dim Count As Integer = 0
-        Dim sqlCount As String = "SELECT COUNT(*) FROM [Feedback] WHERE [Feedback Target] = 'Café'"
+        Dim sqlCount As String = "SELECT COUNT(*) FROM [Feedback] WHERE [Feedback Target] = '" & CafeOwnerHomepage.lblCafeName.Text & "'"
 
         Dim overall As Double
         Dim RoundOverall As String
@@ -77,6 +78,19 @@ Public Class CafeOwnerViewFeedback
         End While
         reader.Close()
         mycon.Close()
+    End Sub
+
+    Private Sub BtnNotification_Click(sender As Object, e As EventArgs) Handles btnNotification.Click
+        Dim CafeOwnerHomepage As CafeOwnerHomepage = TryCast(Me.ParentForm, CafeOwnerHomepage)
+        Dim panel As Panel = TryCast(ParentForm.Controls("pnlContainer"), Panel)
+        If panel IsNot Nothing Then
+            'change usercontrol
+            Dim CafeOwnerNotification As New CafeOwnerNotification
+            panel.Controls.Clear()
+            panel.Controls.Add(CafeOwnerNotification)
+        End If
+        CafeOwnerHomepage.btnFeedback.BackColor = Color.FromArgb(30, 30, 30)
+        CafeOwnerHomepage.iconFeedback.BackColor = Color.FromArgb(30, 30, 30)
     End Sub
 End Class
 

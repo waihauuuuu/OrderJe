@@ -1,5 +1,8 @@
 ﻿'Customer 'Feedback'
+Imports System.Data.OleDb
+
 Public Class ViewFeedBack
+    Public Shared riderid As String
     Sub Resett()
         'Set all buttons to colour White
         btnCafe.BackColor = Color.White
@@ -19,9 +22,20 @@ Public Class ViewFeedBack
 
     Private Sub BtnRider_Click(sender As Object, e As EventArgs) Handles btnRider.Click
         Resett()
-        Dim FbRider As New FbRider()
         btnRider.BackColor = Color.Gray
-        FbRider.Parent = pnlContainerIn
+        Dim FbRider As New FbRider()
+        Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
+        Dim strsql As String = "SELECT * FROM [UserDatabase] WHERE [User Type] = 'Rider'"
+        Dim mycmd As New OleDbCommand(strsql, mycon)
+        mycon.Open()
+        Dim reader As OleDbDataReader = mycmd.ExecuteReader
+        While reader.Read()
+            riderid = reader("User ID")
+            FbRider.lblRiderName = reader("Username")
+            FbRider.lblUserID = reader("User ID")
+            FbRider.Parent = pnlContainerIn
+        End While
+        mycon.Close()
     End Sub
 
     Private Sub BtnApplication_Click(sender As Object, e As EventArgs) Handles btnApplication.Click

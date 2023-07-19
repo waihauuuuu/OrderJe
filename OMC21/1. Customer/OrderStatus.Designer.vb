@@ -23,7 +23,6 @@ Partial Class OrderStatus
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(OrderStatus))
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.picDelivery = New System.Windows.Forms.PictureBox()
@@ -38,8 +37,9 @@ Partial Class OrderStatus
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lblPhone = New System.Windows.Forms.Label()
         Me.btnCart = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.btnReceive = New System.Windows.Forms.Button()
         CType(Me.picDelivery, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picProfile, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -119,16 +119,16 @@ Partial Class OrderStatus
         '
         Me.lblUsername.AutoSize = True
         Me.lblUsername.ForeColor = System.Drawing.Color.White
-        Me.lblUsername.Location = New System.Drawing.Point(221, 347)
+        Me.lblUsername.Location = New System.Drawing.Point(332, 348)
         Me.lblUsername.Name = "lblUsername"
-        Me.lblUsername.Size = New System.Drawing.Size(24, 17)
+        Me.lblUsername.Size = New System.Drawing.Size(75, 17)
         Me.lblUsername.TabIndex = 77
-        Me.lblUsername.Text = "Ali"
+        Me.lblUsername.Text = "lblUsername"
         '
         'picProfile
         '
         Me.picProfile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.picProfile.Image = CType(resources.GetObject("picProfile.Image"), System.Drawing.Image)
+        Me.picProfile.Image = Global.OMC21.My.Resources.Resources.profilePic
         Me.picProfile.Location = New System.Drawing.Point(45, 306)
         Me.picProfile.Name = "picProfile"
         Me.picProfile.Size = New System.Drawing.Size(141, 138)
@@ -140,17 +140,17 @@ Partial Class OrderStatus
         '
         Me.lblUserID.AutoSize = True
         Me.lblUserID.ForeColor = System.Drawing.Color.White
-        Me.lblUserID.Location = New System.Drawing.Point(290, 373)
+        Me.lblUserID.Location = New System.Drawing.Point(332, 380)
         Me.lblUserID.Name = "lblUserID"
-        Me.lblUserID.Size = New System.Drawing.Size(34, 17)
+        Me.lblUserID.Size = New System.Drawing.Size(44, 17)
         Me.lblUserID.TabIndex = 79
-        Me.lblUserID.Text = "R001"
+        Me.lblUserID.Text = "XXXX"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(221, 373)
+        Me.Label2.Location = New System.Drawing.Point(221, 380)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(63, 17)
         Me.Label2.TabIndex = 80
@@ -172,9 +172,9 @@ Partial Class OrderStatus
         Me.lblPhone.ForeColor = System.Drawing.Color.White
         Me.lblPhone.Location = New System.Drawing.Point(332, 414)
         Me.lblPhone.Name = "lblPhone"
-        Me.lblPhone.Size = New System.Drawing.Size(88, 17)
+        Me.lblPhone.Size = New System.Drawing.Size(112, 17)
         Me.lblPhone.TabIndex = 82
-        Me.lblPhone.Text = "012-23344556"
+        Me.lblPhone.Text = "XXX-XXXXXXXX"
         '
         'btnCart
         '
@@ -185,16 +185,6 @@ Partial Class OrderStatus
         Me.btnCart.Size = New System.Drawing.Size(45, 45)
         Me.btnCart.TabIndex = 84
         Me.btnCart.UseVisualStyleBackColor = False
-        '
-        'Button5
-        '
-        Me.Button5.BackColor = System.Drawing.Color.White
-        Me.Button5.Image = Global.OMC21.My.Resources.Resources.icons8_notification_35
-        Me.Button5.Location = New System.Drawing.Point(491, 33)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(45, 45)
-        Me.Button5.TabIndex = 83
-        Me.Button5.UseVisualStyleBackColor = False
         '
         'Label4
         '
@@ -207,14 +197,35 @@ Partial Class OrderStatus
         Me.Label4.Text = "Minute"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(221, 348)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(69, 17)
+        Me.Label5.TabIndex = 86
+        Me.Label5.Text = "Username: "
+        '
+        'btnReceive
+        '
+        Me.btnReceive.ForeColor = System.Drawing.Color.Black
+        Me.btnReceive.Location = New System.Drawing.Point(491, 403)
+        Me.btnReceive.Name = "btnReceive"
+        Me.btnReceive.Size = New System.Drawing.Size(105, 34)
+        Me.btnReceive.TabIndex = 87
+        Me.btnReceive.Text = "Received"
+        Me.btnReceive.UseVisualStyleBackColor = True
+        '
         'OrderStatus
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Controls.Add(Me.btnReceive)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.btnCart)
-        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.lblPhone)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -253,6 +264,7 @@ Partial Class OrderStatus
     Friend WithEvents Label3 As Label
     Friend WithEvents lblPhone As Label
     Friend WithEvents btnCart As Button
-    Friend WithEvents Button5 As Button
     Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents btnReceive As Button
 End Class

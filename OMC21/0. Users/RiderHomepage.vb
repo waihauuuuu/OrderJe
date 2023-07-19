@@ -28,8 +28,10 @@ Public Class RiderHomepage
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+        Dim RiderHome As New RiderHome()
         btnHome.BackColor = Color.FromArgb(180, 20, 20)
         iconHome.BackColor = Color.FromArgb(180, 20, 20)
+        RiderHome.Parent = pnlContainer
     End Sub
 
     'Logout
@@ -64,8 +66,10 @@ Public Class RiderHomepage
 
     Private Sub BtnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click, iconHome.Click
         Resett()
+        Dim RiderHome As New RiderHome()
         btnHome.BackColor = Color.FromArgb(180, 20, 20)
         iconHome.BackColor = Color.FromArgb(180, 20, 20)
+        RiderHome.Parent = pnlContainer
     End Sub
 
     Private Sub BtnFeedback_Click(sender As Object, e As EventArgs) Handles btnFeedback.Click, iconFeedback.Click

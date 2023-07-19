@@ -8,12 +8,22 @@ Public Class CustomerHomepage
     End Sub
 
     Private Sub Homepage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Resett()
         Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
+        Dim xstrsql As String = "SELECT * FROM [Transaction History] WHERE [User ID] = '" & GlobalVariables.UserID & "'"
+        Dim xmycmd As New OleDbCommand(xstrsql, mycon)
+        mycon.Open()
+        Dim xreader As OleDbDataReader = xmycmd.ExecuteReader
+        While xreader.Read()
+            If (xreader("Status") = "Declined") Then
+                MsgBox("Your order declined!", 4 + MsgBoxStyle.Information, "Order")
+            End If
+        End While
+
         Dim strsql As String = "SELECT * FROM UserDatabase WHERE [User ID] = @id"
         Dim mycmd As New OleDbCommand(strsql, mycon)
         mycmd.Parameters.AddWithValue("@id", GlobalVariables.UserID)
         Try
-            mycon.Open()
             Dim reader As OleDbDataReader = mycmd.ExecuteReader()
             'Display username, userID, Profile pic
             If reader.Read() Then
@@ -29,8 +39,11 @@ Public Class CustomerHomepage
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+        mycon.Close()
+        Dim CustomerHome As New CustomerHome()
         btnHome.BackColor = Color.FromArgb(180, 20, 20)
         iconHome.BackColor = Color.FromArgb(180, 20, 20)
+        CustomerHome.Parent = pnlContainer
     End Sub
 
     'Logout
@@ -88,10 +101,33 @@ Public Class CustomerHomepage
     Private Sub BtnDelivery_Click(sender As Object, e As EventArgs) Handles btnDelivery.Click, iconDelivery.Click
         Resett()
         'check delivery
-        Dim OrderStatus As New OrderStatus()
-        btnDelivery.BackColor = Color.FromArgb(180, 20, 20)
-        iconDelivery.BackColor = Color.FromArgb(180, 20, 20)
-        OrderStatus.Parent = pnlContainer
+        Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
+        Dim strsql As String = "SELECT * FROM [Transaction History] WHERE [User ID] = '" & GlobalVariables.UserID & "'"
+        Dim mycmd As New OleDbCommand(strsql, mycon)
+
+        mycon.Open()
+        Dim reader As OleDbDataReader = mycmd.ExecuteReader
+        While reader.Read()
+            If reader("Status") = "3rd Stage" Then
+                Dim OrderStatus As New OrderStatus()
+                btnDelivery.BackColor = Color.FromArgb(180, 20, 20)
+                iconDelivery.BackColor = Color.FromArgb(180, 20, 20)
+                OrderStatus.Parent = pnlContainer
+            ElseIf (reader("Status") = "1st Stage") Or (reader("Status") = "2nd Stage") Then
+                MsgBox("Your order haven't accepted!", 0 + MsgBoxStyle.Information, "Order")
+                Dim CustomerHome As New CustomerHome()
+                btnHome.BackColor = Color.FromArgb(180, 20, 20)
+                iconHome.BackColor = Color.FromArgb(180, 20, 20)
+                CustomerHome.Parent = pnlContainer
+            Else
+                MsgBox("You have no order!", 0 + MsgBoxStyle.Information, "Order")
+                Dim CustomerHome As New CustomerHome()
+                btnHome.BackColor = Color.FromArgb(180, 20, 20)
+                iconHome.BackColor = Color.FromArgb(180, 20, 20)
+                CustomerHome.Parent = pnlContainer
+            End If
+        End While
+        mycon.Close()
     End Sub
 
     Private Sub BtnFeedback_Click(sender As Object, e As EventArgs) Handles btnFeedback.Click, iconFeedback.Click
@@ -104,8 +140,10 @@ Public Class CustomerHomepage
 
     Private Sub BtnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click, iconHome.Click
         Resett()
+        Dim CustomerHome As New CustomerHome()
         btnHome.BackColor = Color.FromArgb(180, 20, 20)
         iconHome.BackColor = Color.FromArgb(180, 20, 20)
+        CustomerHome.Parent = pnlContainer
     End Sub
 
     Private Sub ButtonInForm_MouseEnter(sender As Object, e As EventArgs) Handles iconHome.MouseEnter, iconGames.MouseEnter, iconFeedback.MouseEnter, iconDelivery.MouseEnter, iconCafe.MouseEnter, btnHome.MouseEnter, btnGames.MouseEnter, btnFeedback.MouseEnter, btnDelivery.MouseEnter, btnCafe.MouseEnter

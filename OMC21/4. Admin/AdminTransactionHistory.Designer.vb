@@ -22,23 +22,12 @@ Partial Class AdminTransactionHistory
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.TransactionDataGrid = New System.Windows.Forms.DataGridView()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TransactionDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Button5
-        '
-        Me.Button5.BackColor = System.Drawing.Color.White
-        Me.Button5.Image = Global.OMC21.My.Resources.Resources.icons8_notification_35
-        Me.Button5.Location = New System.Drawing.Point(551, 33)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(45, 45)
-        Me.Button5.TabIndex = 98
-        Me.Button5.UseVisualStyleBackColor = False
         '
         'Label14
         '
@@ -63,35 +52,32 @@ Partial Class AdminTransactionHistory
         Me.PictureBox1.TabIndex = 100
         Me.PictureBox1.TabStop = False
         '
-        'DataGridView1
+        'TransactionDataGrid
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(45, 128)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(527, 311)
-        Me.DataGridView1.TabIndex = 101
+        Me.TransactionDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.TransactionDataGrid.Location = New System.Drawing.Point(45, 128)
+        Me.TransactionDataGrid.Name = "TransactionDataGrid"
+        Me.TransactionDataGrid.Size = New System.Drawing.Size(527, 311)
+        Me.TransactionDataGrid.TabIndex = 101
         '
         'AdminTransactionHistory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.TransactionDataGrid)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Button5)
         Me.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "AdminTransactionHistory"
         Me.Size = New System.Drawing.Size(622, 470)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TransactionDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Button5 As Button
     Friend WithEvents Label14 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents TransactionDataGrid As DataGridView
 End Class

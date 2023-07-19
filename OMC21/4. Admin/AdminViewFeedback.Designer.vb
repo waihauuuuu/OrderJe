@@ -31,7 +31,6 @@ Partial Class AdminViewFeedback
         Me.Star3 = New System.Windows.Forms.Button()
         Me.Star2 = New System.Windows.Forms.Button()
         Me.Star1 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.lblRating = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -159,16 +158,6 @@ Partial Class AdminViewFeedback
         Me.Star1.Text = "★"
         Me.Star1.UseVisualStyleBackColor = False
         '
-        'Button5
-        '
-        Me.Button5.BackColor = System.Drawing.Color.White
-        Me.Button5.Image = Global.OMC21.My.Resources.Resources.icons8_notification_35
-        Me.Button5.Location = New System.Drawing.Point(551, 33)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(45, 45)
-        Me.Button5.TabIndex = 97
-        Me.Button5.UseVisualStyleBackColor = False
-        '
         'lblRating
         '
         Me.lblRating.AutoSize = True
@@ -185,7 +174,6 @@ Partial Class AdminViewFeedback
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.lblRating)
-        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Star5)
         Me.Controls.Add(Me.Star4)
@@ -214,6 +202,5 @@ Partial Class AdminViewFeedback
     Friend WithEvents Star3 As Button
     Friend WithEvents Star2 As Button
     Friend WithEvents Star1 As Button
-    Friend WithEvents Button5 As Button
     Friend WithEvents lblRating As Label
 End Class

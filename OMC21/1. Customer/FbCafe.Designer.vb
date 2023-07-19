@@ -37,6 +37,7 @@ Partial Class FbCafe
         '
         Me.cboCafe.ForeColor = System.Drawing.SystemColors.InactiveCaption
         Me.cboCafe.FormattingEnabled = True
+        Me.cboCafe.Items.AddRange(New Object() {"Café Mesra", "V2 Gee & S Café", "V3 Island One Café", "V4 Razak zaitom Café", "V5 Afifah Beta Café", "V6 Harraz Café", "V5 Dapur Ibrahim Café", "V5 Manje Burger", "Sayang Café"})
         Me.cboCafe.Location = New System.Drawing.Point(29, 15)
         Me.cboCafe.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.cboCafe.Name = "cboCafe"

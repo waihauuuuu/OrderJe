@@ -100,4 +100,15 @@ Public Class RiderLogin
         mycon.Close()
 
     End Sub
+
+    Private Sub LblForgot_Click(sender As Object, e As EventArgs) Handles lblForgot.Click
+        ForgotPassword.Show()
+    End Sub
+    Private Sub LblForgot_MouseEnter(sender As Object, e As EventArgs) Handles lblForgot.MouseEnter
+        lblForgot.ForeColor = Color.White
+    End Sub
+
+    Private Sub LblForgot_MouseLeave(sender As Object, e As EventArgs) Handles lblForgot.MouseLeave
+        lblForgot.ForeColor = Color.FromName("MenuHighlight")
+    End Sub
 End Class

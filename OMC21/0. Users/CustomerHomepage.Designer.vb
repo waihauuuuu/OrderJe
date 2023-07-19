@@ -33,11 +33,7 @@ Partial Class CustomerHomepage
         Me.btnHome = New System.Windows.Forms.Button()
         Me.pnlContainer = New System.Windows.Forms.Panel()
         Me.lblLogout = New System.Windows.Forms.Label()
-        Me.CloseMinimize2 = New OMC21.CloseMinimize()
-        Me.CloseMinimize3 = New OMC21.CloseMinimize()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.btnLogout = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.iconFeedback = New System.Windows.Forms.Button()
         Me.iconDelivery = New System.Windows.Forms.Button()
         Me.iconGames = New System.Windows.Forms.Button()
@@ -45,9 +41,9 @@ Partial Class CustomerHomepage
         Me.iconHome = New System.Windows.Forms.Button()
         Me.picProfile = New System.Windows.Forms.PictureBox()
         Me.CloseMinimize4 = New OMC21.CloseMinimize()
+        Me.CloseMinimize2 = New OMC21.CloseMinimize()
+        Me.CloseMinimize3 = New OMC21.CloseMinimize()
         Me.Panel1.SuspendLayout()
-        Me.pnlContainer.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picProfile, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -175,8 +171,6 @@ Partial Class CustomerHomepage
         '
         Me.pnlContainer.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.pnlContainer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.pnlContainer.Controls.Add(Me.PictureBox1)
-        Me.pnlContainer.Controls.Add(Me.Label1)
         Me.pnlContainer.Location = New System.Drawing.Point(144, 38)
         Me.pnlContainer.Name = "pnlContainer"
         Me.pnlContainer.Size = New System.Drawing.Size(622, 470)
@@ -192,34 +186,6 @@ Partial Class CustomerHomepage
         Me.lblLogout.TabIndex = 5
         Me.lblLogout.Text = "Logout"
         '
-        'CloseMinimize2
-        '
-        Me.CloseMinimize2.BackColor = System.Drawing.Color.Transparent
-        Me.CloseMinimize2.ForeColor = System.Drawing.Color.Transparent
-        Me.CloseMinimize2.Location = New System.Drawing.Point(0, 0)
-        Me.CloseMinimize2.Name = "CloseMinimize2"
-        Me.CloseMinimize2.Size = New System.Drawing.Size(68, 51)
-        Me.CloseMinimize2.TabIndex = 0
-        '
-        'CloseMinimize3
-        '
-        Me.CloseMinimize3.BackColor = System.Drawing.Color.Transparent
-        Me.CloseMinimize3.ForeColor = System.Drawing.Color.Transparent
-        Me.CloseMinimize3.Location = New System.Drawing.Point(0, 0)
-        Me.CloseMinimize3.Name = "CloseMinimize3"
-        Me.CloseMinimize3.Size = New System.Drawing.Size(68, 51)
-        Me.CloseMinimize3.TabIndex = 0
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 30.0!)
-        Me.Label1.Location = New System.Drawing.Point(25, 43)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(303, 56)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Welcome Back!"
-        '
         'btnLogout
         '
         Me.btnLogout.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -232,16 +198,6 @@ Partial Class CustomerHomepage
         Me.btnLogout.Size = New System.Drawing.Size(35, 39)
         Me.btnLogout.TabIndex = 4
         Me.btnLogout.UseVisualStyleBackColor = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.OMC21.My.Resources.Resources.CustomerHome
-        Me.PictureBox1.Location = New System.Drawing.Point(-47, 116)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(547, 321)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
         '
         'iconFeedback
         '
@@ -339,6 +295,24 @@ Partial Class CustomerHomepage
         Me.CloseMinimize4.Size = New System.Drawing.Size(80, 29)
         Me.CloseMinimize4.TabIndex = 6
         '
+        'CloseMinimize2
+        '
+        Me.CloseMinimize2.BackColor = System.Drawing.Color.Transparent
+        Me.CloseMinimize2.ForeColor = System.Drawing.Color.Transparent
+        Me.CloseMinimize2.Location = New System.Drawing.Point(0, 0)
+        Me.CloseMinimize2.Name = "CloseMinimize2"
+        Me.CloseMinimize2.Size = New System.Drawing.Size(68, 51)
+        Me.CloseMinimize2.TabIndex = 0
+        '
+        'CloseMinimize3
+        '
+        Me.CloseMinimize3.BackColor = System.Drawing.Color.Transparent
+        Me.CloseMinimize3.ForeColor = System.Drawing.Color.Transparent
+        Me.CloseMinimize3.Location = New System.Drawing.Point(0, 0)
+        Me.CloseMinimize3.Name = "CloseMinimize3"
+        Me.CloseMinimize3.Size = New System.Drawing.Size(68, 51)
+        Me.CloseMinimize3.TabIndex = 0
+        '
         'CustomerHomepage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
@@ -358,9 +332,6 @@ Partial Class CustomerHomepage
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Homepage"
         Me.Panel1.ResumeLayout(False)
-        Me.pnlContainer.ResumeLayout(False)
-        Me.pnlContainer.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picProfile, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -387,7 +358,5 @@ Partial Class CustomerHomepage
     Friend WithEvents iconGames As Button
     Friend WithEvents iconCafe As Button
     Friend WithEvents iconHome As Button
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label1 As Label
     Friend WithEvents CloseMinimize4 As CloseMinimize
 End Class

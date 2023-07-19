@@ -18,7 +18,7 @@ Public Class FbRider
 
             mycmd.Parameters.AddWithValue("@comment", txtComment.Text)
             mycmd.Parameters.AddWithValue("@rating", Rate)
-            mycmd.Parameters.AddWithValue("@target", "Rider")
+            mycmd.Parameters.AddWithValue("@target", ViewFeedBack.riderid)
             mycmd.Parameters.AddWithValue("@id", GlobalVariables.UserID)
 
             mycmd.ExecuteNonQuery()

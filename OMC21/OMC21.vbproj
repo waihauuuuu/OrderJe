@@ -118,6 +118,30 @@
     <Compile Include="0. Users\AboutUs.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="0. Users\ForgotPassword.Designer.vb">
+      <DependentUpon>ForgotPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="0. Users\ForgotPassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="0. Users\OTPForm.Designer.vb">
+      <DependentUpon>OTPForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="0. Users\OTPForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="0. Users\OurTeam.Designer.vb">
+      <DependentUpon>OurTeam.vb</DependentUpon>
+    </Compile>
+    <Compile Include="0. Users\OurTeam.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2. Cafe Owner\AcceptOrder.Designer.vb">
+      <DependentUpon>AcceptOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="2. Cafe Owner\AcceptOrder.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="0. Users\AdminHomepage.Designer.vb">
       <DependentUpon>AdminHomepage.vb</DependentUpon>
     </Compile>
@@ -138,6 +162,12 @@
     </Compile>
     <Compile Include="0. Users\GlobalVariables.vb" />
     <Compile Include="0. Users\ModuleEncrypt.vb" />
+    <Compile Include="0. Users\Order.Designer.vb">
+      <DependentUpon>Order.vb</DependentUpon>
+    </Compile>
+    <Compile Include="0. Users\Order.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="0. Users\RiderEditProfile.Designer.vb">
       <DependentUpon>RiderEditProfile.vb</DependentUpon>
     </Compile>
@@ -161,6 +191,12 @@
     </Compile>
     <Compile Include="0. Users\TransactionItem.vb">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="1. Customer\AddBankCard2.Designer.vb">
+      <DependentUpon>AddBankCard2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1. Customer\AddBankCard2.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="1. Customer\AddedCart.Designer.vb">
       <DependentUpon>AddedCart.vb</DependentUpon>
@@ -186,6 +222,12 @@
     <Compile Include="1. Customer\ChangePassword.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="1. Customer\CustomerHome.Designer.vb">
+      <DependentUpon>CustomerHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1. Customer\CustomerHome.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="1. Customer\CustomerLogin.Designer.vb">
       <DependentUpon>CustomerLogin.vb</DependentUpon>
     </Compile>
@@ -208,6 +250,12 @@
       <DependentUpon>CustomerProfile.vb</DependentUpon>
     </Compile>
     <Compile Include="1. Customer\CustomerProfile.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="1. Customer\CustomerReceipt.Designer.vb">
+      <DependentUpon>CustomerReceipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="1. Customer\CustomerReceipt.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="1. Customer\CustomerTransactionHistory.Designer.vb">
@@ -252,6 +300,12 @@
     <Compile Include="1. Customer\ViewFeedBack.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="2. Cafe Owner\CafeOwnerHome.Designer.vb">
+      <DependentUpon>CafeOwnerHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="2. Cafe Owner\CafeOwnerHome.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="2. Cafe Owner\CafeOwnerLogin.Designer.vb">
       <DependentUpon>CafeOwnerLogin.vb</DependentUpon>
     </Compile>
@@ -262,12 +316,6 @@
       <DependentUpon>CafeOwnerNotification.vb</DependentUpon>
     </Compile>
     <Compile Include="2. Cafe Owner\CafeOwnerNotification.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="2. Cafe Owner\CafeOwnerReceipt.Designer.vb">
-      <DependentUpon>CafeOwnerReceipt.vb</DependentUpon>
-    </Compile>
-    <Compile Include="2. Cafe Owner\CafeOwnerReceipt.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="2. Cafe Owner\CafeOwnerTransactionHistory.Designer.vb">
@@ -294,10 +342,28 @@
     <Compile Include="2. Cafe Owner\MenuPicture.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="3. Rider\RiderDetails.Designer.vb">
+      <DependentUpon>RiderDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="3. Rider\RiderDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3. Rider\RiderHome.Designer.vb">
+      <DependentUpon>RiderHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="3. Rider\RiderHome.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="3. Rider\RiderNotification.Designer.vb">
       <DependentUpon>RiderNotification.vb</DependentUpon>
     </Compile>
     <Compile Include="3. Rider\RiderNotification.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="3. Rider\RiderOrder.Designer.vb">
+      <DependentUpon>RiderOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="3. Rider\RiderOrder.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="3. Rider\RiderProfile.Designer.vb">
@@ -331,12 +397,6 @@
     <Compile Include="1. Customer\AddPaymentMethods.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="3. Rider\RiderReceipt.Designer.vb">
-      <DependentUpon>RiderReceipt.vb</DependentUpon>
-    </Compile>
-    <Compile Include="3. Rider\RiderReceipt.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="3. Rider\RiderTransactionHistory.Designer.vb">
       <DependentUpon>RiderTransactionHistory.vb</DependentUpon>
     </Compile>
@@ -367,10 +427,30 @@
     <Compile Include="4. Admin\AdminViewFeedback.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="5. Game\Card.vb" />
     <Compile Include="5. Game\CarRacing.Designer.vb">
       <DependentUpon>CarRacing.vb</DependentUpon>
     </Compile>
     <Compile Include="5. Game\CarRacing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="5. Game\FlappyBirdGame.Designer.vb">
+      <DependentUpon>FlappyBirdGame.vb</DependentUpon>
+    </Compile>
+    <Compile Include="5. Game\FlappyBirdGame.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="5. Game\MatchingGameEngine.vb" />
+    <Compile Include="5. Game\MemoryMatching.Designer.vb">
+      <DependentUpon>MemoryMatching.vb</DependentUpon>
+    </Compile>
+    <Compile Include="5. Game\MemoryMatching.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="5. Game\TicTacToe.Designer.vb">
+      <DependentUpon>TicTacToe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="5. Game\TicTacToe.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
@@ -460,6 +540,18 @@
     <EmbeddedResource Include="0. Users\AboutUs.resx">
       <DependentUpon>AboutUs.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="0. Users\ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0. Users\OTPForm.resx">
+      <DependentUpon>OTPForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0. Users\OurTeam.resx">
+      <DependentUpon>OurTeam.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2. Cafe Owner\AcceptOrder.resx">
+      <DependentUpon>AcceptOrder.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="0. Users\AdminHomepage.resx">
       <DependentUpon>AdminHomepage.vb</DependentUpon>
     </EmbeddedResource>
@@ -468,6 +560,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="0. Users\Comment.resx">
       <DependentUpon>Comment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="0. Users\Order.resx">
+      <DependentUpon>Order.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="0. Users\RiderEditProfile.resx">
       <DependentUpon>RiderEditProfile.vb</DependentUpon>
@@ -481,6 +576,9 @@
     <EmbeddedResource Include="0. Users\TransactionItem.resx">
       <DependentUpon>TransactionItem.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="1. Customer\AddBankCard2.resx">
+      <DependentUpon>AddBankCard2.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="1. Customer\AddedCart.resx">
       <DependentUpon>AddedCart.vb</DependentUpon>
     </EmbeddedResource>
@@ -492,6 +590,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="1. Customer\ChangePassword.resx">
       <DependentUpon>ChangePassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1. Customer\CustomerHome.resx">
+      <DependentUpon>CustomerHome.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="1. Customer\CustomerLogin.resx">
       <DependentUpon>CustomerLogin.vb</DependentUpon>
@@ -507,6 +608,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="1. Customer\CustomerProfile.resx">
       <DependentUpon>CustomerProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1. Customer\CustomerReceipt.resx">
+      <DependentUpon>CustomerReceipt.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="1. Customer\CustomerTransactionHistory.resx">
       <DependentUpon>CustomerTransactionHistory.vb</DependentUpon>
@@ -529,14 +633,14 @@
     <EmbeddedResource Include="1. Customer\ViewFeedBack.resx">
       <DependentUpon>ViewFeedBack.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="2. Cafe Owner\CafeOwnerHome.resx">
+      <DependentUpon>CafeOwnerHome.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="2. Cafe Owner\CafeOwnerLogin.resx">
       <DependentUpon>CafeOwnerLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="2. Cafe Owner\CafeOwnerNotification.resx">
       <DependentUpon>CafeOwnerNotification.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="2. Cafe Owner\CafeOwnerReceipt.resx">
-      <DependentUpon>CafeOwnerReceipt.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="2. Cafe Owner\CafeOwnerTransactionHistory.resx">
       <DependentUpon>CafeOwnerTransactionHistory.vb</DependentUpon>
@@ -550,8 +654,17 @@
     <EmbeddedResource Include="2. Cafe Owner\MenuPicture.resx">
       <DependentUpon>MenuPicture.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="3. Rider\RiderDetails.resx">
+      <DependentUpon>RiderDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3. Rider\RiderHome.resx">
+      <DependentUpon>RiderHome.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="3. Rider\RiderNotification.resx">
       <DependentUpon>RiderNotification.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3. Rider\RiderOrder.resx">
+      <DependentUpon>RiderOrder.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="3. Rider\RiderProfile.resx">
       <DependentUpon>RiderProfile.vb</DependentUpon>
@@ -564,9 +677,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="1. Customer\CustomerSignUp.resx">
       <DependentUpon>CustomerSignUp.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="3. Rider\RiderReceipt.resx">
-      <DependentUpon>RiderReceipt.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="3. Rider\RiderTransactionHistory.resx">
       <DependentUpon>RiderTransactionHistory.vb</DependentUpon>
@@ -585,6 +695,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="5. Game\CarRacing.resx">
       <DependentUpon>CarRacing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="5. Game\FlappyBirdGame.resx">
+      <DependentUpon>FlappyBirdGame.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="5. Game\MemoryMatching.resx">
+      <DependentUpon>MemoryMatching.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="5. Game\TicTacToe.resx">
+      <DependentUpon>TicTacToe.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CloseMinimize.resx">
       <DependentUpon>CloseMinimize.vb</DependentUpon>
@@ -802,6 +921,31 @@
     <Content Include="OrderJeDatabase.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\OMC Presentation.jpg" />
+    <None Include="Resources\out team.jpg" />
+    <None Include="Resources\bad.png" />
+    <None Include="Resources\moderate.png" />
+    <None Include="Resources\smiley.png" />
+    <None Include="Resources\straight.png" />
+    <None Include="Resources\sad-face.png" />
+    <None Include="Resources\riderhp-removebg-preview.png" />
+    <None Include="Resources\CafeOwnerHp-removebg-preview.png" />
+    <None Include="Resources\CafeOwnerHp.jpg" />
+    <None Include="Resources\cafe_owner-removebg-preview.png" />
+    <None Include="Resources\hp rbg.png" />
+    <None Include="Resources\flappy icon.jpg" />
+    <None Include="Resources\pipedown.png" />
+    <None Include="Resources\pipe.png" />
+    <None Include="Resources\ground.png" />
+    <None Include="Resources\bird.png" />
+    <None Include="Resources\bluecardback.png" />
+    <None Include="Resources\Simp5.png" />
+    <None Include="Resources\Simp2.png" />
+    <None Include="Resources\Simp1.png" />
+    <None Include="Resources\Simp4.png" />
+    <None Include="Resources\Simp3.png" />
+    <None Include="Resources\Simp6.png" />
+    <None Include="Resources\Refresh.png" />
     <None Include="Resources\riderHome.png" />
     <None Include="Resources\CafeHome.jpg" />
     <None Include="Resources\CustomerHome.jpg" />

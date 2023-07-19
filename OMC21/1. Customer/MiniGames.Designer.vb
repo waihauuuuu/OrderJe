@@ -37,10 +37,9 @@ Partial Class MiniGames
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.btnPuzzle = New System.Windows.Forms.Button()
+        Me.btnFlappyBird = New System.Windows.Forms.Button()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.btnCart = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,7 +88,6 @@ Partial Class MiniGames
         '
         'PictureBox2
         '
-        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox2.Image = Global.OMC21.My.Resources.Resources.tic_tac_toe_icon2
         Me.PictureBox2.Location = New System.Drawing.Point(14, 16)
         Me.PictureBox2.Name = "PictureBox2"
@@ -144,7 +142,6 @@ Partial Class MiniGames
         '
         'PictureBox3
         '
-        Me.PictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox3.Image = Global.OMC21.My.Resources.Resources.memory_icon_removebg_preview
         Me.PictureBox3.Location = New System.Drawing.Point(14, 16)
         Me.PictureBox3.Name = "PictureBox3"
@@ -189,7 +186,6 @@ Partial Class MiniGames
         '
         'PictureBox4
         '
-        Me.PictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox4.Image = Global.OMC21.My.Resources.Resources.car_racing_icon2
         Me.PictureBox4.Location = New System.Drawing.Point(14, 16)
         Me.PictureBox4.Name = "PictureBox4"
@@ -202,7 +198,7 @@ Partial Class MiniGames
         '
         Me.Panel4.BackColor = System.Drawing.Color.White
         Me.Panel4.Controls.Add(Me.Label5)
-        Me.Panel4.Controls.Add(Me.btnPuzzle)
+        Me.Panel4.Controls.Add(Me.btnFlappyBird)
         Me.Panel4.Controls.Add(Me.PictureBox5)
         Me.Panel4.Location = New System.Drawing.Point(326, 294)
         Me.Panel4.Name = "Panel4"
@@ -214,28 +210,27 @@ Partial Class MiniGames
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(170, 33)
+        Me.Label5.Location = New System.Drawing.Point(153, 33)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(53, 16)
+        Me.Label5.Size = New System.Drawing.Size(87, 16)
         Me.Label5.TabIndex = 17
-        Me.Label5.Text = "PUZZLE"
+        Me.Label5.Text = "FLAPPY BIRD"
         '
-        'btnPuzzle
+        'btnFlappyBird
         '
-        Me.btnPuzzle.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.btnPuzzle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnPuzzle.ForeColor = System.Drawing.Color.White
-        Me.btnPuzzle.Location = New System.Drawing.Point(149, 104)
-        Me.btnPuzzle.Name = "btnPuzzle"
-        Me.btnPuzzle.Size = New System.Drawing.Size(93, 30)
-        Me.btnPuzzle.TabIndex = 14
-        Me.btnPuzzle.Text = "Play"
-        Me.btnPuzzle.UseVisualStyleBackColor = False
+        Me.btnFlappyBird.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.btnFlappyBird.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFlappyBird.ForeColor = System.Drawing.Color.White
+        Me.btnFlappyBird.Location = New System.Drawing.Point(149, 104)
+        Me.btnFlappyBird.Name = "btnFlappyBird"
+        Me.btnFlappyBird.Size = New System.Drawing.Size(93, 30)
+        Me.btnFlappyBird.TabIndex = 14
+        Me.btnFlappyBird.Text = "Play"
+        Me.btnFlappyBird.UseVisualStyleBackColor = False
         '
         'PictureBox5
         '
-        Me.PictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox5.Image = Global.OMC21.My.Resources.Resources.puzzle_icon
+        Me.PictureBox5.Image = Global.OMC21.My.Resources.Resources.flappy_icon
         Me.PictureBox5.Location = New System.Drawing.Point(14, 16)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(117, 118)
@@ -252,16 +247,6 @@ Partial Class MiniGames
         Me.btnCart.Size = New System.Drawing.Size(45, 45)
         Me.btnCart.TabIndex = 18
         Me.btnCart.UseVisualStyleBackColor = False
-        '
-        'Button5
-        '
-        Me.Button5.BackColor = System.Drawing.Color.White
-        Me.Button5.Image = Global.OMC21.My.Resources.Resources.icons8_notification_35
-        Me.Button5.Location = New System.Drawing.Point(491, 33)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(45, 45)
-        Me.Button5.TabIndex = 17
-        Me.Button5.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
@@ -284,7 +269,6 @@ Partial Class MiniGames
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnCart)
-        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Font = New System.Drawing.Font("Comic Sans MS", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -312,7 +296,6 @@ Partial Class MiniGames
     Friend WithEvents btnTicTacToe As Button
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents btnCart As Button
-    Friend WithEvents Button5 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel2 As Panel
@@ -322,7 +305,7 @@ Partial Class MiniGames
     Friend WithEvents btnCarRacing As Button
     Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents btnPuzzle As Button
+    Friend WithEvents btnFlappyBird As Button
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label

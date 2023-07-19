@@ -35,6 +35,7 @@ Partial Class CustomerLogin
         Me.btnBack = New System.Windows.Forms.Button()
         Me.picLogo = New System.Windows.Forms.PictureBox()
         Me.cboShowPassword = New System.Windows.Forms.CheckBox()
+        Me.lblForgot = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.picLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -181,6 +182,17 @@ Partial Class CustomerLogin
         Me.cboShowPassword.Text = "Show password"
         Me.cboShowPassword.UseVisualStyleBackColor = True
         '
+        'lblForgot
+        '
+        Me.lblForgot.AutoSize = True
+        Me.lblForgot.Font = New System.Drawing.Font("Comic Sans MS", 11.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblForgot.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.lblForgot.Location = New System.Drawing.Point(123, 330)
+        Me.lblForgot.Name = "lblForgot"
+        Me.lblForgot.Size = New System.Drawing.Size(133, 20)
+        Me.lblForgot.TabIndex = 27
+        Me.lblForgot.Text = "Forgot Password?"
+        '
         'CustomerLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
@@ -188,6 +200,7 @@ Partial Class CustomerLogin
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(660, 415)
+        Me.Controls.Add(Me.lblForgot)
         Me.Controls.Add(Me.cboShowPassword)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.txtPassword)
@@ -223,4 +236,5 @@ Partial Class CustomerLogin
     Friend WithEvents Label1 As Label
     Friend WithEvents picLogo As PictureBox
     Friend WithEvents cboShowPassword As CheckBox
+    Friend WithEvents lblForgot As Label
 End Class

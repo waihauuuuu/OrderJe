@@ -3,6 +3,9 @@
         btnData.BackColor = Color.FromArgb(30, 30, 30)
         btnTransactionHistory.BackColor = Color.FromArgb(30, 30, 30)
         btnFeedback.BackColor = Color.FromArgb(30, 30, 30)
+        iconData.BackColor = Color.FromArgb(30, 30, 30)
+        iconTransactionHistory.BackColor = Color.FromArgb(30, 30, 30)
+        iconFeedback.BackColor = Color.FromArgb(30, 30, 30)
         If pnlContainer.Controls.Count > 0 Then
             'Remove the usercontrol in the panel
             pnlContainer.Controls.RemoveAt(0)

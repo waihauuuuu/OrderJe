@@ -23,13 +23,13 @@ Partial Class Menu
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnRemove = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.CafeDataGrid = New System.Windows.Forms.DataGridView()
+        Me.btnNotification = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.CafeDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label14
@@ -43,17 +43,6 @@ Partial Class Menu
         Me.Label14.Size = New System.Drawing.Size(49, 23)
         Me.Label14.TabIndex = 72
         Me.Label14.Text = "Menu"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.OMC21.My.Resources.Resources.OrderJeLogo
-        Me.PictureBox1.Location = New System.Drawing.Point(45, -5)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(90, 100)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 71
-        Me.PictureBox1.TabStop = False
         '
         'btnRemove
         '
@@ -73,31 +62,42 @@ Partial Class Menu
         Me.btnAdd.Text = "Add New Menu"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
-        'Button5
+        'CafeDataGrid
         '
-        Me.Button5.BackColor = System.Drawing.Color.White
-        Me.Button5.Image = Global.OMC21.My.Resources.Resources.icons8_notification_35
-        Me.Button5.Location = New System.Drawing.Point(551, 33)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(45, 45)
-        Me.Button5.TabIndex = 84
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.CafeDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.CafeDataGrid.Location = New System.Drawing.Point(45, 122)
+        Me.CafeDataGrid.Name = "CafeDataGrid"
+        Me.CafeDataGrid.Size = New System.Drawing.Size(529, 265)
+        Me.CafeDataGrid.TabIndex = 85
         '
-        'DataGridView1
+        'btnNotification
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(45, 122)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(529, 265)
-        Me.DataGridView1.TabIndex = 85
+        Me.btnNotification.BackColor = System.Drawing.Color.White
+        Me.btnNotification.Image = Global.OMC21.My.Resources.Resources.icons8_notification_35
+        Me.btnNotification.Location = New System.Drawing.Point(551, 33)
+        Me.btnNotification.Name = "btnNotification"
+        Me.btnNotification.Size = New System.Drawing.Size(45, 45)
+        Me.btnNotification.TabIndex = 84
+        Me.btnNotification.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.OMC21.My.Resources.Resources.OrderJeLogo
+        Me.PictureBox1.Location = New System.Drawing.Point(45, -5)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(90, 100)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 71
+        Me.PictureBox1.TabStop = False
         '
         'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.CafeDataGrid)
+        Me.Controls.Add(Me.btnNotification)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.btnRemove)
         Me.Controls.Add(Me.Label14)
@@ -106,8 +106,8 @@ Partial Class Menu
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Menu"
         Me.Size = New System.Drawing.Size(622, 470)
+        CType(Me.CafeDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -117,6 +117,6 @@ Partial Class Menu
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnRemove As Button
     Friend WithEvents btnAdd As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents btnNotification As Button
+    Friend WithEvents CafeDataGrid As DataGridView
 End Class

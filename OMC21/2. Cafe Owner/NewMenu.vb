@@ -81,4 +81,17 @@ Public Class NewMenu
     Private Sub TxtCost_Leave(sender As Object, e As EventArgs) Handles txtCost.Leave
         txtCost.Text = Format(CDbl(txtCost.Text), "0.00")
     End Sub
+
+    Private Sub BtnNotification_Click(sender As Object, e As EventArgs) Handles btnNotification.Click
+        Dim CafeOwnerHomepage As CafeOwnerHomepage = TryCast(Me.ParentForm, CafeOwnerHomepage)
+        Dim panel As Panel = TryCast(ParentForm.Controls("pnlContainer"), Panel)
+        If panel IsNot Nothing Then
+            'change usercontrol
+            Dim CafeOwnerNotification As New CafeOwnerNotification
+            panel.Controls.Clear()
+            panel.Controls.Add(CafeOwnerNotification)
+        End If
+        CafeOwnerHomepage.btnFeedback.BackColor = Color.FromArgb(30, 30, 30)
+        CafeOwnerHomepage.iconFeedback.BackColor = Color.FromArgb(30, 30, 30)
+    End Sub
 End Class

@@ -27,14 +27,13 @@ Partial Class CafeOwnerViewFeedback
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.lblRating = New System.Windows.Forms.Label()
         Me.Star5 = New System.Windows.Forms.Button()
         Me.Star4 = New System.Windows.Forms.Button()
         Me.Star3 = New System.Windows.Forms.Button()
         Me.Star2 = New System.Windows.Forms.Button()
         Me.Star1 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.btnNotification = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -88,27 +87,18 @@ Partial Class CafeOwnerViewFeedback
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Comic Sans MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(41, 171)
+        Me.Label3.Location = New System.Drawing.Point(40, 160)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(117, 23)
         Me.Label3.TabIndex = 100
         Me.Label3.Text = "Overall Rating"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"All ratings", "5 stars", "4 stars", "3 stars", "2 stars", "1 star"})
-        Me.ComboBox1.Location = New System.Drawing.Point(375, 195)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(196, 25)
-        Me.ComboBox1.TabIndex = 101
         '
         'lblRating
         '
         Me.lblRating.AutoSize = True
         Me.lblRating.Font = New System.Drawing.Font("Comic Sans MS", 12.0!)
         Me.lblRating.ForeColor = System.Drawing.Color.White
-        Me.lblRating.Location = New System.Drawing.Point(198, 171)
+        Me.lblRating.Location = New System.Drawing.Point(197, 160)
         Me.lblRating.Name = "lblRating"
         Me.lblRating.Size = New System.Drawing.Size(77, 23)
         Me.lblRating.TabIndex = 102
@@ -123,7 +113,7 @@ Partial Class CafeOwnerViewFeedback
         Me.Star5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Star5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Star5.Font = New System.Drawing.Font("Comic Sans MS", 30.0!)
-        Me.Star5.Location = New System.Drawing.Point(235, 182)
+        Me.Star5.Location = New System.Drawing.Point(224, 171)
         Me.Star5.Name = "Star5"
         Me.Star5.Size = New System.Drawing.Size(67, 66)
         Me.Star5.TabIndex = 108
@@ -139,7 +129,7 @@ Partial Class CafeOwnerViewFeedback
         Me.Star4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Star4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Star4.Font = New System.Drawing.Font("Comic Sans MS", 30.0!)
-        Me.Star4.Location = New System.Drawing.Point(184, 182)
+        Me.Star4.Location = New System.Drawing.Point(173, 171)
         Me.Star4.Name = "Star4"
         Me.Star4.Size = New System.Drawing.Size(67, 66)
         Me.Star4.TabIndex = 107
@@ -155,7 +145,7 @@ Partial Class CafeOwnerViewFeedback
         Me.Star3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Star3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Star3.Font = New System.Drawing.Font("Comic Sans MS", 30.0!)
-        Me.Star3.Location = New System.Drawing.Point(134, 182)
+        Me.Star3.Location = New System.Drawing.Point(123, 171)
         Me.Star3.Name = "Star3"
         Me.Star3.Size = New System.Drawing.Size(67, 66)
         Me.Star3.TabIndex = 106
@@ -171,7 +161,7 @@ Partial Class CafeOwnerViewFeedback
         Me.Star2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Star2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Star2.Font = New System.Drawing.Font("Comic Sans MS", 30.0!)
-        Me.Star2.Location = New System.Drawing.Point(84, 182)
+        Me.Star2.Location = New System.Drawing.Point(73, 171)
         Me.Star2.Name = "Star2"
         Me.Star2.Size = New System.Drawing.Size(67, 66)
         Me.Star2.TabIndex = 105
@@ -187,22 +177,22 @@ Partial Class CafeOwnerViewFeedback
         Me.Star1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Star1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Star1.Font = New System.Drawing.Font("Comic Sans MS", 30.0!)
-        Me.Star1.Location = New System.Drawing.Point(35, 182)
+        Me.Star1.Location = New System.Drawing.Point(24, 171)
         Me.Star1.Name = "Star1"
         Me.Star1.Size = New System.Drawing.Size(67, 66)
         Me.Star1.TabIndex = 104
         Me.Star1.Text = "★"
         Me.Star1.UseVisualStyleBackColor = False
         '
-        'Button6
+        'btnNotification
         '
-        Me.Button6.BackColor = System.Drawing.Color.White
-        Me.Button6.Image = Global.OMC21.My.Resources.Resources.icons8_notification_35
-        Me.Button6.Location = New System.Drawing.Point(551, 33)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(45, 45)
-        Me.Button6.TabIndex = 103
-        Me.Button6.UseVisualStyleBackColor = False
+        Me.btnNotification.BackColor = System.Drawing.Color.White
+        Me.btnNotification.Image = Global.OMC21.My.Resources.Resources.icons8_notification_35
+        Me.btnNotification.Location = New System.Drawing.Point(551, 33)
+        Me.btnNotification.Name = "btnNotification"
+        Me.btnNotification.Size = New System.Drawing.Size(45, 45)
+        Me.btnNotification.TabIndex = 103
+        Me.btnNotification.UseVisualStyleBackColor = False
         '
         'PictureBox2
         '
@@ -220,9 +210,8 @@ Partial Class CafeOwnerViewFeedback
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.btnNotification)
         Me.Controls.Add(Me.lblRating)
-        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PanelComment)
@@ -250,9 +239,8 @@ Partial Class CafeOwnerViewFeedback
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents lblRating As Label
-    Friend WithEvents Button6 As Button
+    Friend WithEvents btnNotification As Button
     Friend WithEvents Star5 As Button
     Friend WithEvents Star4 As Button
     Friend WithEvents Star3 As Button

@@ -40,15 +40,16 @@ Public Class AddOrder
         picFood.Image?.Save(imagePath, System.Drawing.Imaging.ImageFormat.Png) 'if picturebox contain image, then save image as png
 
         Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
-        Dim strsql As String = "INSERT INTO [Cart] ([User ID], [Cafe Name], [Food Name], [Cost], [Quantity], [Picture]) Values(@id, @cafename, @foodname, @cost, @quantity, @picture)"
+        Dim strsql As String = "INSERT INTO [Cart] ([User ID], [Cafe Name], [Food Name], [Cost], [Quantity], [Picture], [Status]) Values(@id, @cafename, @foodname, @cost, @quantity, @picture, @status)"
         Dim mycmd As New OleDbCommand(strsql, mycon)
         mycon.Open()
         mycmd.Parameters.AddWithValue("@id", GlobalVariables.UserID)
         mycmd.Parameters.AddWithValue("@cafename", lblCafe.Text)
         mycmd.Parameters.AddWithValue("@foodname", lblFoodName.Text)
-        mycmd.Parameters.AddWithValue("@cost", txtCost.Text)
+        mycmd.Parameters.AddWithValue("@cost", FoodOrder.strCost)
         mycmd.Parameters.AddWithValue("@quatity", nudQuantity.Value)
         mycmd.Parameters.AddWithValue("@picture", imagePath)
+        mycmd.Parameters.AddWithValue("@status", "Cart")
         mycmd.ExecuteNonQuery()
         mycon.Close()
 

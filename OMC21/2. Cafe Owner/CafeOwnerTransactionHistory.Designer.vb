@@ -25,9 +25,7 @@ Partial Class CafeOwnerTransactionHistory
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelTransactionHistory = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.btnSearch = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.btnNotification = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -44,10 +42,9 @@ Partial Class CafeOwnerTransactionHistory
         '
         'PanelTransactionHistory
         '
-        Me.PanelTransactionHistory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PanelTransactionHistory.Location = New System.Drawing.Point(45, 172)
+        Me.PanelTransactionHistory.Location = New System.Drawing.Point(74, 121)
         Me.PanelTransactionHistory.Name = "PanelTransactionHistory"
-        Me.PanelTransactionHistory.Size = New System.Drawing.Size(526, 266)
+        Me.PanelTransactionHistory.Size = New System.Drawing.Size(480, 349)
         Me.PanelTransactionHistory.TabIndex = 73
         '
         'Label1
@@ -61,43 +58,22 @@ Partial Class CafeOwnerTransactionHistory
         Me.Label1.TabIndex = 70
         Me.Label1.Text = "Transaction History"
         '
-        'DateTimePicker1
+        'btnNotification
         '
-        Me.DateTimePicker1.CustomFormat = "dd/MM/yyyy"
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(44, 127)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(127, 24)
-        Me.DateTimePicker1.TabIndex = 76
-        Me.DateTimePicker1.Value = New Date(2023, 7, 7, 0, 0, 0, 0)
-        '
-        'btnSearch
-        '
-        Me.btnSearch.Location = New System.Drawing.Point(212, 127)
-        Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(82, 24)
-        Me.btnSearch.TabIndex = 75
-        Me.btnSearch.Text = "Search"
-        Me.btnSearch.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.BackColor = System.Drawing.Color.White
-        Me.Button5.Image = Global.OMC21.My.Resources.Resources.icons8_notification_35
-        Me.Button5.Location = New System.Drawing.Point(551, 33)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(45, 45)
-        Me.Button5.TabIndex = 84
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.btnNotification.BackColor = System.Drawing.Color.White
+        Me.btnNotification.Image = Global.OMC21.My.Resources.Resources.icons8_notification_35
+        Me.btnNotification.Location = New System.Drawing.Point(551, 33)
+        Me.btnNotification.Name = "btnNotification"
+        Me.btnNotification.Size = New System.Drawing.Size(45, 45)
+        Me.btnNotification.TabIndex = 84
+        Me.btnNotification.UseVisualStyleBackColor = False
         '
         'CafeOwnerTransactionHistory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.btnSearch)
+        Me.Controls.Add(Me.btnNotification)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PanelTransactionHistory)
         Me.Controls.Add(Me.Label1)
@@ -114,7 +90,5 @@ Partial Class CafeOwnerTransactionHistory
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PanelTransactionHistory As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents btnSearch As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents btnNotification As Button
 End Class

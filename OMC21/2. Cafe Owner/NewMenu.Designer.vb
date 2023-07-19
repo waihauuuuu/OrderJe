@@ -34,7 +34,7 @@ Partial Class NewMenu
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtCost = New System.Windows.Forms.MaskedTextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.btnNotification = New System.Windows.Forms.Button()
         CType(Me.picMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -157,22 +157,22 @@ Partial Class NewMenu
         Me.Label2.TabIndex = 77
         Me.Label2.Text = "RM"
         '
-        'Button5
+        'btnNotification
         '
-        Me.Button5.BackColor = System.Drawing.Color.White
-        Me.Button5.Image = Global.OMC21.My.Resources.Resources.icons8_notification_35
-        Me.Button5.Location = New System.Drawing.Point(551, 33)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(45, 45)
-        Me.Button5.TabIndex = 84
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.btnNotification.BackColor = System.Drawing.Color.White
+        Me.btnNotification.Image = Global.OMC21.My.Resources.Resources.icons8_notification_35
+        Me.btnNotification.Location = New System.Drawing.Point(551, 33)
+        Me.btnNotification.Name = "btnNotification"
+        Me.btnNotification.Size = New System.Drawing.Size(45, 45)
+        Me.btnNotification.TabIndex = 84
+        Me.btnNotification.UseVisualStyleBackColor = False
         '
         'NewMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.btnNotification)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtCost)
         Me.Controls.Add(Me.Label1)
@@ -206,5 +206,5 @@ Partial Class NewMenu
     Friend WithEvents Label1 As Label
     Friend WithEvents txtCost As MaskedTextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents Button5 As Button
+    Friend WithEvents btnNotification As Button
 End Class

@@ -60,9 +60,6 @@ Public Class FoodOrder
             MessageBox.Show(ex.Message)
         End Try
         mycon.Close()
-
-        btnFood.BackColor = Color.White
-        btnFood.ForeColor = Color.Black
     End Sub
 
     'when cbo changed

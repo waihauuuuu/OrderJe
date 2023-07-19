@@ -32,8 +32,7 @@ Public Class CustomerEditProfile
 
     Private Sub CustomerEditProfile_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         RefreshParentForm()
-
-        'Default colour = orange red
+        Resett()
         Dim CustomerProfile As New CustomerProfile()
         btnPersonal.BackColor = Color.OrangeRed
         iconPersonal.BackColor = Color.OrangeRed
@@ -99,13 +98,6 @@ Public Class CustomerEditProfile
         End If
     End Sub
 
-    'Concept:
-    ' > Profile form
-    ' > button clicked, clear user control in panel, add new usercontrol
-    ' > for every usercontol change, colour changed
-    ' > more fancyyyyy~ XD
-
-    'Create function
     Sub Resett()
         'Set all buttons to colour 30, 30, 30
         btnPersonal.BackColor = Color.FromArgb(30, 30, 30)

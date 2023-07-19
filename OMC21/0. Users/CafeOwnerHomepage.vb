@@ -11,34 +11,17 @@ Public Class CafeOwnerHomepage
             mycon.Open()
             Dim reader As OleDbDataReader = mycmd.ExecuteReader()
             'Display username, userID, Profile pic
-            If reader.Read() Then
-                'Display username
-                If reader("Username").ToString = "V2Cafe" Then
-                    lblCafeName.Text = "V2 Gee & S Café"
-                ElseIf reader("Username").ToString = "V3Cafe" Then
-                    lblCafeName.Text = "V3 Island One Café"
-                ElseIf reader("Username").ToString = "V4Cafe" Then
-                    lblCafeName.Text = "V4 Razak zaitom Café"
-                ElseIf reader("Username").ToString = "V5Cafe" Then
-                    lblCafeName.Text = "V5 Afifah Beta Café"
-                ElseIf reader("Username").ToString = "V5Dapur" Then
-                    lblCafeName.Text = "V5 Dapur Ibrahim Café"
-                ElseIf reader("Username").ToString = "Manje" Then
-                    lblCafeName.Text = "V5 Manje Burger"
-                ElseIf reader("Username").ToString = "V6Cafe" Then
-                    lblCafeName.Text = "V6 Harraz Café"
-                ElseIf reader("Username").ToString = "Sayang" Then
-                    lblCafeName.Text = "Sayang Café"
-                ElseIf reader("Username").ToString = "Mesra" Then
-                    lblCafeName.Text = "Café Mesra"
-                End If
-            End If
+            While reader.Read()
+                lblCafeName.Text = reader("Full Name")
+            End While
             reader.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+        Dim CafeOwnerHome As New CafeOwnerHome()
         btnHome.BackColor = Color.FromArgb(180, 20, 20)
         iconHome.BackColor = Color.FromArgb(180, 20, 20)
+        CafeOwnerHome.Parent = pnlContainer
     End Sub
     Sub Resett()
         'Set all buttons to colour 130, 0, 0
@@ -60,7 +43,7 @@ Public Class CafeOwnerHomepage
         Dim response = MsgBox("Are you sure you want log out?", 4 + MsgBoxStyle.Question, "Confirmation")
         If response = MsgBoxResult.Yes Then
             Me.Hide()
-            CustomerLogin.Show()
+            CafeOwnerLogin.Show()
         End If
     End Sub
 
@@ -68,7 +51,7 @@ Public Class CafeOwnerHomepage
         Dim response = MsgBox("Are you sure you want log out?", 4 + MsgBoxStyle.Question, "Confirmation")
         If response = MsgBoxResult.Yes Then
             Me.Hide()
-            CustomerLogin.Show()
+            CafeOwnerLogin.Show()
         End If
     End Sub
 
@@ -122,8 +105,10 @@ Public Class CafeOwnerHomepage
 
     Private Sub BtnHome_Click(sender As Object, e As EventArgs) Handles iconHome.Click, btnHome.Click
         Resett()
+        Dim CafeOwnerHome As New CafeOwnerHome()
         btnHome.BackColor = Color.FromArgb(180, 20, 20)
         iconHome.BackColor = Color.FromArgb(180, 20, 20)
+        CafeOwnerHome.Parent = pnlContainer
     End Sub
 
     Private Sub BtnMenu_Click(sender As Object, e As EventArgs) Handles iconMenu.Click, btnMenu.Click

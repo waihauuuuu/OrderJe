@@ -55,6 +55,7 @@ Partial Class Cart
         '
         Me.btnCheckOut.BackColor = System.Drawing.Color.White
         Me.btnCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCheckOut.ForeColor = System.Drawing.Color.Black
         Me.btnCheckOut.Location = New System.Drawing.Point(270, 433)
         Me.btnCheckOut.Name = "btnCheckOut"
         Me.btnCheckOut.Size = New System.Drawing.Size(75, 23)

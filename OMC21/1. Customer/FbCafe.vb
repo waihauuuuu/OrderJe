@@ -44,7 +44,7 @@ Public Class FbCafe
 
             mycmd.Parameters.AddWithValue("@comment", txtComment.Text)
             mycmd.Parameters.AddWithValue("@rating", rate)
-            mycmd.Parameters.AddWithValue("@target", "Cafe")
+            mycmd.Parameters.AddWithValue("@target", (cboCafe.SelectedItem).ToString)
             mycmd.Parameters.AddWithValue("@id", GlobalVariables.UserID)
 
             mycmd.ExecuteNonQuery()

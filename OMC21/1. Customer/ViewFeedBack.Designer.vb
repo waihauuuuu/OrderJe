@@ -27,7 +27,6 @@ Partial Class ViewFeedBack
         Me.btnRider = New System.Windows.Forms.Button()
         Me.btnApplication = New System.Windows.Forms.Button()
         Me.pnlContainerIn = New System.Windows.Forms.Panel()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.btnCart = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,16 +88,6 @@ Partial Class ViewFeedBack
         Me.pnlContainerIn.Size = New System.Drawing.Size(622, 328)
         Me.pnlContainerIn.TabIndex = 5
         '
-        'Button5
-        '
-        Me.Button5.BackColor = System.Drawing.Color.White
-        Me.Button5.Image = Global.OMC21.My.Resources.Resources.icons8_notification_35
-        Me.Button5.Location = New System.Drawing.Point(491, 33)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(45, 45)
-        Me.Button5.TabIndex = 7
-        Me.Button5.UseVisualStyleBackColor = False
-        '
         'btnCart
         '
         Me.btnCart.BackColor = System.Drawing.Color.White
@@ -127,7 +116,6 @@ Partial Class ViewFeedBack
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
         Me.Controls.Add(Me.pnlContainerIn)
         Me.Controls.Add(Me.btnCart)
-        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.btnApplication)
         Me.Controls.Add(Me.btnRider)
         Me.Controls.Add(Me.btnCafe)
@@ -149,6 +137,5 @@ Partial Class ViewFeedBack
     Friend WithEvents btnRider As Button
     Friend WithEvents btnApplication As Button
     Friend WithEvents pnlContainerIn As Panel
-    Friend WithEvents Button5 As Button
     Friend WithEvents btnCart As Button
 End Class

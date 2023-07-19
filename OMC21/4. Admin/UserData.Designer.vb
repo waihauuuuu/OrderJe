@@ -28,7 +28,7 @@ Partial Class UserData
         Me.btnRider = New System.Windows.Forms.Button()
         Me.UserDataGrid = New System.Windows.Forms.DataGridView()
         Me.btnCafeOwner = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
+        Me.btnRemove = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UserDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -94,22 +94,22 @@ Partial Class UserData
         Me.btnCafeOwner.Text = "Cafe Owner"
         Me.btnCafeOwner.UseVisualStyleBackColor = False
         '
-        'Button5
+        'btnRemove
         '
-        Me.Button5.BackColor = System.Drawing.Color.White
-        Me.Button5.Image = Global.OMC21.My.Resources.Resources.icons8_notification_35
-        Me.Button5.Location = New System.Drawing.Point(551, 33)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(45, 45)
-        Me.Button5.TabIndex = 76
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.btnRemove.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnRemove.Location = New System.Drawing.Point(426, 123)
+        Me.btnRemove.Name = "btnRemove"
+        Me.btnRemove.Size = New System.Drawing.Size(146, 35)
+        Me.btnRemove.TabIndex = 76
+        Me.btnRemove.Text = "Remove User"
+        Me.btnRemove.UseVisualStyleBackColor = False
         '
         'UserData
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.btnRemove)
         Me.Controls.Add(Me.UserDataGrid)
         Me.Controls.Add(Me.btnCafeOwner)
         Me.Controls.Add(Me.btnRider)
@@ -132,5 +132,5 @@ Partial Class UserData
     Friend WithEvents btnRider As Button
     Friend WithEvents UserDataGrid As DataGridView
     Friend WithEvents btnCafeOwner As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents btnRemove As Button
 End Class

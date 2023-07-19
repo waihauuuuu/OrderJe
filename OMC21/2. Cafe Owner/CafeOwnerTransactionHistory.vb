@@ -1,102 +1,39 @@
 ﻿Imports System.Data.OleDb
 
 Public Class CafeOwnerTransactionHistory
-    Private transactions As List(Of Transaction)
-    Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb"
-    Private Function GetTransactions() As List(Of Transaction)
-        Dim transactions As New List(Of Transaction)()
-        Dim strsql As String = "SELECT * FROM [Transaction History] WHERE [User ID] = '" & GlobalVariables.UserID & "'"
-        Using mycon As New OleDbConnection(connectionString)
-            Using mycmd As New OleDbCommand(strsql, mycon)
-                mycon.Open()
-                Using reader As OleDbDataReader = mycmd.ExecuteReader()
-                    While reader.Read()
-                        'Retrieve transaction data from the reader and create a transaction Object
-                        Dim transaction As New Transaction With {
-                            .CardNumber = reader("Card Number").ToString(),
-                            .OrderItem = reader("Order Item").ToString(),
-                            .Quantity = Integer.Parse(reader("Quantity").ToString()),
-                            .Cost = Decimal.Parse(reader("Cost").ToString()),
-                            .TimePurchased = DateTime.Parse(reader("Time Purchased").ToString())
-                        }
-                        transactions.Add(transaction)
-                    End While
-                End Using
-            End Using
-        End Using
-        Return transactions
-    End Function
-    Private Function GetTransactions(datePicked As DateTime, cafeName As String) As List(Of Transaction)
-        Dim transactions As New List(Of Transaction)()
-        Dim strsql As String = "SELECT * FROM [Transaction History] WHERE [User ID] = @userID"
-        Using mycon As New OleDbConnection(connectionString)
-            Using mycmd As New OleDbCommand(strsql, mycon)
-                mycmd.Parameters.AddWithValue("@userID", GlobalVariables.UserID)
-                mycon.Open()
-                Dim reader As OleDbDataReader = mycmd.ExecuteReader()
-                While reader.Read()
-                    If cafeName = reader("Cafe Name") AndAlso datePicked = reader.GetDateTime(reader.GetOrdinal("Time Purchased")).Date Then
-                        Dim transaction As New Transaction With {
-                            .CardNumber = reader("Card Number").ToString(),
-                            .OrderItem = reader("Order Item").ToString(),
-                            .Quantity = Integer.Parse(reader("Quantity").ToString()),
-                            .Cost = Decimal.Parse(reader("Cost").ToString()),
-                            .TimePurchased = DateTime.Parse(reader("Time Purchased").ToString())
-                        }
-                        'Add the transaction to the list
-                        transactions.Add(transaction)
-                    End If
-                End While
-            End Using
-        End Using
-        Return transactions
-    End Function
-    Public Class Transaction
-        Public Property ID As Integer
-        Public Property CardNumber As String
-        Public Property OrderItem As String
-        Public Property Quantity As Integer
-        Public Property Cost As Decimal
-        Public Property TimePurchased As DateTime
-        Public Property UserID As Integer
-    End Class
-    Private Sub CustomerTransactionHistory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        transactions = GetTransactions()
-        DisplayTransactions(transactions)
-    End Sub
-    Private Sub DisplayTransactions(transactions As List(Of Transaction))
-        PanelTransactionHistory.Controls.Clear()
-        If transactions IsNot Nothing AndAlso transactions.Count > 0 Then
-            For Each transaction In transactions
-                'Assign the transaction details to the UserControl's properties
-                Dim transactionItem As New TransactionItem With {
-                    .ID = transaction.ID,
-                    .CardNumber = transaction.CardNumber,
-                    .OrderItem = transaction.OrderItem,
-                    .Quantity = transaction.Quantity,
-                    .Cost = transaction.Cost,
-                    .TimePurchased = transaction.TimePurchased,
-                    .UserID = transaction.UserID
-}
-                PanelTransactionHistory.Controls.Add(transactionItem)
-                transactionItem.Width = PanelTransactionHistory.ClientSize.Width
-            Next
-        Else
-            'Handle the case where no transactions are found
-            Dim noTransactionLabel As New Label With {
-                .Text = "No transactions found.",
-                .Font = New Font("Comic Sans MS", 12, FontStyle.Bold),
-                .ForeColor = Color.Red,
-                .TextAlign = ContentAlignment.MiddleCenter,
-                .AutoSize = False,
-                .Width = PanelTransactionHistory.Width,
-                .Height = PanelTransactionHistory.Height
-            }
-            PanelTransactionHistory.Controls.Add(noTransactionLabel)
+    Private Sub BtnNotification_Click(sender As Object, e As EventArgs) Handles btnNotification.Click
+        Dim CafeOwnerHomepage As CafeOwnerHomepage = TryCast(Me.ParentForm, CafeOwnerHomepage)
+        Dim panel As Panel = TryCast(ParentForm.Controls("pnlContainer"), Panel)
+        If panel IsNot Nothing Then
+            'change usercontrol
+            Dim CafeOwnerNotification As New CafeOwnerNotification
+            panel.Controls.Clear()
+            panel.Controls.Add(CafeOwnerNotification)
         End If
+        CafeOwnerHomepage.btnTransaction.BackColor = Color.FromArgb(30, 30, 30)
+        CafeOwnerHomepage.iconTransaction.BackColor = Color.FromArgb(30, 30, 30)
     End Sub
-    Private Sub BtnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        'Take the date from the DateTimePicker 
-        Dim datePicked As Date = DateTimePicker1.Value.Date
+
+    Private Sub CafeOwnerTransactionHistory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
+        Dim ordersql As String = "SELECT * FROM [Transaction History] WHERE [Status] = 'Done'"
+        Dim ordercmd As New OleDbCommand(ordersql, mycon)
+
+        Dim TransactionItem As New TransactionItem
+        mycon.Open()
+        Dim orderreader As OleDbDataReader = ordercmd.ExecuteReader
+        While orderreader.Read()
+            Dim cartsql As String = "SELECT * FROM [CART] WHERE [Cafe Name] = '" & CafeOwnerHomepage.lblCafeName.Text & "'"
+            Dim cartcmd As New OleDbCommand(cartsql, mycon)
+            Dim cartreader As OleDbDataReader = cartcmd.ExecuteReader
+            TransactionItem.lblOrder.Text = "Order" & orderreader("Order ID")
+            TransactionItem.lblDate.Text = orderreader("Datetime")
+            While cartreader.Read()
+                TransactionItem.lblCorner.Text = "Food Name: " & cartreader("Food Name") & " x" & cartreader("Quantity")
+                TransactionItem.lblTotal.Text = "Total: RM" & cartreader("Cost")
+            End While
+            PanelTransactionHistory.Controls.Add(TransactionItem)
+        End While
+        mycon.Close()
     End Sub
 End Class

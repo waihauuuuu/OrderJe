@@ -1,4 +1,8 @@
 ﻿'Customer 'Delivery'
+Imports System.IO
+Imports System.Data.OleDb
+
+
 Public Class OrderStatus
     Private countdownTime As Integer ' Total countdown time in seconds
 
@@ -7,6 +11,33 @@ Public Class OrderStatus
         UpdateCountdownLabel()
         Timer1.Interval = 1000
         Timer1.Start()
+
+        Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
+        Dim strsql As String = "SELECT * FROM [Transaction History] WHERE [Status] = '3rd Stage'"
+        Dim mycmd As New OleDbCommand(strsql, mycon)
+
+        Dim usersql As String = "SELECT * FROM [UserDatabase]"
+        Dim usercmd As New OleDbCommand(usersql, mycon)
+
+        mycon.Open()
+        Dim reader As OleDbDataReader = mycmd.ExecuteReader
+        Dim userreader As OleDbDataReader = usercmd.ExecuteReader
+
+        reader.Read()
+        While userreader.Read()
+            If userreader("User ID") = reader("Rider ID") Then
+                lblUsername.Text = userreader("Username")
+                lblUserID.Text = userreader("User ID")
+                lblPhone.Text = userreader("Phone Number")
+                If Not String.IsNullOrEmpty(userreader("Picture").ToString) AndAlso File.Exists(userreader("Picture").ToString) Then
+                    picProfile.Image = Image.FromFile(userreader("Picture").ToString)
+                Else
+                    picProfile.Image = My.Resources.profilePic
+                End If
+            End If
+        End While
+        reader.Close()
+        mycon.Close()
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -28,25 +59,21 @@ Public Class OrderStatus
         lblTimer.Text = minutes.ToString("00") & ":" & seconds.ToString("00")
     End Sub
 
-    Private Sub BtnCart_Click(sender As Object, e As EventArgs) Handles btnCart.Click
-        Dim CustomerHomepage As CustomerHomepage = TryCast(Me.ParentForm, CustomerHomepage)
-        Dim panel As Panel = TryCast(ParentForm.Controls("pnlContainer"), Panel)
-        If panel IsNot Nothing Then
-            'change usercontrol
-            Dim Cart As New Cart
-            panel.Controls.Clear()
-            panel.Controls.Add(Cart)
-        End If
-        CustomerHomepage.btnDelivery.BackColor = Color.FromArgb(30, 30, 30)
-        CustomerHomepage.iconDelivery.BackColor = Color.FromArgb(30, 30, 30)
-    End Sub
+    Private Sub BtnReceive_Click(sender As Object, e As EventArgs) Handles btnReceive.Click
+        Dim response As String = MsgBox("Are you sure you have received your order?", 4 + MsgBoxStyle.Question, "Order")
+        If response = vbYes Then
+            Dim mycon As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USER\Documents\OrderJeDatabase.accdb")
+            Dim strsql As String = "UPDATE [Transaction History] SET [Status] = @status, [Rider ID] = @id WHERE [Status] = '3rd Stage'"
+            Dim mycmd As New OleDbCommand(strsql, mycon)
+            mycon.Open()
 
-    'If cafe owner and rider accept the order
-    'Show this usercontrol
-    'Elseif cafe owner accept the order, rider not accept the order
-    'Show 'Delivery service not accepted'
-    'Elseif cafe owner not accept the order, rider not accept the order
-    'Show 'Order not accepted'
-    'Else (no order)
-    'Show 'You have no order'
+            mycmd.Parameters.AddWithValue("@status", "Done")
+            mycmd.Parameters.AddWithValue("@id", GlobalVariables.UserID)
+
+            mycmd.ExecuteNonQuery()
+            mycon.Close()
+
+            MsgBox("Order Received!", 0 + MsgBoxStyle.Information, "Order")
+        End If
+    End Sub
 End Class

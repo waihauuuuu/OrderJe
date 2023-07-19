@@ -36,6 +36,7 @@ Partial Class RiderViewFeedback
         Me.Star2 = New System.Windows.Forms.Button()
         Me.Star1 = New System.Windows.Forms.Button()
         Me.lblRating = New System.Windows.Forms.Label()
+        Me.btnNotification = New System.Windows.Forms.Button()
         CType(Me.picProfile, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -217,11 +218,22 @@ Partial Class RiderViewFeedback
         Me.lblRating.TabIndex = 103
         Me.lblRating.Text = "lblRating"
         '
+        'btnNotification
+        '
+        Me.btnNotification.BackColor = System.Drawing.Color.White
+        Me.btnNotification.Image = Global.OMC21.My.Resources.Resources.icons8_notification_35
+        Me.btnNotification.Location = New System.Drawing.Point(541, 32)
+        Me.btnNotification.Name = "btnNotification"
+        Me.btnNotification.Size = New System.Drawing.Size(45, 45)
+        Me.btnNotification.TabIndex = 104
+        Me.btnNotification.UseVisualStyleBackColor = False
+        '
         'RiderViewFeedback
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
+        Me.Controls.Add(Me.btnNotification)
         Me.Controls.Add(Me.lblRating)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Star5)
@@ -261,4 +273,5 @@ Partial Class RiderViewFeedback
     Friend WithEvents Star2 As Button
     Friend WithEvents Star1 As Button
     Friend WithEvents lblRating As Label
+    Friend WithEvents btnNotification As Button
 End Class

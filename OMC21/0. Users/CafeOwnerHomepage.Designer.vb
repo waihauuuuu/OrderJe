@@ -32,23 +32,17 @@ Partial Class CafeOwnerHomepage
         Me.btnHome = New System.Windows.Forms.Button()
         Me.lblLogout = New System.Windows.Forms.Label()
         Me.CloseMinimize1 = New OMC21.CloseMinimize()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.btnLogout = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.iconFeedback = New System.Windows.Forms.Button()
         Me.iconTransaction = New System.Windows.Forms.Button()
         Me.iconMenu = New System.Windows.Forms.Button()
         Me.iconHome = New System.Windows.Forms.Button()
-        Me.pnlContainer.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlContainer
         '
         Me.pnlContainer.BackColor = System.Drawing.Color.FromArgb(CType(CType(180, Byte), Integer), CType(CType(20, Byte), Integer), CType(CType(20, Byte), Integer))
-        Me.pnlContainer.Controls.Add(Me.PictureBox1)
-        Me.pnlContainer.Controls.Add(Me.Label1)
         Me.pnlContainer.Location = New System.Drawing.Point(144, 38)
         Me.pnlContainer.Name = "pnlContainer"
         Me.pnlContainer.Size = New System.Drawing.Size(622, 470)
@@ -160,17 +154,6 @@ Partial Class CafeOwnerHomepage
         Me.CloseMinimize1.Size = New System.Drawing.Size(79, 37)
         Me.CloseMinimize1.TabIndex = 13
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Comic Sans MS", 30.0!)
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(25, 43)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(303, 56)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Welcome Back!"
-        '
         'btnLogout
         '
         Me.btnLogout.BackColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -183,16 +166,6 @@ Partial Class CafeOwnerHomepage
         Me.btnLogout.Size = New System.Drawing.Size(35, 39)
         Me.btnLogout.TabIndex = 8
         Me.btnLogout.UseVisualStyleBackColor = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.OMC21.My.Resources.Resources.CafeHome
-        Me.PictureBox1.Location = New System.Drawing.Point(-68, 109)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(573, 335)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 3
-        Me.PictureBox1.TabStop = False
         '
         'iconFeedback
         '
@@ -267,10 +240,7 @@ Partial Class CafeOwnerHomepage
         Me.Name = "CafeOwnerHomepage"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CafeOwnerHomepage"
-        Me.pnlContainer.ResumeLayout(False)
-        Me.pnlContainer.PerformLayout()
         Me.Panel1.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -289,6 +259,4 @@ Partial Class CafeOwnerHomepage
     Friend WithEvents btnLogout As Button
     Friend WithEvents CloseMinimize1 As CloseMinimize
     Friend WithEvents lblCafeName As Label
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label1 As Label
 End Class
