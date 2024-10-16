@@ -12,4 +12,5 @@ As the programming leader for OrderJe, I managed the UI/UX design, frontend, bac
 ![Microsoft Access](https://img.shields.io/badge/Microsoft%20Access-%23A4373A.svg?logo=microsoft-access&logoColor=white)
 
 ## 🤝 Collaborator:
-[@QUDRIELZAM](https://github.com/QUDRIELZAM) [@niksarahheidi](https://github.com/niksarahheidi)
+1. [@QUDRIELZAM](https://github.com/QUDRIELZAM)
+2. [@niksarahheidi](https://github.com/niksarahheidi)
