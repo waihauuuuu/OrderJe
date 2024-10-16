@@ -1,5 +1,6 @@
 ## 🍎 About OrderJe
-OrderJe is a project developed for the Oh My Code competition, designed to help university students conveniently order food from various cafe within the Universiti Teknologi PETRONAS campus, enhancing their on-campus dining experience.
+> OrderJe is a project developed for the Oh My Code competition in [Universiti Teknologi PETRONAS](https://www.utp.edu.my/Pages/Home.aspx).
+OrderJe designed to help university students conveniently order food from various cafe within the Universiti Teknologi PETRONAS campus, enhancing their on-campus dining experience.
 
 ## 🧑‍💼 My Role in OrderJe
 As the programming leader for OrderJe, I managed the UI/UX design, frontend, backend, and database development.
