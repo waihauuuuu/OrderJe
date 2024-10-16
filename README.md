@@ -6,11 +6,11 @@ OrderJe designed to help university students conveniently order food from variou
 ## 🧑‍💼 My Role in OrderJe
 As the programming leader for OrderJe, I managed the UI/UX design, frontend, backend, and database development.
 
-## 💻 Tech Stack:
+## 💻 Tech Stack
 ![Visual Basic](https://img.shields.io/badge/Visual%20Basic-%235c2d91.svg?logo=.net&logoColor=white) 
 ![.NET](https://img.shields.io/badge/.NET-%23512BD4.svg?logo=.net&logoColor=white) 
 ![Microsoft Access](https://img.shields.io/badge/Microsoft%20Access-%23A4373A.svg?logo=microsoft-access&logoColor=white)
 
-## 🤝 Collaborator:
+## 🤝 Collaborator
 1. [@QUDRIELZAM](https://github.com/QUDRIELZAM)
 2. [@niksarahheidi](https://github.com/niksarahheidi)
